@@ -1,7 +1,8 @@
 /* normalize */
 @import url("https://necolas.github.io/normalize.css/latest/normalize.css");
 /* Roboto font */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Dancing Script */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
 
 @import url("./app.css");
 
