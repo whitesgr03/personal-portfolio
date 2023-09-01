@@ -9,7 +9,7 @@ const App = () => {
 	const handleChangeTheme = () => setDarkTheme(!darkTheme);
 
 	return (
-		<div className="app">
+		<div className={`app ${darkTheme ? "dark" : "light"}`}>
 		</div>
 	);
 };
