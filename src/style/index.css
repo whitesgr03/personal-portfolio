@@ -15,3 +15,24 @@ body {
 		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 		"Segoe UI Symbol";
 }
+@media (prefers-color-scheme: dark) {
+	body {
+		font-weight: 300;
+		color: var(--dark-scheme-color);
+		background-color: var(--dark-scheme-bgc);
+	}
+	h1 {
+		font-weight: 400;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+		font-weight: 400;
+		color: var(--light-scheme-color);
+		background-color: var(--light-scheme-bgc);
+	}
+	h1 {
+		font-weight: 700;
+	}
+}
