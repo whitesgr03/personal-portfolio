@@ -1,3 +1,23 @@
 .app {
 	display: flex;
 }
+
+.app.dark {
+	font-weight: 300;
+	color: var(--dark-scheme-color);
+	background-color: var(--dark-scheme-bgc);
+}
+
+.app.dark h1 {
+	font-weight: 400;
+}
+
+.app.light {
+	font-weight: 400;
+	color: var(--light-scheme-color);
+	background-color: var(--light-scheme-bgc);
+}
+
+.app.light h1 {
+	font-weight: 700;
+}
