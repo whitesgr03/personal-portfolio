@@ -10,6 +10,7 @@ const App = () => {
 
 	return (
 		<div className={`app ${darkTheme ? "dark" : "light"}`}>
+			<Header darkTheme={darkTheme} onChangeTheme={handleChangeTheme} />
 		</div>
 	);
 };
