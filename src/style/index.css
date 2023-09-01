@@ -8,6 +8,12 @@
 @import url("./app.css");
 @import url("./header.css");
 
+:root {
+	--dark-scheme-color: #a1a1a1;
+	--dark-scheme-bgc: #121212;
+	--light-scheme-color: #000;
+	--light-scheme-bgc: #fff;
+}
 
 body {
 	box-sizing: border-box;
