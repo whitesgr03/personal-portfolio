@@ -1,0 +1,34 @@
+header {
+	width: 100%;
+	padding: 20px;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav h1 {
+	font-family: "Dancing Script";
+	text-align: center;
+}
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	column-gap: 30px;
+}
+
+nav ul a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul button,
+nav ul a {
+	width: 45px;
+}
