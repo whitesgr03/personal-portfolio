@@ -26,3 +26,11 @@
 .app.light h1 {
 	font-weight: 700;
 }
+
+.app main {
+	display: grid;
+	grid-template: 1fr 1fr;
+	grid-template-areas:
+		"about"
+		"products";
+}
