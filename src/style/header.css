@@ -4,6 +4,12 @@ header {
 	border-bottom: 1px solid;
 }
 
+.app.dark header {
+	border-bottom-color: var(--dark-scheme-color);
+}
+
+.app.light header {
+	border-bottom-color: var(--light-scheme-color);
 }
 
 nav {
