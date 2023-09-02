@@ -1,6 +1,9 @@
 header {
-	width: 100%;
-	padding: 20px;
+	padding: 10px 20px;
+	grid-area: "header";
+	border-bottom: 1px solid;
+}
+
 }
 
 nav {
