@@ -13,6 +13,7 @@
 	--dark-scheme-bgc: #121212;
 	--light-scheme-color: #000;
 	--light-scheme-bgc: #fff;
+	--svg-icon-width: 45px;
 }
 
 body {
