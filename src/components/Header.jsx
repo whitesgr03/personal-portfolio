@@ -11,9 +11,7 @@ const Header = ({ darkTheme, onChangeTheme }) => {
 		<header>
 			<nav>
 				<h1>
-					<a href="#home">
-						Weiss <br /> Bai
-					</a>
+					<a href="#home">Bai</a>
 				</h1>
 				<ul>
 					<li>
