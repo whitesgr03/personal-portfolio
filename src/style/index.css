@@ -7,6 +7,7 @@
 
 @import url("./app.css");
 @import url("./header.css");
+@import url("./footer.css");
 
 :root {
 	--dark-scheme-color: #a1a1a1;
