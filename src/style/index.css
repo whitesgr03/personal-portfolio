@@ -23,6 +23,60 @@ body {
 		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 		"Segoe UI Symbol";
 }
+
+[hidden] {
+	display: none !important;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	white-space: pre-line;
+}
+
+button {
+	border: 0;
+	outline: none;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+	color: inherit;
+	font-weight: inherit;
+}
+
+li {
+	list-style: none;
+}
+
+input,
+textarea {
+	outline: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a,
+img,
+svg {
+	vertical-align: middle;
+}
+
 svg {
 	width: 100%;
 }
