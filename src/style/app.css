@@ -1,5 +1,10 @@
 .app {
-	display: flex;
+	display: grid;
+	grid-template: 1fr 2fr 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
 }
 
 .app.dark {
