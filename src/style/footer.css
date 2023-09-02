@@ -1,0 +1,39 @@
+footer {
+	grid-area: "footer";
+}
+
+footer .contact {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+address {
+	display: flex;
+
+	align-items: center;
+}
+
+address svg,
+footer a {
+	width: var(--svg-icon-width);
+}
+
+.copyright {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 10px;
+	border-top: 1px solid;
+	padding: 20px 0;
+}
+
+.app.dark .copyright {
+	border-top-color: var(--dark-scheme-color);
+}
+
+.app.light .copyright {
+	border-top-color: var(--light-scheme-color);
+}
