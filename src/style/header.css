@@ -39,5 +39,5 @@ nav ul a {
 
 nav ul button,
 nav ul a {
-	width: 45px;
+	width: var(--svg-icon-width);
 }
