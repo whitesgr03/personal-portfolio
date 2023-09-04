@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className="contact">
-				<h3>Contact me</h3>
+				<h2>Contact me</h2>
 				<p>
 					Please get in touch if you think our work could be mutually
 					beneficial!
