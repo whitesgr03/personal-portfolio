@@ -91,6 +91,9 @@ svg {
 	h1 {
 		font-weight: 400;
 	}
+	img {
+		filter: brightness(0.8) contrast(1.2);
+	}
 }
 
 @media (prefers-color-scheme: light) {
