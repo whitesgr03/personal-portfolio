@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Header from "./Header";
 import Footer from "./Footer";
+import About from "./About";
 const App = () => {
 	const [darkTheme, setDarkTheme] = useState(
 		window.matchMedia("(prefers-color-scheme: dark)")
@@ -12,6 +13,9 @@ const App = () => {
 	return (
 		<div className={`app ${darkTheme ? "dark" : "light"}`}>
 			<Header darkTheme={darkTheme} onChangeTheme={handleChangeTheme} />
+			<main>
+				<About />
+			</main>
 			<Footer />
 		</div>
 	);
