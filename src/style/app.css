@@ -1,6 +1,6 @@
 .app {
 	display: grid;
-	grid-template: 1fr 2fr 1fr;
+	row-gap: 20px;
 	grid-template:
 		"header" auto
 		"main" auto
@@ -37,7 +37,7 @@
 
 .app main {
 	display: grid;
-	grid-template: 1fr 1fr;
+	row-gap: 20px;
 	grid-template:
 		"about" auto
 		"products" auto;
