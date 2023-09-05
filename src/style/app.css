@@ -39,6 +39,7 @@
 }
 .app.light h2 {
 	font-weight: 700;
+	color: var(--light-scheme-highlight-color);
 }
 
 .app.light h3 {
