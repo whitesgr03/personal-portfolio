@@ -6,7 +6,7 @@ header {
 	z-index: 1;
 	padding: 10px 30px;
 	grid-area: header;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid transparent;
 }
 
 .app.dark header {
