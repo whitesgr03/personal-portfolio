@@ -15,7 +15,7 @@ header {
 }
 
 .app.light header {
-	border-bottom-color: var(--light-scheme-color);
+	background-color: var(--light-scheme-bgc);
 }
 
 nav {
