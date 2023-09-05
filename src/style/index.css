@@ -12,9 +12,11 @@
 @import url("./footer.css");
 
 :root {
-	--dark-scheme-color: #a1a1a1;
-	--dark-scheme-bgc: #121212;
-	--light-scheme-color: #000;
+	--dark-scheme-highlight-color: #f2a145;
+	--dark-scheme-color: #b0b0b0;
+	--dark-scheme-bgc: #0a1324;
+	--light-scheme-highlight-color: #195c86;
+	--light-scheme-color: #000000;
 	--light-scheme-bgc: #fff;
 	--svg-icon-width: 45px;
 }
