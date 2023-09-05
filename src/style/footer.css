@@ -33,6 +33,6 @@ footer a {
 	justify-content: center;
 	align-items: center;
 	row-gap: 10px;
-	border-top: 1px solid;
+	border-top: 1px solid transparent;
 	padding: 20px 0;
 }
