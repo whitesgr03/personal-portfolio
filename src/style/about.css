@@ -6,6 +6,8 @@
 	row-gap: 40px;
 	padding: 20px;
 }
+
+/* dark */
 .app.dark .about .describe p {
 	font-weight: 500;
 }
@@ -13,6 +15,7 @@
 	color: var(--dark-scheme-highlight-color);
 }
 
+/* light */
 .app.light .about .describe p {
 	font-weight: 700;
 }
