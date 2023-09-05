@@ -37,11 +37,3 @@ footer a {
 	border-top: 1px solid;
 	padding: 20px 0;
 }
-
-.app.dark .copyright {
-	border-top-color: var(--dark-scheme-color);
-}
-
-.app.light .copyright {
-	border-top-color: var(--light-scheme-color);
-}
