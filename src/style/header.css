@@ -1,6 +1,6 @@
 header {
 	padding: 10px 20px;
-	grid-area: "header";
+	grid-area: header;
 	border-bottom: 1px solid;
 }
 
