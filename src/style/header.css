@@ -23,6 +23,10 @@ header {
 	color: var(--dark-scheme-highlight-color);
 }
 
+.app.light header h1 {
+	color: var(--light-scheme-highlight-color);
+}
+
 nav {
 	display: flex;
 	align-items: center;
