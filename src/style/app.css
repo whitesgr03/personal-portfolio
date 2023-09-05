@@ -7,6 +7,8 @@
 		"footer" auto;
 }
 
+/* dark */
+
 .app.dark {
 	font-weight: 300;
 	color: var(--dark-scheme-color);
@@ -27,6 +29,8 @@
 .app.dark h3 {
 	font-weight: 400;
 }
+
+/* light */
 
 .app.light {
 	font-weight: 400;
