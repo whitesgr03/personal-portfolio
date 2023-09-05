@@ -37,6 +37,13 @@
 .app.light h1 {
 	font-weight: 700;
 }
+.app.light h2 {
+	font-weight: 700;
+}
+
+.app.light h3 {
+	font-weight: 700;
+}
 
 .app main {
 	display: grid;
