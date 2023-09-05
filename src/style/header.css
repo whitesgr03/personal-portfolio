@@ -10,7 +10,7 @@ header {
 }
 
 .app.dark header {
-	border-bottom-color: var(--dark-scheme-color);
+	border-color: var(--dark-scheme-color);
 }
 
 .app.light header {
