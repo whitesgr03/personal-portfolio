@@ -6,6 +6,9 @@
 	row-gap: 40px;
 	padding: 20px;
 }
+.app.dark .about .describe p {
+	font-weight: 500;
+}
 
 .about img {
 	border-radius: 100%;
