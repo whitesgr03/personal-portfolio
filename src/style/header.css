@@ -11,6 +11,7 @@ header {
 
 .app.dark header {
 	border-color: var(--dark-scheme-color);
+	background-color: var(--dark-scheme-bgc);
 }
 
 .app.light header {
