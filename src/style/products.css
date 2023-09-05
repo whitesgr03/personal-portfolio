@@ -25,6 +25,10 @@
 	row-gap: 20px;
 }
 
+.products li article h3 {
+	font-size: 1.2rem;
+}
+
 .products .link {
 	display: flex;
 	column-gap: 20px;
