@@ -2,6 +2,11 @@ footer {
 	grid-area: footer;
 }
 
+.app.dark footer .copyright {
+	border-top-color: var(--dark-scheme-color);
+}
+
+
 footer .contact {
 	padding: 20px;
 	display: flex;
