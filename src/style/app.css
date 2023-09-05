@@ -21,6 +21,7 @@
 
 .app.dark h2 {
 	font-weight: 400;
+	color: var(--dark-scheme-highlight-color);
 }
 
 .app.dark h3 {
