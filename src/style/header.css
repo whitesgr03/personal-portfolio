@@ -19,6 +19,10 @@ header {
 	background-color: var(--light-scheme-bgc);
 }
 
+.app.dark header h1 {
+	color: var(--dark-scheme-highlight-color);
+}
+
 nav {
 	display: flex;
 	align-items: center;
