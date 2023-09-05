@@ -4,7 +4,9 @@ import githubIcon from "../image/github-icon.png";
 const Products = () => {
 	return (
 		<div id="products" className="products">
-			<h2>My Works</h2>
+			<h2>
+				My <span>Works</span>
+			</h2>
 
 			<ul>
 				<li>
