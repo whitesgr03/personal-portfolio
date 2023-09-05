@@ -12,17 +12,19 @@
 	color: var(--dark-scheme-color);
 	background-color: var(--dark-scheme-bgc);
 }
-
+.app.dark h1 {
+	font-weight: 400;
+}
 .app.dark img {
 	filter: brightness(0.8) contrast(1.2);
 }
 
-.app.light img {
-	filter: brightness(1) contrast(1);
+.app.dark h2 {
+	font-weight: 500;
 }
 
-.app.dark h1 {
-	font-weight: 400;
+.app.dark h3 {
+	font-weight: 500;
 }
 
 .app.light {
