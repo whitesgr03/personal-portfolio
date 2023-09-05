@@ -6,6 +6,44 @@
 	padding: 20px;
 }
 
+/* dark */
+.app.dark .products .link a {
+	border-color: var(--dark-scheme-color);
+}
+.app.dark .products .link a:nth-child(1) {
+	border-color: var(--dark-scheme-highlight-color);
+	color: var(--dark-scheme-highlight-color);
+}
+
+.app.dark .products .link a img {
+	filter: invert(87%) sepia(11%) saturate(13%) hue-rotate(317deg)
+		brightness(78%) contrast(85%);
+}
+.app.dark .products .link a:nth-child(1) img {
+	filter: invert(74%) sepia(21%) saturate(1722%) hue-rotate(332deg)
+		brightness(102%) contrast(90%);
+}
+
+/* light */
+.app.light .products .link a {
+	border-width: 2px;
+	border-color: var(--light-scheme-color);
+}
+
+.app.light .products .link a:nth-child(1) {
+	border-color: var(--light-scheme-highlight-color);
+	color: var(--light-scheme-highlight-color);
+}
+
+.app.light .products .link a img {
+	filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%)
+		contrast(104%);
+}
+.app.light .products .link a:nth-child(1) img {
+	filter: invert(26%) sepia(94%) saturate(574%) hue-rotate(163deg)
+		brightness(93%) contrast(89%);
+}
+
 .products ul {
 	display: flex;
 	flex-direction: column;
@@ -44,22 +82,4 @@
 .products .link a img {
 	margin-left: 10px;
 	height: 20px;
-}
-
-.app.light .products .link a {
-	border-color: var(--light-scheme-color);
-}
-
-.app.dark .products .link a {
-	border-color: var(--dark-scheme-color);
-}
-
-.app.light .products .link a img {
-	filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%)
-		contrast(104%);
-}
-
-.app.dark .products .link a img {
-	filter: invert(87%) sepia(11%) saturate(13%) hue-rotate(317deg)
-		brightness(78%) contrast(85%);
 }
