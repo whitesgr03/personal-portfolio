@@ -9,6 +9,10 @@
 .app.dark .about .describe p {
 	font-weight: 500;
 }
+.app.dark .about .describe span:nth-child(1) {
+	color: var(--dark-scheme-highlight-color);
+}
+
 .app.light .about .describe p {
 	font-weight: 700;
 }
