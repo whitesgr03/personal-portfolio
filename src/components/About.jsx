@@ -7,7 +7,7 @@ const About = () => {
 			<div className="describe">
 				<img src="https://fakeimg.pl/150/" alt="Weiss Bai" />
 				<p>
-					Hey I'm
+					<span>Hey I'm</span>
 					<span>Weiss Bai</span>
 				</p>
 			</div>
