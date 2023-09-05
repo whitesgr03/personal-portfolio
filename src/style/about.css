@@ -9,6 +9,9 @@
 .app.dark .about .describe p {
 	font-weight: 500;
 }
+.app.light .about .describe p {
+	font-weight: 700;
+}
 
 .about img {
 	border-radius: 100%;
