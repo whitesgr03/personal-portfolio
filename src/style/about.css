@@ -16,6 +16,9 @@
 .app.light .about .describe p {
 	font-weight: 700;
 }
+.app.light .about .describe span:nth-child(1) {
+	color: var(--light-scheme-highlight-color);
+}
 
 .about img {
 	border-radius: 100%;
