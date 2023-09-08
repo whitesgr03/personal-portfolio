@@ -56,6 +56,10 @@
 	row-gap: 20px;
 }
 
+.products li picture {
+	max-width: 75%;
+}
+
 .products li article {
 	display: flex;
 	flex-direction: column;
