@@ -4,7 +4,7 @@ header {
 	left: 0;
 	right: 0;
 	z-index: 1;
-	padding: 10px 30px;
+	padding: 10px 50px;
 	grid-area: header;
 	border-bottom: 1px solid transparent;
 }
