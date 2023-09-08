@@ -8,6 +8,11 @@ footer {
 	border-top: 1px solid transparent;
 	padding: 20px 0;
 }
+
+.app.dark footer {
+	border-top-color: var(--dark-scheme-color);
+}
+
 footer a {
 	width: var(--svg-icon-width);
 }
