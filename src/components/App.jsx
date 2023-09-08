@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import About from "./About";
 import Products from "./Products";
+import Contact from "./Contact";
 
 const App = () => {
 	const [darkTheme, setDarkTheme] = useState(
@@ -18,6 +19,7 @@ const App = () => {
 			<main>
 				<About />
 				<Products />
+				<Contact />
 			</main>
 			<Footer />
 		</div>
