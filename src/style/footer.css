@@ -13,6 +13,10 @@ footer {
 	border-top-color: var(--dark-scheme-color);
 }
 
+.app.light footer {
+	box-shadow: -1px 0px 12px -5px var(--light-scheme-color);
+}
+
 footer a {
 	width: var(--svg-icon-width);
 }
