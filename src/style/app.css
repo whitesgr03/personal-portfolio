@@ -1,6 +1,5 @@
 .app {
 	display: grid;
-	row-gap: 20px;
 	grid-template:
 		"header" auto
 		"main" auto
