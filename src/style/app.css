@@ -56,8 +56,9 @@
 
 .app main {
 	display: grid;
-	row-gap: 20px;
+	row-gap: 40px;
 	grid-template:
 		"about" auto
 		"products" auto;
+	padding: 40px;
 }
