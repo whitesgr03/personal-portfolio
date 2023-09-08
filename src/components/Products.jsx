@@ -22,7 +22,7 @@ const Products = () => {
 							laudantium, totam nobis!
 						</p>
 
-						<div class="link">
+						<div className="link">
 							<a href="#live" target="_blank">
 								Live
 								<img
@@ -52,7 +52,7 @@ const Products = () => {
 							molestiae delectus?
 						</p>
 
-						<div class="link">
+						<div className="link">
 							<a href="#live" target="_blank">
 								Live
 								<img
