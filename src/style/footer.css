@@ -1,33 +1,5 @@
 footer {
 	grid-area: footer;
-}
-
-.app.dark footer .copyright {
-	border-top-color: var(--dark-scheme-color);
-}
-
-.app.light footer .copyright {
-	box-shadow: -1px 0px 12px -5px var(--light-scheme-color);
-}
-
-footer .contact {
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	row-gap: 20px;
-}
-
-address {
-	display: flex;
-	align-items: center;
-}
-
-address svg,
-footer a {
-	width: var(--svg-icon-width);
-}
-
-.copyright {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -35,4 +7,7 @@ footer a {
 	row-gap: 10px;
 	border-top: 1px solid transparent;
 	padding: 20px 0;
+}
+footer a {
+	width: var(--svg-icon-width);
 }
