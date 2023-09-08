@@ -1,0 +1,14 @@
+.contact {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+address {
+	display: flex;
+	align-items: center;
+}
+
+address svg {
+	width: var(--svg-icon-width);
+}
