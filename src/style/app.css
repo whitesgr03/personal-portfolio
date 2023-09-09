@@ -62,3 +62,15 @@
 		"products" auto;
 	padding: 40px;
 }
+
+@media (min-width: 769px) {
+	.app main {
+		margin: 0 5%;
+	}
+}
+
+@media (min-width: 1025px) {
+	.app main {
+		margin: 0 10%;
+	}
+}
