@@ -22,7 +22,7 @@
 	color: var(--light-scheme-highlight-color);
 }
 
-.about img {
+.about .describe img {
 	border-radius: 100%;
 }
 
