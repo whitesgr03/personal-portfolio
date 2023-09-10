@@ -47,24 +47,21 @@
 .products ul {
 	display: flex;
 	flex-direction: column;
-	row-gap: 40px;
+	row-gap: 3rem;
 }
 
 .products li {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	row-gap: 20px;
-}
-
-.products li picture {
-	max-width: 75%;
+	row-gap: 2rem;
 }
 
 .products li article {
 	display: flex;
 	flex-direction: column;
-	row-gap: 20px;
+	row-gap: 2rem;
+}
+
 }
 
 .products li article h3 {
@@ -73,7 +70,7 @@
 
 .products .link {
 	display: flex;
-	column-gap: 20px;
+	column-gap: 2rem;
 }
 
 .products .link a {
