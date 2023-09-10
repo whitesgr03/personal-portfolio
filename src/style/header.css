@@ -45,14 +45,11 @@ nav ul {
 	column-gap: 30px;
 }
 
-nav ul a {
+nav ul a,
+nav ul button {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-nav ul button,
-nav ul a {
 	width: var(--svg-icon-width);
 }
