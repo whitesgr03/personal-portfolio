@@ -95,3 +95,24 @@
 	}
 }
 
+@media (min-width: 1025px) {
+	.products li {
+		flex-direction: row;
+		column-gap: 2rem;
+	}
+
+	.products li .wrap {
+		flex: 1 1 100%;
+
+		align-items: center;
+	}
+
+	.products li article {
+		justify-content: space-between;
+		flex: 1 1 100%;
+	}
+
+	.products li .link {
+		justify-content: flex-end;
+	}
+}
