@@ -53,3 +53,13 @@ nav ul button {
 	align-items: center;
 	width: var(--svg-icon-width);
 }
+
+@media (min-width: 481px) {
+	.app.dark header h1 {
+		font-size: 3rem;
+	}
+
+	nav ul {
+		column-gap: 50px;
+	}
+}
