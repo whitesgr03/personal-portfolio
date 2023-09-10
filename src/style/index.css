@@ -114,3 +114,9 @@ svg {
 		font-weight: 700;
 	}
 }
+
+@media (min-width: 1025px) {
+	body {
+		font-size: 1.2rem;
+	}
+}
