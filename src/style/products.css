@@ -88,3 +88,10 @@
 	margin-left: 10px;
 	height: 20px;
 }
+
+@media (min-width: 481px) {
+	.products li .wrap img {
+		width: 80%;
+	}
+}
+
