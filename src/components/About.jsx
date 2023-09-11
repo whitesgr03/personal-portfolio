@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
-const About = () => {
+const About = forwardRef((props, ref) => {
 	return (
 		<article id="about" className="about">
 			<div className="describe">
@@ -38,6 +38,6 @@ const About = () => {
 			</div>
 		</article>
 	);
-};
+});
 
 export default About;
