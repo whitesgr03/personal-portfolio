@@ -31,7 +31,7 @@ const About = forwardRef((props, ref) => {
 					Reiciendis porro sint qui! Asperiores adipisci qui dicta.
 				</p>
 				<div className="link">
-					<a href="#github">
+					<a href="#github" target="_blank">
 						<Icon path={mdiGithub} />
 					</a>
 				</div>
