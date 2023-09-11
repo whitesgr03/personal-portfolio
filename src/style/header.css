@@ -1,10 +1,10 @@
 header {
-	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 1;
 	padding: 10px 20px;
+	position: sticky;
 	grid-area: header;
 	border-bottom: 1px solid transparent;
 }
@@ -16,24 +16,24 @@ nav {
 }
 
 nav h1 {
-	font-family: "Dancing Script";
 	text-align: center;
+	font-family: "Dancing Script";
 }
 
 nav ul {
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;
 	column-gap: 30px;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 nav ul a,
 nav ul button {
+	width: var(--svg-icon-width);
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	width: var(--svg-icon-width);
 }
 
 nav ul a span,
