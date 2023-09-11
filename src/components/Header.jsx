@@ -7,6 +7,7 @@ import {
 } from "@mdi/js";
 
 const Header = ({ aboutRef,
+	productsRef,
 	darkTheme, onChangeTheme }) => {
 	const handleScrollToAbout = e => {
 		e.preventDefault();
