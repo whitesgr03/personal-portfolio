@@ -20,3 +20,13 @@ footer {
 footer a {
 	width: var(--svg-icon-width);
 }
+
+/* dark mode */
+.app.dark footer a:hover {
+	color: var(--dark-scheme-highlight-color);
+}
+
+/* light mode */
+.app.light footer a:hover {
+	color: var(--light-scheme-highlight-color);
+}
