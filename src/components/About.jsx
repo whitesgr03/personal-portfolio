@@ -5,7 +5,7 @@ import { mdiGithub } from "@mdi/js";
 
 const About = forwardRef((props, ref) => {
 	return (
-		<article id="about" className="about">
+		<article className="about" ref={ref}>
 			<div className="describe">
 				<img src="https://fakeimg.pl/150/" alt="Weiss Bai" />
 				<p>
