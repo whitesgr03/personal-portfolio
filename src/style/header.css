@@ -9,24 +9,6 @@ header {
 	border-bottom: 1px solid transparent;
 }
 
-.app.dark header {
-	border-color: var(--dark-scheme-color);
-	background-color: var(--dark-scheme-bgc);
-}
-
-.app.light header {
-	box-shadow: 0px 1px 12px -5px var(--light-scheme-color);
-	background-color: var(--light-scheme-bgc);
-}
-
-.app.dark header h1 {
-	color: var(--dark-scheme-highlight-color);
-}
-
-.app.light header h1 {
-	color: var(--light-scheme-highlight-color);
-}
-
 nav {
 	display: flex;
 	align-items: center;
@@ -79,6 +61,49 @@ nav ul button:hover span::after {
 	transition: transform 0.3s ease, border-color 0s ease;
 }
 
+/* dark mode */
+.app.dark header {
+	border-color: var(--dark-scheme-color);
+	background-color: var(--dark-scheme-bgc);
+}
+.app.dark header h1 {
+	color: var(--dark-scheme-highlight-color);
+}
+.app.dark header h1:hover {
+	color: var(--dark-scheme-color);
+}
+.app.dark nav ul a:hover span::after,
+.app.dark nav ul button:hover span::after {
+	border-color: var(--dark-scheme-highlight-color);
+}
+.app.dark nav ul a:hover,
+.app.dark nav ul a:focus,
+.app.dark nav ul button:hover,
+.app.dark nav ul button:focus {
+	color: var(--dark-scheme-highlight-color);
+}
+
+/* light mode*/
+.app.light header {
+	box-shadow: 0px 1px 12px -5px var(--light-scheme-color);
+	background-color: var(--light-scheme-bgc);
+}
+.app.light header h1 {
+	color: var(--light-scheme-highlight-color);
+}
+.app.light header h1:hover {
+	color: var(--light-scheme-color);
+}
+.app.light nav ul a:hover span::after,
+.app.light nav ul button:hover span::after {
+	border-color: var(--light-scheme-highlight-color);
+}
+.app.light nav ul a:hover,
+.app.light nav ul a:focus,
+.app.light nav ul button:hover,
+.app.light nav ul button:focus {
+	color: var(--light-scheme-highlight-color);
+}
 
 @media (min-width: 481px) {
 	.app.dark header h1 {
