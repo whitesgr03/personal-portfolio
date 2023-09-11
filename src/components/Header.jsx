@@ -6,7 +6,8 @@ import {
 	mdiAccountOutline,
 } from "@mdi/js";
 
-const Header = ({ darkTheme, onChangeTheme }) => {
+const Header = ({ aboutRef,
+	darkTheme, onChangeTheme }) => {
 	return (
 		<header>
 			<nav>
