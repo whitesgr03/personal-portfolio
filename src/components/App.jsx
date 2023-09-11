@@ -18,7 +18,11 @@ const App = () => {
 
 	return (
 		<div className={`app ${darkTheme ? "dark" : "light"}`}>
-			<Header darkTheme={darkTheme} onChangeTheme={handleChangeTheme} />
+			<Header
+				aboutRef={aboutRef}
+				darkTheme={darkTheme}
+				onChangeTheme={handleChangeTheme}
+			/>
 			<main>
 				<About ref={aboutRef} />
 				<Products />
