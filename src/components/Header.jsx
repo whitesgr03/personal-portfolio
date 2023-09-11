@@ -17,6 +17,16 @@ const Header = ({ aboutRef,
 		});
 		e.target.closest("a").blur();
 	};
+
+	const handleScrollToProducts = e => {
+		e.preventDefault();
+		productsRef.current.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+		e.target.closest("a").blur();
+	};
+
 	return (
 		<header>
 			<nav>
@@ -31,7 +41,7 @@ const Header = ({ aboutRef,
 						</a>
 					</li>
 					<li>
-						<a href="#products">
+						<a href="#products" onClick={handleScrollToProducts}>
 							<Icon path={mdiClipboardListOutline} />
 							<span>Projects</span>
 						</a>
