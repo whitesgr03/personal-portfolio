@@ -25,7 +25,7 @@ const App = () => {
 			/>
 			<main>
 				<About ref={aboutRef} />
-				<Products />
+				<Products ref={productsRef} />
 				<Contact />
 			</main>
 			<Footer />
