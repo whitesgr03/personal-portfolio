@@ -54,6 +54,13 @@ nav ul button {
 	width: var(--svg-icon-width);
 }
 
+nav ul a span,
+nav ul button span {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 3px;
+}
+
 @media (min-width: 481px) {
 	.app.dark header h1 {
 		font-size: 3rem;
