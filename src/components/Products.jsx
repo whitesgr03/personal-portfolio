@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
-const Products = () => {
+const Products = forwardRef((props, ref) => {
 	return (
 		<div id="products" className="products">
 			<h2>
@@ -75,6 +75,6 @@ const Products = () => {
 			</ul>
 		</div>
 	);
-};
+});
 
 export default Products;
