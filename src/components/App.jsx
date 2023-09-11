@@ -20,7 +20,7 @@ const App = () => {
 		<div className={`app ${darkTheme ? "dark" : "light"}`}>
 			<Header darkTheme={darkTheme} onChangeTheme={handleChangeTheme} />
 			<main>
-				<About />
+				<About ref={aboutRef} />
 				<Products />
 				<Contact />
 			</main>
