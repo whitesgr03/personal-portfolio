@@ -6,42 +6,41 @@ import {
 	mdiAccountOutline,
 } from "@mdi/js";
 
-const Header = ({ aboutRef,
-	productsRef,
-	darkTheme, onChangeTheme }) => {
-	const handleScrollToAbout = e => {
+const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
+	const handleScroll = (e, ref) => {
 		e.preventDefault();
-		aboutRef.current.scrollIntoView({
-			behavior: "smooth",
-			block: "start",
-		});
-		e.target.closest("a").blur();
-	};
 
-	const handleScrollToProducts = e => {
-		e.preventDefault();
-		productsRef.current.scrollIntoView({
-			behavior: "smooth",
-			block: "start",
-		});
-		e.target.closest("a").blur();
+		ref
+			? ref.current.scrollIntoView({
+					behavior: "smooth",
+					block: "start",
+			  })
+			: window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 
 	return (
 		<header>
 			<nav>
 				<h1>
-					<a href="#home">Bai</a>
+					<a href="#home" onClick={handleScroll}>
+						Bai
+					</a>
 				</h1>
 				<ul>
 					<li>
-						<a href="#about" onClick={handleScrollToAbout}>
+						<a
+							href="#about"
+							onClick={e => handleScroll(e, aboutRef)}
+						>
 							<Icon path={mdiAccountOutline} />
 							<span>About</span>
 						</a>
 					</li>
 					<li>
-						<a href="#products" onClick={handleScrollToProducts}>
+						<a
+							href="#products"
+							onClick={e => handleScroll(e, productsRef)}
+						>
 							<Icon path={mdiClipboardListOutline} />
 							<span>Projects</span>
 						</a>
