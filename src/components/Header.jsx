@@ -8,6 +8,14 @@ import {
 
 const Header = ({ aboutRef,
 	darkTheme, onChangeTheme }) => {
+	const handleScrollToAbout = e => {
+		e.preventDefault();
+		aboutRef.current.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+		e.target.closest("a").blur();
+	};
 	return (
 		<header>
 			<nav>
@@ -16,7 +24,7 @@ const Header = ({ aboutRef,
 				</h1>
 				<ul>
 					<li>
-						<a href="#about">
+						<a href="#about" onClick={handleScrollToAbout}>
 							<Icon path={mdiAccountOutline} />
 							<span>About</span>
 						</a>
