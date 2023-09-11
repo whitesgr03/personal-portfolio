@@ -73,6 +73,13 @@ nav ul button span::after {
 	transition: transform 0.3s ease, border-color 0s 0.3s ease;
 }
 
+nav ul a:hover span::after,
+nav ul button:hover span::after {
+	transform: translateX(0%);
+	transition: transform 0.3s ease, border-color 0s ease;
+}
+
+
 @media (min-width: 481px) {
 	.app.dark header h1 {
 		font-size: 3rem;
