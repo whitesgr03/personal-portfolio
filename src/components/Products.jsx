@@ -1,3 +1,5 @@
+import { forwardRef } from "react";
+
 import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
