@@ -5,7 +5,7 @@ import githubIcon from "../image/github-icon.png";
 
 const Products = forwardRef((props, ref) => {
 	return (
-		<div id="products" className="products">
+		<div id="products" className="products" ref={ref}>
 			<h2>
 				My <span>Works</span>
 			</h2>
