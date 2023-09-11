@@ -11,4 +11,5 @@ address {
 
 address svg {
 	width: var(--svg-icon-width);
+	margin-right: 5px;
 }
