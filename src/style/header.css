@@ -106,7 +106,7 @@ nav ul button:hover span::after {
 }
 
 @media (min-width: 481px) {
-	.header {
+	header {
 		padding: 10px 50px;
 	}
 
