@@ -82,13 +82,16 @@
 }
 
 @media (min-width: 769px) {
-	.app main {
+	.app main > div:nth-child(2) {
 		margin: 0 5%;
 	}
 }
 
 @media (min-width: 1025px) {
-	.app main {
+	.app {
+		font-size: 1.2rem;
+	}
+	.app main > div:nth-child(2) {
 		margin: 0 10%;
 	}
 }
