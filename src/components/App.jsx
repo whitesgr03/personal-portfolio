@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import About from "./About";
 import Products from "./Products";
+import Modal from "./Modal";
 import Contact from "./Contact";
 
 const App = () => {
@@ -34,6 +35,10 @@ const App = () => {
 
 	return (
 		<div className={`app ${darkTheme ? "dark" : "light"}`}>
+			<Modal
+				showProduct={showProduct}
+				onCloseModal={handleCloseModal}
+			/>
 			<Header
 				aboutRef={aboutRef}
 				productsRef={productsRef}
