@@ -48,6 +48,10 @@
 	font-size: 1.2rem;
 }
 
+.products li article h3 button {
+	text-decoration: underline;
+}
+
 .products .link {
 	display: flex;
 	column-gap: 2rem;
