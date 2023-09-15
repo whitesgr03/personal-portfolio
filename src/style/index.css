@@ -19,10 +19,9 @@
 	--dark-scheme-bgc: #0a1324;
 	--light-scheme-highlight-color: #195c86;
 	--light-scheme-color: #000000;
-	--light-scheme-bgc: #fff;
+	--light-scheme-bgc: #e9e3e3;
 	--svg-icon-width: 45px;
 }
-
 body {
 	box-sizing: border-box;
 	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
