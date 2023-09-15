@@ -7,6 +7,7 @@ import Products from "./Products";
 import Contact from "./Contact";
 
 const App = () => {
+	const [showProduct, setShowProduct] = useState(false);
 	const aboutRef = useRef(null);
 	const productsRef = useRef(null);
 
