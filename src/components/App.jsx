@@ -17,6 +17,11 @@ const App = () => {
 
 	const handleChangeTheme = () => setDarkTheme(!darkTheme);
 
+	const handleScrollBarHidden = e =>
+		!showProduct && !e.target.closest(".modal")
+			? (document.body.style.overflow = "hidden")
+			: (document.body.style.overflow = "auto");
+
 	return (
 		<div className={`app ${darkTheme ? "dark" : "light"}`}>
 			<Header
