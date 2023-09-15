@@ -16,6 +16,12 @@ const App = () => {
 	);
 
 	const handleChangeTheme = () => setDarkTheme(!darkTheme);
+
+	const handleShowModal = (e, product) => {
+		setShowProduct(true);
+		handleScrollBarHidden(e);
+	};
+
 	const handleCloseModal = e => {
 		setShowProduct(false);
 		handleScrollBarHidden(e);
