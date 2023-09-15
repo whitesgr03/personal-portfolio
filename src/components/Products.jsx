@@ -59,12 +59,20 @@ const Products = forwardRef((props, ref) => {
 				</li>
 				<li>
 					<div className="wrap">
-						<button type="button">
+						<button
+							type="button"
+							onClick={e => onShowProduct(e, "product1")}
+						>
 						</button>
 					</div>
 					<article>
 						<h3>
-							<button type="button">product2</button>
+							<button
+								type="button"
+								onClick={e => onShowProduct(e, "product1")}
+							>
+								product2
+							</button>
 						</h3>
 
 						<p>
