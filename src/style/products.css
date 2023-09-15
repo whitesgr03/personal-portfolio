@@ -121,12 +121,6 @@
 		brightness(101%) contrast(90%);
 }
 
-@media (min-width: 481px) {
-	.products li .wrap img {
-		width: 80%;
-	}
-}
-
 @media (min-width: 1025px) {
 	.products li {
 		flex-direction: row;
