@@ -46,6 +46,10 @@ const App = () => {
 				onChangeTheme={handleChangeTheme}
 			/>
 			<main>
+				<div
+					className={`backdrop ${showProduct ? "blur" : ""}`}
+					onClick={handleCloseModal}
+				></div>
 				<div>
 					<About ref={aboutRef} />
 					<Products
