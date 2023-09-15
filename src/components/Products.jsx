@@ -4,6 +4,8 @@ import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
 const Products = forwardRef((props, ref) => {
+	const { onShowProduct } = props;
+
 	return (
 		<div id="products" className="products" ref={ref}>
 			<h2>
