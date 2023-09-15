@@ -14,9 +14,22 @@ const Products = forwardRef((props, ref) => {
 
 			<ul>
 				<li>
-					<img src="https://fakeimg.pl/350x200/" alt="product1" />
+					<div className="wrap">
+						<button
+							type="button"
+							onClick={e => onShowProduct(e, "product1")}
+						>
+						</button>
+					</div>
 					<article>
-						<h3>product1</h3>
+						<h3>
+							<button
+								type="button"
+								onClick={e => onShowProduct(e, "product1")}
+							>
+								product1
+							</button>
+						</h3>
 
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing
@@ -45,9 +58,14 @@ const Products = forwardRef((props, ref) => {
 					</article>
 				</li>
 				<li>
-					<img src="https://fakeimg.pl/350x200/" alt="product2" />
+					<div className="wrap">
+						<button type="button">
+						</button>
+					</div>
 					<article>
-						<h3>product2</h3>
+						<h3>
+							<button type="button">product2</button>
+						</h3>
 
 						<p>
 							Lorem ipsum dolor, sit amet consectetur adipisicing
