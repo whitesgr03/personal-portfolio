@@ -72,6 +72,10 @@
 
 /* dark mode */
 
+.app.dark .products li article h3 button {
+	color: var(--dark-scheme-highlight-color);
+}
+
 .app.dark .products .link a:nth-child(1) {
 	border-color: var(--dark-scheme-highlight-color);
 	color: var(--dark-scheme-highlight-color);
@@ -104,6 +108,10 @@
 }
 
 /* light mode */
+
+.app.light .products li article h3 button {
+	color: var(--light-scheme-highlight-color);
+}
 .app.light .products .link a {
 	border-width: 2px;
 }
