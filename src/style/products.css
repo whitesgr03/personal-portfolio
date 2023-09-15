@@ -29,6 +29,19 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
+}
+
+.products li .wrap button {
+	transition: all 0.3s ease;
+}
+
+.products li .wrap button:hover {
+	transform: scale(1.2);
+}
+
+.products li .wrap button:focus {
+	transform: scale(1);
 }
 
 .products li article h3 {
