@@ -46,9 +46,14 @@ const App = () => {
 				onChangeTheme={handleChangeTheme}
 			/>
 			<main>
-				<About ref={aboutRef} />
-				<Products ref={productsRef} />
-				<Contact />
+				<div>
+					<About ref={aboutRef} />
+					<Products
+						ref={productsRef}
+						onShowProduct={handleShowModal}
+					/>
+					<Contact />
+				</div>
 			</main>
 			<Footer />
 		</div>
