@@ -109,6 +109,7 @@
 /* light */
 .app.light .modal .productModal,
 .app.light .modal.bgc {
+	background-color: var(--dark-scheme-color);
 }
 .app.light .padding .close::after,
 .app.light .padding .close::before {
