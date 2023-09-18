@@ -17,7 +17,7 @@ const Modal = ({ showProduct, onIfShowProduct }) => {
 	);
 };
 
-const ProductModal = ({ onCloseModal }) => (
+const ProductModal = () => (
 	<div className="productModal">
 		<button type="button" className="close" onClick={onCloseModal}></button>
 		<div className="describe">
