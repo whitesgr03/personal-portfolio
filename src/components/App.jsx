@@ -24,6 +24,10 @@ const App = () => {
 	};
 
 	const handleIfShowProduct = e => showProduct && handleCloseModal(e.target);
+
+	const handleCloseModal = target =>
+		!target.closest(".productModal") &&
+		!target.closest("header") &&
 		setShowProduct(false);
 
 	return (
