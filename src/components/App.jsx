@@ -31,7 +31,11 @@ const App = () => {
 		setShowProduct(false);
 
 	return (
-		<div className={`app ${darkTheme ? "dark" : "light"}`}>
+		<div
+			className={`app ${darkTheme ? "dark" : "light"} ${
+				showProduct ? "unScroll" : ""
+			}`}
+		>
 			<Modal
 				showProduct={showProduct}
 				onCloseModal={handleCloseModal}
