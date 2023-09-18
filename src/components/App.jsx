@@ -23,7 +23,7 @@ const App = () => {
 		// get product img
 	};
 
-	const handleCloseModal = e => {
+	const handleIfShowProduct = e => showProduct && handleCloseModal(e.target);
 		setShowProduct(false);
 
 	return (
