@@ -24,6 +24,12 @@
 	transition: transform 0.3s ease-in-out;
 }
 
+.modal .padding {
+	padding-bottom: 40%;
+	position: relative;
+	z-index: 1;
+}
+
 .productModal {
 	position: relative;
 	display: flex;
