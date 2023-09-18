@@ -1,4 +1,4 @@
-const Modal = ({ showProduct, onCloseModal }) => {
+const Modal = ({ showProduct, onIfShowProduct }) => {
 	return (
 		<div className={`modal ${showProduct ? "show" : ""}`}>
 			<ProductModal onCloseModal={onCloseModal} />
