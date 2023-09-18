@@ -12,8 +12,7 @@ const Modal = ({ showProduct, onIfShowProduct }) => {
 			: setIsModalScroll(false);
 	};
 	return (
-		<div className={`modal ${showProduct ? "show" : ""}`}>
-			<ProductModal onCloseModal={onCloseModal} />
+			<ProductModal />
 		</div>
 	);
 };
