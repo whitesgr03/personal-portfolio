@@ -41,7 +41,7 @@
 
 .padding .close {
 	position: absolute;
-	top: 0;
+	top: 100%;
 	right: 0;
 	width: var(--svg-icon-width);
 	height: var(--svg-icon-width);
