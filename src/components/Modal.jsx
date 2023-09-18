@@ -1,6 +1,8 @@
 import { useState } from "react";
 const Modal = ({ showProduct, onIfShowProduct }) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
+	const [disableModalScroll, setDisableModalScroll] = useState(false);
+
 	return (
 		<div className={`modal ${showProduct ? "show" : ""}`}>
 			<ProductModal onCloseModal={onCloseModal} />
