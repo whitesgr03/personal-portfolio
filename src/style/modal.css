@@ -117,6 +117,10 @@
 }
 
 @media (min-width: 481px) {
+	.modal .padding {
+		padding-bottom: 30%;
+	}
+}
 	.modal {
 		left: 10%;
 		right: 10%;
