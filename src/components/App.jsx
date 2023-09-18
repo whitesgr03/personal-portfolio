@@ -35,6 +35,7 @@ const App = () => {
 			className={`app ${darkTheme ? "dark" : "light"} ${
 				showProduct ? "unScroll" : ""
 			}`}
+			onPointerDown={handleIfShowProduct}
 		>
 			<Modal
 				showProduct={showProduct}
