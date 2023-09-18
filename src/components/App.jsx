@@ -20,18 +20,11 @@ const App = () => {
 
 	const handleShowModal = (e, product) => {
 		setShowProduct(true);
-		handleScrollBarHidden(e);
+		// get product img
 	};
 
 	const handleCloseModal = e => {
 		setShowProduct(false);
-		handleScrollBarHidden(e);
-	};
-
-	const handleScrollBarHidden = e =>
-		!showProduct && !e.target.closest(".modal")
-			? (document.body.style.overflow = "hidden")
-			: (document.body.style.overflow = "auto");
 
 	return (
 		<div className={`app ${darkTheme ? "dark" : "light"}`}>
