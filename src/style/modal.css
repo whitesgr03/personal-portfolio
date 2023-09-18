@@ -8,6 +8,13 @@
 	transform: translateY(100%);
 	z-index: 2;
 	overflow: scroll;
+	scrollbar-width: none;
+}
+
+.modal::-webkit-scrollbar {
+	display: none;
+}
+
 .modal.unScroll {
 	overflow: hidden;
 }
