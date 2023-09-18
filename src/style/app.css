@@ -9,6 +9,10 @@
 		"footer" auto;
 }
 
+.app.unScroll {
+	overflow: hidden;
+}
+
 .app main {
 	position: relative;
 }
