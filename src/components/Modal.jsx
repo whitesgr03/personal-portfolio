@@ -16,7 +16,7 @@ const Modal = ({ showProduct, onIfShowProduct }) => {
 			className={`modal ${showProduct ? "show" : ""} ${
 				isModalScroll ? "bgc" : ""
 			} ${disableModalScroll ? "unScroll" : ""}`}
-		>
+			onScroll={handleScroll}
 			<ProductModal />
 		</div>
 	);
