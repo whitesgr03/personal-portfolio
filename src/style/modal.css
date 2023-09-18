@@ -96,26 +96,21 @@
 }
 
 /* dark */
-.app.dark .modal {
-	background-color: var(--dark-scheme-bgc);
-	border-color: var(--dark-scheme-color) var(--dark-scheme-color) transparent
-		var(--dark-scheme-color);
+.app.dark .modal .productModal,
+.app.dark .modal.bgc {
 }
 
-.app.dark .productModal .close::after,
-.app.dark .productModal .close::before {
+.app.dark .padding .close::after,
+.app.dark .padding .close::before {
 	background-color: var(--dark-scheme-highlight-color);
 }
 
 /* light */
-.app.light .modal {
-	background-color: var(--light-scheme-bgc);
-	border-color: var(--light-scheme-color) var(--light-scheme-color)
-		transparent var(--light-scheme-color);
+.app.light .modal .productModal,
+.app.light .modal.bgc {
 }
-
-.app.light .productModal .close::after,
-.app.light .productModal .close::before {
+.app.light .padding .close::after,
+.app.light .padding .close::before {
 	background-color: var(--light-scheme-highlight-color);
 }
 
