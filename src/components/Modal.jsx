@@ -20,6 +20,8 @@ const Modal = ({ showProduct, onIfShowProduct }) => {
 		>
 			<div
 				className="padding"
+				onPointerOver={handlePointerOver}
+				onPointerOut={handlePointerOut}
 			>
 			</div>
 			<ProductModal />
