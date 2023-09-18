@@ -3,6 +3,9 @@ const Modal = ({ showProduct, onIfShowProduct }) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
 
+	const handlePointerOver = () => setDisableModalScroll(true);
+	const handlePointerOut = () => setDisableModalScroll(false);
+
 	return (
 		<div className={`modal ${showProduct ? "show" : ""}`}>
 			<ProductModal onCloseModal={onCloseModal} />
