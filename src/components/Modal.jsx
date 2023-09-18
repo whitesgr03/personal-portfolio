@@ -1,3 +1,4 @@
+import { useState } from "react";
 const Modal = ({ showProduct, onIfShowProduct }) => {
 	return (
 		<div className={`modal ${showProduct ? "show" : ""}`}>
