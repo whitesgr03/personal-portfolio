@@ -41,7 +41,7 @@
 
 .app main .backdrop.blur {
 	visibility: visible;
-	transition: visibility 0.3s ease-in-out;
+	opacity: 1;
 }
 
 /* dark mode */
