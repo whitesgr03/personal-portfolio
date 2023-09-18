@@ -17,6 +17,11 @@ const Modal = ({ showProduct, onIfShowProduct }) => {
 				isModalScroll ? "bgc" : ""
 			} ${disableModalScroll ? "unScroll" : ""}`}
 			onScroll={handleScroll}
+		>
+			<div
+				className="padding"
+			>
+			</div>
 			<ProductModal />
 		</div>
 	);
