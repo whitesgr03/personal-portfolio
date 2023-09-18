@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 const Modal = ({ showProduct, onIfShowProduct }) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
@@ -23,6 +24,11 @@ const Modal = ({ showProduct, onIfShowProduct }) => {
 				onPointerOver={handlePointerOver}
 				onPointerOut={handlePointerOut}
 			>
+				<button
+					type="button"
+					className="close"
+					onClick={onIfShowProduct}
+				></button>
 			</div>
 			<ProductModal />
 		</div>
@@ -31,7 +37,6 @@ const Modal = ({ showProduct, onIfShowProduct }) => {
 
 const ProductModal = () => (
 	<div className="productModal">
-		<button type="button" className="close" onClick={onCloseModal}></button>
 		<div className="describe">
 			<h3>Product 1 Product 1 Product 1</h3>
 			<div>
