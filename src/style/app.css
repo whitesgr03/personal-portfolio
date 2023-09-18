@@ -2,6 +2,7 @@
 	height: 100vh;
 	display: grid;
 	overflow: scroll;
+	position: relative;
 	grid-template:
 		"header" auto
 		"main" auto
