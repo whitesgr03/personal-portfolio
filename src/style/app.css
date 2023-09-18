@@ -1,5 +1,7 @@
 .app {
+	height: 100vh;
 	display: grid;
+	overflow: scroll;
 	grid-template:
 		"header" auto
 		"main" auto
