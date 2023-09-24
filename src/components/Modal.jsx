@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import PropTypes from "prop-types";
+
 const Modal = ({ showProduct, onCloseModal }) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
@@ -68,4 +70,10 @@ const ProductModal = () => (
 		</ul>
 	</div>
 );
-export default Modal;
+
+Modal.propTypes = {
+	showProduct: PropTypes.bool,
+	onIfShowProduct: PropTypes.func,
+};
+
+export { Modal as default, ProductModal };
