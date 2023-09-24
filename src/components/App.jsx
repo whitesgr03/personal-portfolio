@@ -16,10 +16,6 @@ const App = () => {
 	const aboutRef = useRef(null);
 	const productsRef = useRef(null);
 
-	const [darkTheme, setDarkTheme] = useState(
-		window.matchMedia("(prefers-color-scheme: dark)")
-	);
-
 	const handleChangeTheme = () => setDarkTheme(!darkTheme);
 
 	const handleShowModal = (e, product) => {
