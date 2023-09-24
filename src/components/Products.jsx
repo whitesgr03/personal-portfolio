@@ -17,7 +17,7 @@ const Products = forwardRef((props, ref) => {
 					<div className="wrap">
 						<button
 							type="button"
-							onClick={e => onShowProduct(e, "product1")}
+							aria-label="buttonForImage"
 						>
 						</button>
 					</div>
@@ -25,7 +25,7 @@ const Products = forwardRef((props, ref) => {
 						<h3>
 							<button
 								type="button"
-								onClick={e => onShowProduct(e, "product1")}
+								aria-label="buttonForTitle"
 							>
 								product1
 							</button>
@@ -61,7 +61,7 @@ const Products = forwardRef((props, ref) => {
 					<div className="wrap">
 						<button
 							type="button"
-							onClick={e => onShowProduct(e, "product1")}
+							aria-label="product2Img"
 						>
 						</button>
 					</div>
