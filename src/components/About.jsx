@@ -7,7 +7,13 @@ const About = forwardRef((props, ref) => {
 	return (
 		<article className="about" ref={ref}>
 			<div className="describe">
-				<img src="https://fakeimg.pl/150/" alt="Weiss Bai" />
+				<img
+					sizes="(max-width: 1920px) 100vw, 1920px"
+					srcSet={`https://fakeimg.pl/150x150/ 480w, https://fakeimg.pl/300x300/ 1372w`}
+					src="https://fakeimg.pl/300x300/"
+					alt="Weiss Bai"
+				/>
+
 				<p>
 					<span>Hey I'm</span>
 					<span>Weiss Bai</span>
