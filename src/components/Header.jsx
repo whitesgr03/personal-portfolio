@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Icon from "@mdi/react";
 import {
 	mdiWeatherSunny,
@@ -65,6 +67,13 @@ const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
 			</nav>
 		</header>
 	);
+};
+
+Header.propTypes = {
+	aboutRef: PropTypes.object,
+	productsRef: PropTypes.object,
+	darkTheme: PropTypes.bool,
+	onChangeTheme: PropTypes.func,
 };
 
 export default Header;
