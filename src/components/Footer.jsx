@@ -4,7 +4,11 @@ import { mdiGithub } from "@mdi/js";
 const Footer = () => {
 	return (
 		<footer>
-			<a href="#github" target="_blank">
+			<a
+				href="https://github.com/whitesgr03/personal-portfolio"
+				rel="noreferrer"
+				target="_blank"
+			>
 				<Icon path={mdiGithub} />
 			</a>
 			<p>&copy; 2023 - Designed & coded by Weiss Bai</p>
