@@ -1,11 +1,11 @@
+import PropTypes from "prop-types";
+
 import { forwardRef } from "react";
 
 import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
-const Products = forwardRef((props, ref) => {
-	const { onShowProduct } = props;
-
+const Products = forwardRef(({ onShowProduct }, ref) => {
 	return (
 		<div id="products" className="products" ref={ref}>
 			<h2>
@@ -123,5 +123,9 @@ const Products = forwardRef((props, ref) => {
 		</div>
 	);
 });
+
+Products.propTypes = {
+	onShowProduct: PropTypes.func,
+};
 
 export default Products;
