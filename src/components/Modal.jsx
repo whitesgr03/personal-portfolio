@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Modal = ({ showProduct, onIfShowProduct }) => {
+const Modal = ({ showProduct, onCloseModal }) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
 
