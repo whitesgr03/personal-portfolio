@@ -14,17 +14,20 @@ const Modal = ({ showProduct, onCloseModal }) => {
 			? setIsModalScroll(true)
 			: setIsModalScroll(false);
 	};
+
 	return (
 		<div
 			className={`modal ${showProduct ? "show" : ""} ${
 				isModalScroll ? "bgc" : ""
 			} ${disableModalScroll ? "unScroll" : ""}`}
 			onScroll={handleScroll}
+			data-testid="modal"
 		>
 			<div
 				className="padding"
 				onPointerOver={handlePointerOver}
 				onPointerOut={handlePointerOut}
+				data-testid="padding"
 			>
 				<button
 					type="button"

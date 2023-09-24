@@ -36,6 +36,7 @@ const App = () => {
 				showProduct ? "unScroll" : ""
 			}`}
 			onPointerDown={handleIfShowProduct}
+			data-testid="app"
 		>
 			<Modal
 				showProduct={showProduct}
