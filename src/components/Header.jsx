@@ -15,12 +15,13 @@ const Header = ({
 	darkTheme,
 	onChangeTheme,
 }) => {
+	const handlePointerDown = ref =>
+		ref.current.classList.contains("app")
+			? (ref.current.scrollTop = 0)
+			: ref.current.scrollIntoView({
 					behavior: "smooth",
 					block: "start",
-			  })
-			: window.scrollTo({ top: 0, behavior: "smooth" });
-	};
-
+			  });
 	return (
 		<header>
 			<nav>
