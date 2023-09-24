@@ -24,30 +24,31 @@ const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
 		<header>
 			<nav>
 				<h1>
-					<a href="#home" onPointerDown={handlePointerDown}>
+					<button
+						type="button"
+						onPointerDown={() => handlePointerDown(appRef)}
+					>
 						Bai
-					</a>
+					</button>
 				</h1>
 				<ul>
 					<li>
-						<a
-							href="#about"
-							onPointerDown={e => handlePointerDown(e, aboutRef)}
+						<button
+							type="button"
+							onPointerDown={() => handlePointerDown(aboutRef)}
 						>
 							<Icon path={mdiAccountOutline} />
 							<span>About</span>
-						</a>
+						</button>
 					</li>
 					<li>
-						<a
-							href="#products"
-							onPointerDown={e =>
-								handlePointerDown(e, productsRef)
-							}
+						<button
+							type="button"
+							onPointerDown={() => handlePointerDown(productsRef)}
 						>
 							<Icon path={mdiClipboardListOutline} />
 							<span>Projects</span>
-						</a>
+						</button>
 					</li>
 					<li>
 						<button
