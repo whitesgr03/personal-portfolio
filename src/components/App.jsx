@@ -39,7 +39,7 @@ const App = () => {
 		>
 			<Modal
 				showProduct={showProduct}
-				onIfShowProduct={handleIfShowProduct}
+				onCloseModal={handleIfShowProduct}
 			/>
 			<Header
 				aboutRef={aboutRef}
