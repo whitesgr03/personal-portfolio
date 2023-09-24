@@ -9,6 +9,10 @@ import Contact from "./Contact";
 
 const App = () => {
 	const [showProduct, setShowProduct] = useState(false);
+	const [darkTheme, setDarkTheme] = useState(
+		window.matchMedia("(prefers-color-scheme: dark)")?.matches ?? false
+	);
+
 	const aboutRef = useRef(null);
 	const productsRef = useRef(null);
 
