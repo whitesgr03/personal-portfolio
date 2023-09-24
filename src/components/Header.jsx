@@ -22,7 +22,7 @@ const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
 		<header>
 			<nav>
 				<h1>
-					<a href="#home" onClick={handleScroll}>
+					<a href="#home" onPointerDown={handlePointerDown}>
 						Bai
 					</a>
 				</h1>
@@ -30,7 +30,7 @@ const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
 					<li>
 						<a
 							href="#about"
-							onClick={e => handleScroll(e, aboutRef)}
+							onPointerDown={e => handlePointerDown(e, aboutRef)}
 						>
 							<Icon path={mdiAccountOutline} />
 							<span>About</span>
@@ -39,7 +39,9 @@ const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
 					<li>
 						<a
 							href="#products"
-							onClick={e => handleScroll(e, productsRef)}
+							onPointerDown={e =>
+								handlePointerDown(e, productsRef)
+							}
 						>
 							<Icon path={mdiClipboardListOutline} />
 							<span>Projects</span>
@@ -48,7 +50,7 @@ const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
 					<li>
 						<button
 							type="button"
-							aria-label="theme"
+							className={darkTheme ? "dark" : "light"}
 							onClick={onChangeTheme}
 						>
 							{darkTheme ? (
