@@ -8,12 +8,13 @@ import {
 	mdiAccountOutline,
 } from "@mdi/js";
 
-const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
-	const handlePointerDown = (e, ref) => {
-		e.preventDefault();
-
-		ref
-			? ref.current.scrollIntoView({
+const Header = ({
+	appRef,
+	aboutRef,
+	productsRef,
+	darkTheme,
+	onChangeTheme,
+}) => {
 					behavior: "smooth",
 					block: "start",
 			  })
@@ -73,6 +74,7 @@ const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
 Header.propTypes = {
 	aboutRef: PropTypes.object,
 	productsRef: PropTypes.object,
+	appRef: PropTypes.object,
 	darkTheme: PropTypes.bool,
 	onChangeTheme: PropTypes.func,
 };
