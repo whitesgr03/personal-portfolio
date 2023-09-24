@@ -27,7 +27,7 @@ const Modal = ({ showProduct, onCloseModal }) => {
 				<button
 					type="button"
 					className="close"
-					onClick={onIfShowProduct}
+					onPointerDown={onCloseModal}
 				></button>
 			</div>
 			<ProductModal />
