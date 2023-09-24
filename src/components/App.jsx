@@ -15,6 +15,7 @@ const App = () => {
 
 	const aboutRef = useRef(null);
 	const productsRef = useRef(null);
+	const appRef = useRef(null);
 
 	const handleChangeTheme = () => setDarkTheme(!darkTheme);
 
@@ -37,6 +38,7 @@ const App = () => {
 			}`}
 			onPointerDown={handleIfShowProduct}
 			data-testid="app"
+			ref={appRef}
 		>
 			<Modal
 				showProduct={showProduct}
@@ -45,6 +47,7 @@ const App = () => {
 			<Header
 				aboutRef={aboutRef}
 				productsRef={productsRef}
+				appRef={appRef}
 				darkTheme={darkTheme}
 				onChangeTheme={handleChangeTheme}
 			/>
