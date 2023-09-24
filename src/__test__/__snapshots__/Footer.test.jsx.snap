@@ -4,7 +4,8 @@ exports[`Renders Footer Component Should return Footer DOM 1`] = `
 <div>
   <footer>
     <a
-      href="#github"
+      href="https://github.com/whitesgr03/personal-portfolio"
+      rel="noreferrer"
       target="_blank"
     >
       <svg
