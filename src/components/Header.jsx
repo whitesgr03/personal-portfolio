@@ -7,7 +7,7 @@ import {
 } from "@mdi/js";
 
 const Header = ({ aboutRef, productsRef, darkTheme, onChangeTheme }) => {
-	const handleScroll = (e, ref) => {
+	const handlePointerDown = (e, ref) => {
 		e.preventDefault();
 
 		ref
