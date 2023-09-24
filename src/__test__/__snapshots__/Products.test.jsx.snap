@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Products Component should return Products DOM 1`] = `
+<div>
+  <div
+    class="products"
+    id="products"
+  >
+    <h2>
+      My 
+      <span>
+        Works
+      </span>
+    </h2>
+    <ul>
+      <li>
+        <div
+          class="wrap"
+        >
+          <button
+            aria-label="buttonForImage"
+            type="button"
+          >
+            <img
+              alt="product1"
+              sizes="(max-width: 1920px) 100vw, 1920px"
+              src="https://fakeimg.pl/1920x1280/195c86/"
+              srcset="https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w"
+            />
+          </button>
+        </div>
+        <article>
+          <h3>
+            <button
+              aria-label="buttonForTitle"
+              type="button"
+            >
+              product1
+            </button>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit adipisci tenetur, rerum impedit ex atque fugiat repudiandae ad ipsum temporibus totam! Repudiandae iure nisi quidem unde laudantium, totam nobis!
+          </p>
+          <div
+            class="link"
+          >
+            <a
+              href="#live"
+              target="_blank"
+            >
+              Live
+              <img
+                alt="live (opens in new tab)"
+                src="open-in-new-icon.png"
+              />
+            </a>
+            <a
+              href="#source"
+              target="_blank"
+            >
+              Source
+              <img
+                alt="github (opens in new tab)"
+                src="github-icon.png"
+              />
+            </a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <div
+          class="wrap"
+        >
+          <button
+            aria-label="product2Img"
+            type="button"
+          >
+            <img
+              alt="product2"
+              sizes="(max-width: 1920px) 100vw, 1920px"
+              src="https://fakeimg.pl/1920x1280/195c86/"
+              srcset="https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w"
+            />
+          </button>
+        </div>
+        <article>
+          <h3>
+            <button
+              type="button"
+            >
+              product2
+            </button>
+          </h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam optio quis dicta laborum reprehenderit iste asperiores doloremque labore molestiae delectus?
+          </p>
+          <div
+            class="link"
+          >
+            <a
+              href="#live"
+              target="_blank"
+            >
+              Live
+              <img
+                alt="live (opens in new tab)"
+                src="open-in-new-icon.png"
+              />
+            </a>
+            <a
+              href="#source"
+              target="_blank"
+            >
+              Source
+              <img
+                alt="github (opens in new tab)"
+                src="github-icon.png"
+              />
+            </a>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
