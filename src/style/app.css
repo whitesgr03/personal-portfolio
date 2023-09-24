@@ -3,6 +3,7 @@
 	display: grid;
 	overflow: scroll;
 	position: relative;
+	scroll-behavior: smooth;
 	grid-template:
 		"header" auto
 		"main" auto
