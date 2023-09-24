@@ -1,6 +1,7 @@
 {
 	"name": "personal-portfolio",
 	"version": "0.1.0",
+	"homepage": "https://whitesgr03.github.io/personal-portfolio/",
 	"private": true,
 	"dependencies": {
 		"@mdi/js": "^7.2.96",
