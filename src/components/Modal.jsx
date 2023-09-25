@@ -30,11 +30,7 @@ const Modal = forwardRef(({ showProduct }, ref) => {
 				onPointerOut={handlePointerOut}
 				data-testid="padding"
 			>
-				<button
-					type="button"
-					className="close"
-					onPointerDown={onCloseModal}
-				></button>
+				<button type="button" className="close"></button>
 			</div>
 			<ProductModal />
 		</div>
