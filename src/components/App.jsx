@@ -30,7 +30,10 @@ const App = () => {
 		!e.target.closest("header") &&
 		handleCloseModal();
 
+	const handleCloseModal = () => {
 		setShowProduct(false);
+		modalRef.current.scrollTop = 0;
+	};
 
 	return (
 		<div
