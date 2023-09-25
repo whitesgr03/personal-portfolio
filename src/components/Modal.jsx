@@ -2,7 +2,7 @@ import { useState, forwardRef } from "react";
 
 import PropTypes from "prop-types";
 
-const Modal = ({ showProduct, onCloseModal }) => {
+const Modal = forwardRef(({ showProduct }, ref) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
 
@@ -22,6 +22,7 @@ const Modal = ({ showProduct, onCloseModal }) => {
 			} ${disableModalScroll ? "unScroll" : ""}`}
 			onScroll={handleScroll}
 			data-testid="modal"
+			ref={ref}
 		>
 			<div
 				className="padding"
@@ -38,7 +39,7 @@ const Modal = ({ showProduct, onCloseModal }) => {
 			<ProductModal />
 		</div>
 	);
-};
+});
 
 const ProductModal = () => (
 	<div className="productModal">
@@ -76,7 +77,6 @@ const ProductModal = () => (
 
 Modal.propTypes = {
 	showProduct: PropTypes.bool,
-	onIfShowProduct: PropTypes.func,
 };
 
 export { Modal as default, ProductModal };
