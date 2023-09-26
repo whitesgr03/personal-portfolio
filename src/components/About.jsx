@@ -53,4 +53,8 @@ const About = forwardRef(({ showProduct }, ref) => {
 	);
 });
 
+About.propTypes = {
+	onShowProduct: PropTypes.func,
+};
+
 export default About;
