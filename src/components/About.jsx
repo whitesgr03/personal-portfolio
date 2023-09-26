@@ -41,6 +41,7 @@ const About = forwardRef(({ showProduct }, ref) => {
 						href="https://github.com/whitesgr03/personal-portfolio"
 						target="_blank"
 						rel="noreferrer"
+						tabIndex={showProduct ? "-1" : ""}
 					>
 						<Icon path={mdiGithub} />
 					</a>
