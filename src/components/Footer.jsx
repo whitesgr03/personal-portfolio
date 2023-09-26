@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
