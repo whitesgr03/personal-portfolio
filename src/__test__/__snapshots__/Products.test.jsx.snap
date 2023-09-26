@@ -14,12 +14,13 @@ exports[`Renders Products Component should return Products DOM 1`] = `
     </h2>
     <ul>
       <li>
-        <div
-          class="wrap"
+        <button
+          aria-label="buttonForImage"
+          class="test"
+          type="button"
         >
-          <button
-            aria-label="buttonForImage"
-            type="button"
+          <div
+            class="wrap"
           >
             <img
               alt="product1"
@@ -27,12 +28,11 @@ exports[`Renders Products Component should return Products DOM 1`] = `
               src="https://fakeimg.pl/1920x1280/195c86/"
               srcset="https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w"
             />
-          </button>
-        </div>
+          </div>
+        </button>
         <article>
           <h3>
             <button
-              aria-label="buttonForTitle"
               type="button"
             >
               product1
@@ -68,12 +68,12 @@ exports[`Renders Products Component should return Products DOM 1`] = `
         </article>
       </li>
       <li>
-        <div
-          class="wrap"
+        <button
+          aria-label="product2Img"
+          type="button"
         >
-          <button
-            aria-label="product2Img"
-            type="button"
+          <div
+            class="wrap"
           >
             <img
               alt="product2"
@@ -81,8 +81,8 @@ exports[`Renders Products Component should return Products DOM 1`] = `
               src="https://fakeimg.pl/1920x1280/195c86/"
               srcset="https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w"
             />
-          </button>
-        </div>
+          </div>
+        </button>
         <article>
           <h3>
             <button
