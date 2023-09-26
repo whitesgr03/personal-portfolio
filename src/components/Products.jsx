@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
-const Products = forwardRef(({ onShowProduct }, ref) => {
+const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 	return (
 		<div id="products" className="products" ref={ref}>
 			<h2>

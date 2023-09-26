@@ -14,6 +14,7 @@ const Header = ({
 	productsRef,
 	darkTheme,
 	onChangeTheme,
+	showProduct,
 }) => {
 	const handleClick = ref =>
 		ref.current.classList.contains("app")

@@ -1,7 +1,7 @@
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
-const Footer = () => {
+const Footer = ({ showProduct }) => {
 	return (
 		<footer>
 			<a
