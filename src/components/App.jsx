@@ -55,6 +55,7 @@ const App = () => {
 				appRef={appRef}
 				darkTheme={darkTheme}
 				onChangeTheme={handleChangeTheme}
+				showProduct={showProduct}
 			/>
 			<main>
 				<div className={`backdrop ${showProduct ? "blur" : ""}`}></div>
