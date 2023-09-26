@@ -35,6 +35,10 @@ const App = () => {
 		modalRef.current.scrollTop = 0;
 	};
 
+	useEffect(() => {
+		showProduct && modalRef.current.focus();
+	}, [showProduct]);
+
 	return (
 		<div
 			className={`app ${darkTheme ? "dark" : "light"} ${
