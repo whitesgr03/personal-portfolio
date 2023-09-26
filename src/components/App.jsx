@@ -44,7 +44,7 @@ const App = () => {
 			className={`app ${darkTheme ? "dark" : "light"} ${
 				showProduct ? "unScroll" : ""
 			}`}
-			onPointerDown={handleIfShowProduct}
+			onClick={handleIfShowProduct}
 			data-testid="app"
 			ref={appRef}
 		>
