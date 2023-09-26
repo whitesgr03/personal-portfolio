@@ -69,7 +69,7 @@ const App = () => {
 					<Contact />
 				</div>
 			</main>
-			<Footer />
+			<Footer showProduct={showProduct} />
 		</div>
 	);
 };
