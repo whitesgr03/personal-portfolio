@@ -14,20 +14,21 @@ const Products = forwardRef(({ onShowProduct }, ref) => {
 
 			<ul>
 				<li>
-					<div className="wrap">
-						<button
-							type="button"
-							aria-label="buttonForImage"
-							onPointerDown={e => onShowProduct(e, "product1")}
-						>
+					<button
+						type="button"
+						aria-label="buttonForImage"
+						className="test"
+					>
+						<div className="wrap">
 							<img
 								sizes="(max-width: 1920px) 100vw, 1920px"
 								srcSet={`https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w`}
 								src="https://fakeimg.pl/1920x1280/195c86/"
 								alt="product1"
 							/>
-						</button>
-					</div>
+						</div>
+					</button>
+
 					<article>
 						<h3>
 							<button
@@ -68,20 +69,21 @@ const Products = forwardRef(({ onShowProduct }, ref) => {
 					</article>
 				</li>
 				<li>
-					<div className="wrap">
-						<button
-							type="button"
+					<button
+						type="button"
+						aria-label="product2Img"
 							aria-label="product2Img"
-							onPointerDown={e => onShowProduct(e, "product2")}
-						>
+					>
+						<div className="wrap">
 							<img
 								sizes="(max-width: 1920px) 100vw, 1920px"
 								srcSet={`https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w`}
 								src="https://fakeimg.pl/1920x1280/195c86/"
 								alt="product2"
 							/>
-						</button>
-					</div>
+						</div>
+					</button>
+
 					<article>
 						<h3>
 							<button
