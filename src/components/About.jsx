@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { forwardRef } from "react";
 
 import Icon from "@mdi/react";
