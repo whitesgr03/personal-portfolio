@@ -20,15 +20,15 @@ describe("Renders Products Component", () => {
 			name: "buttonForImage",
 		});
 
-		await user.pointer({ keys: "[MouseLeft]", target: buttonForImage });
+		await user.click(buttonForImage);
 
 		expect(mockShowProduct).toBeCalledTimes(1);
 
 		const buttonForTitle = screen.getByRole("button", {
-			name: "buttonForTitle",
+			name: "product1",
 		});
 
-		await user.pointer({ keys: "[MouseLeft]", target: buttonForTitle });
+		await user.click(buttonForTitle);
 
 		expect(mockShowProduct).toBeCalledTimes(2);
 	});

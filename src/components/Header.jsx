@@ -15,7 +15,7 @@ const Header = ({
 	darkTheme,
 	onChangeTheme,
 }) => {
-	const handlePointerDown = ref =>
+	const handleClick = ref =>
 		ref.current.classList.contains("app")
 			? (ref.current.scrollTop = 0)
 			: ref.current.scrollIntoView({
@@ -28,7 +28,7 @@ const Header = ({
 				<h1>
 					<button
 						type="button"
-						onPointerDown={() => handlePointerDown(appRef)}
+						onClick={() => handleClick(appRef)}
 					>
 						Bai
 					</button>
@@ -37,7 +37,7 @@ const Header = ({
 					<li>
 						<button
 							type="button"
-							onPointerDown={() => handlePointerDown(aboutRef)}
+							onClick={() => handleClick(aboutRef)}
 						>
 							<Icon path={mdiAccountOutline} />
 							<span>About</span>
@@ -46,7 +46,7 @@ const Header = ({
 					<li>
 						<button
 							type="button"
-							onPointerDown={() => handlePointerDown(productsRef)}
+							onClick={() => handleClick(productsRef)}
 						>
 							<Icon path={mdiClipboardListOutline} />
 							<span>Projects</span>
