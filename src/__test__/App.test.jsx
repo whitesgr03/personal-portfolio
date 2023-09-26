@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 
-
 import App from "../components/App";
 
 Object.defineProperty(window, "matchMedia", {
@@ -42,13 +41,4 @@ describe("Renders App Component", () => {
 
 		expect(element).toHaveClass(scheme);
 	});
-	// fit("Should pointerDown checks if mode is enabled", async () => {
-	// 	const user = userEvent.setup();
-
-	// 	render(<App />);
-
-	// 	const element = screen.getByTestId("app");
-
-	// 	await user.pointer({ keys: "[MouseLeft]", target: element });
-	// });
 });
