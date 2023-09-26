@@ -23,6 +23,7 @@ const Modal = forwardRef(({ showProduct }, ref) => {
 			onScroll={handleScroll}
 			data-testid="modal"
 			ref={ref}
+			tabIndex="-1"
 		>
 			<div
 				className="padding"

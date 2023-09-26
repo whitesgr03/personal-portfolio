@@ -29,6 +29,7 @@ const Header = ({
 				<h1>
 					<button
 						type="button"
+						tabIndex={showProduct ? "-1" : ""}
 						onClick={() => handleClick(appRef)}
 					>
 						Bai
@@ -38,6 +39,7 @@ const Header = ({
 					<li>
 						<button
 							type="button"
+							tabIndex={showProduct ? "-1" : ""}
 							onClick={() => handleClick(aboutRef)}
 						>
 							<Icon path={mdiAccountOutline} />
@@ -47,6 +49,7 @@ const Header = ({
 					<li>
 						<button
 							type="button"
+							tabIndex={showProduct ? "-1" : ""}
 							onClick={() => handleClick(productsRef)}
 						>
 							<Icon path={mdiClipboardListOutline} />
@@ -56,6 +59,7 @@ const Header = ({
 					<li>
 						<button
 							type="button"
+							tabIndex={showProduct ? "-1" : ""}
 							className={darkTheme ? "dark" : "light"}
 							onClick={onChangeTheme}
 						>

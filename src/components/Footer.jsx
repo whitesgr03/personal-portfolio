@@ -8,6 +8,7 @@ const Footer = ({ showProduct }) => {
 				href="https://github.com/whitesgr03/personal-portfolio"
 				rel="noreferrer"
 				target="_blank"
+				tabIndex={showProduct ? "-1" : ""}
 			>
 				<Icon path={mdiGithub} />
 			</a>

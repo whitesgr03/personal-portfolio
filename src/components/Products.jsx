@@ -16,6 +16,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 				<li>
 					<button
 						type="button"
+						tabIndex={showProduct ? "-1" : ""}
 						aria-label="buttonForImage"
 						onClick={e => onShowProduct(e, "product1")}
 						className="test"
@@ -34,6 +35,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 						<h3>
 							<button
 								type="button"
+								tabIndex={showProduct ? "-1" : ""}
 								onClick={e => onShowProduct(e, "product1")}
 							>
 								product1
@@ -49,14 +51,22 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 						</p>
 
 						<div className="link">
-							<a href="#live" target="_blank">
+							<a
+								href="#live"
+								target="_blank"
+								tabIndex={showProduct ? "-1" : ""}
+							>
 								Live
 								<img
 									src={openNewTabIcon}
 									alt="live (opens in new tab)"
 								/>
 							</a>
-							<a href="#source" target="_blank">
+							<a
+								href="#source"
+								target="_blank"
+								tabIndex={showProduct ? "-1" : ""}
+							>
 								Source
 								<img
 									src={githubIcon}
@@ -69,6 +79,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 				<li>
 					<button
 						type="button"
+						tabIndex={showProduct ? "-1" : ""}
 						aria-label="product2Img"
 						onClick={e => onShowProduct(e, "product2")}
 					>
@@ -86,6 +97,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 						<h3>
 							<button
 								type="button"
+								tabIndex={showProduct ? "-1" : ""}
 								onClick={e => onShowProduct(e, "product2")}
 							>
 								product2
@@ -100,14 +112,22 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 						</p>
 
 						<div className="link">
-							<a href="#live" target="_blank">
+							<a
+								href="#live"
+								target="_blank"
+								tabIndex={showProduct ? "-1" : ""}
+							>
 								Live
 								<img
 									src={openNewTabIcon}
 									alt="live (opens in new tab)"
 								/>
 							</a>
-							<a href="#source" target="_blank">
+							<a
+								href="#source"
+								target="_blank"
+								tabIndex={showProduct ? "-1" : ""}
+							>
 								Source
 								<img
 									src={githubIcon}
