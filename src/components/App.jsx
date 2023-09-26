@@ -60,7 +60,7 @@ const App = () => {
 			<main>
 				<div className={`backdrop ${showProduct ? "blur" : ""}`}></div>
 				<div>
-					<About ref={aboutRef} />
+					<About ref={aboutRef} showProduct={showProduct} />
 					<Products
 						ref={productsRef}
 						onShowProduct={handleShowModal}
