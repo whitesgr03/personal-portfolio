@@ -19,4 +19,8 @@ const Footer = ({ showProduct }) => {
 	);
 };
 
+Footer.propTypes = {
+	onShowProduct: PropTypes.func,
+};
+
 export default Footer;
