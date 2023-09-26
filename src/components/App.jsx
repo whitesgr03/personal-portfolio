@@ -64,6 +64,7 @@ const App = () => {
 					<Products
 						ref={productsRef}
 						onShowProduct={handleShowModal}
+						showProduct={showProduct}
 					/>
 					<Contact />
 				</div>
