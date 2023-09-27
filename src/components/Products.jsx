@@ -36,6 +36,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 							<button
 								type="button"
 								tabIndex={showProduct ? "-1" : ""}
+								aria-label="buttonForTitle"
 								onClick={e => onShowProduct(e, "product1")}
 							>
 								product1
@@ -98,6 +99,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 							<button
 								type="button"
 								tabIndex={showProduct ? "-1" : ""}
+								aria-label="buttonForTitle"
 								onClick={e => onShowProduct(e, "product2")}
 							>
 								product2
