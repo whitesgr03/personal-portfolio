@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Footer from "../components/Footer";
 
@@ -7,5 +7,13 @@ describe("Renders Footer Component", () => {
 		const { container } = render(<Footer />);
 
 		expect(container).toMatchSnapshot();
+	});
+	it("Should disable link from being focused", () => {
+		const mokeShowProduct = true;
+
+		render(<Footer showProduct={mokeShowProduct} />);
+
+		const link = screen.getByRole("link");
+		expect(link).toHaveAttribute("tabIndex", "-1");
 	});
 });
