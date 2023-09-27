@@ -10,7 +10,7 @@ describe("Renders Products Component", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should display the modal with pointerDown", async () => {
+	it("should display the modal with click", async () => {
 		const mockShowProduct = jest.fn();
 		const user = userEvent.setup();
 
