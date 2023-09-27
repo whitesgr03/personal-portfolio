@@ -81,7 +81,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 					<button
 						type="button"
 						tabIndex={showProduct ? "-1" : ""}
-						aria-label="product2Img"
+						aria-label="buttonForImage"
 						onClick={e => onShowProduct(e, "product2")}
 					>
 						<div className="wrap">
