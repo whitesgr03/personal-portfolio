@@ -60,7 +60,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 								Live
 								<img
 									src={openNewTabIcon}
-									alt="live (opens in new tab)"
+									alt="(opens in new tab)"
 								/>
 							</a>
 							<a
@@ -71,7 +71,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 								Source
 								<img
 									src={githubIcon}
-									alt="github (opens in new tab)"
+									alt="(opens in new tab)"
 								/>
 							</a>
 						</div>
@@ -122,7 +122,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 								Live
 								<img
 									src={openNewTabIcon}
-									alt="live (opens in new tab)"
+									alt="(opens in new tab)"
 								/>
 							</a>
 							<a
@@ -133,7 +133,7 @@ const Products = forwardRef(({ onShowProduct, showProduct }, ref) => {
 								Source
 								<img
 									src={githubIcon}
-									alt="github (opens in new tab)"
+									alt="(opens in new tab)"
 								/>
 							</a>
 						</div>
