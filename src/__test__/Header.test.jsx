@@ -21,4 +21,21 @@ describe("Renders Header Component", () => {
 			"light"
 		);
 	});
+	it("Should disable buttons from being focused", () => {
+		const mokeShowProduct = true;
+
+		render(<Header showProduct={mokeShowProduct} />);
+
+		const titleButton = screen.getByRole("button", { name: "Bai" });
+		const aboutButton = screen.getByRole("button", { name: "About" });
+		const productsButton = screen.getByRole("button", {
+			name: "Projects",
+		});
+		const themeButton = screen.getByRole("button", { name: "Theme" });
+
+		expect(titleButton).toHaveAttribute("tabIndex", "-1");
+		expect(aboutButton).toHaveAttribute("tabIndex", "-1");
+		expect(productsButton).toHaveAttribute("tabIndex", "-1");
+		expect(themeButton).toHaveAttribute("tabIndex", "-1");
+	});
 });
