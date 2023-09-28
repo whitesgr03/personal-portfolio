@@ -172,6 +172,7 @@ const App = () => {
 					<Products
 						ref={productsRef}
 						onShowProduct={handleShowModal}
+						allProducts={allProducts}
 						showModal={showModal}
 					/>
 					<Contact />
