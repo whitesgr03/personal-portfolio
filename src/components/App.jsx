@@ -135,6 +135,18 @@ const App = () => {
 		product && modalRef.current.focus();
 	}, [product]);
 
+	useEffect(() => {
+		(async () => {
+			const fakeResult = await getProducts();
+
+			if (!fakeResult) {
+				return;
+			}
+
+			fakeResult && setAllProducts(fakeResult);
+		})();
+	}, []);
+
 	return (
 		<div
 			className={`app ${darkTheme ? "dark" : "light"} ${
