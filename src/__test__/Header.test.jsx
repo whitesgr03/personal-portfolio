@@ -21,7 +21,7 @@ describe("Renders Header Component", () => {
 			"light"
 		);
 	});
-	it("Should disable buttons from being focused", () => {
+	it("Should disable focus button", () => {
 		const mokeShowProduct = true;
 
 		render(<Header showProduct={mokeShowProduct} />);
