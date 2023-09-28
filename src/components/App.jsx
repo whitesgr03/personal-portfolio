@@ -47,11 +47,6 @@ const App = () => {
 	useEffect(() => {
 		(async () => {
 			const fakeResult = await getProducts();
-
-			if (!fakeResult) {
-				return;
-			}
-
 			fakeResult && setAllProducts(fakeResult);
 		})();
 	}, []);
