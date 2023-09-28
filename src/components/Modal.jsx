@@ -2,9 +2,7 @@ import { useState, forwardRef } from "react";
 
 import PropTypes from "prop-types";
 
-const Modal = forwardRef(({ showModal,
-	product
-}, ref) => {
+const Modal = forwardRef(({ showModal, product }, ref) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
 
