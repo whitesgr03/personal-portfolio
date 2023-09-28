@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import About from "../components/About";
 
 describe("Renders Footer Component", () => {
-	it("Should return Footer DOM", () => {
+	it("Should able link from being focused", () => {
 		const mokeShowProduct = false;
 
 		render(<About showProduct={mokeShowProduct} />);
