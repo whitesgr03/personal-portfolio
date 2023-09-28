@@ -8,11 +8,11 @@ import Modal from "./Modal";
 import Contact from "./Contact";
 
 const App = () => {
-	const [showProduct, setShowProduct] = useState(false);
 	const [darkTheme, setDarkTheme] = useState(
 		window.matchMedia("(prefers-color-scheme: dark)")?.matches ?? false
 	);
 	const [allProducts, setAllProducts] = useState([]);
+	const [product, setProduct] = useState(null);
 	const appRef = useRef(null);
 	const aboutRef = useRef(null);
 	const productsRef = useRef(null);
