@@ -152,7 +152,12 @@ describe("Renders Products Component", () => {
 
 		const user = userEvent.setup();
 
-		render(<Products onShowProduct={mockShowProduct} />);
+		render(
+			<Products
+				onShowProduct={mockShowProduct}
+				allProducts={mockAllProducts}
+			/>
+		);
 
 		const buttonForImage = screen.getByRole("button", {
 			name: "buttonForImage",
