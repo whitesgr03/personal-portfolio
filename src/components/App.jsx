@@ -34,7 +34,7 @@ const App = () => {
 		handleCloseModal();
 
 	const handleCloseModal = () => {
-		setShowProduct(false);
+		setShowModal(false);
 		modalRef.current.scrollTop = 0;
 	};
 
