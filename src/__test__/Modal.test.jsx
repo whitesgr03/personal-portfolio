@@ -22,8 +22,7 @@ describe("Renders Modal Component", () => {
 });
 
 describe("Renders ProductModal Component", () => {
-	it("Should return Footer DOM", () => {
-		const { container } = render(<ProductModal />);
+	it("Should return ProductModal DOM", () => {
 
 		expect(container).toMatchSnapshot();
 	});
