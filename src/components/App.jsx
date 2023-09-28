@@ -150,34 +150,35 @@ const App = () => {
 	return (
 		<div
 			className={`app ${darkTheme ? "dark" : "light"} ${
-				showProduct ? "unScroll" : ""
+				showModal ? "unScroll" : ""
 			}`}
 			onClick={handleIfShowProduct}
 			data-testid="app"
 			ref={appRef}
 		>
-			<Modal showProduct={showProduct} ref={modalRef} />
+			<Modal showModal={showModal}
+				ref={modalRef} />
 			<Header
 				aboutRef={aboutRef}
 				productsRef={productsRef}
 				appRef={appRef}
 				darkTheme={darkTheme}
 				onChangeTheme={handleChangeTheme}
-				showProduct={showProduct}
+				showModal={showModal}
 			/>
 			<main>
-				<div className={`backdrop ${showProduct ? "blur" : ""}`}></div>
+				<div className={`backdrop ${showModal ? "blur" : ""}`}></div>
 				<div>
-					<About ref={aboutRef} showProduct={showProduct} />
+					<About ref={aboutRef} showModal={showModal} />
 					<Products
 						ref={productsRef}
 						onShowProduct={handleShowModal}
-						showProduct={showProduct}
+						showModal={showModal}
 					/>
 					<Contact />
 				</div>
 			</main>
-			<Footer showProduct={showProduct} />
+			<Footer showModal={showModal} />
 		</div>
 	);
 };
