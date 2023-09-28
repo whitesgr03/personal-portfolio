@@ -39,8 +39,8 @@ const App = () => {
 	};
 
 	useEffect(() => {
-		showProduct && modalRef.current.focus();
-	}, [showProduct]);
+		product && modalRef.current.focus();
+	}, [product]);
 
 	return (
 		<div
