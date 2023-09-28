@@ -6,9 +6,7 @@ import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
 const Products = forwardRef(
-	({ onShowProduct,
-		allProducts,
-		showModal }, ref) => {
+	({ onShowProduct, allProducts, showModal }, ref) => {
 		return (
 			<div id="products" className="products" ref={ref}>
 				<h2>
