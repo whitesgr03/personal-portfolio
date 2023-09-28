@@ -17,25 +17,28 @@ exports[`Renders Products Component should return Products DOM 1`] = `
         <button
           aria-label="buttonForImage"
           class="test"
+          tabindex=""
           type="button"
         >
           <div
             class="wrap"
           >
             <img
-              alt="product1"
+              alt="project1"
               sizes="(max-width: 1920px) 100vw, 1920px"
-              src="https://fakeimg.pl/1920x1280/195c86/"
-              srcset="https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w"
+              src="https://fakeimg.pl/1820x1213/195c86/"
+              srcset="https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w, https://fakeimg.pl/1372x915/195c86/ 1372w, https://fakeimg.pl/1820x1213/195c86/ 1820w"
             />
           </div>
         </button>
         <article>
           <h3>
             <button
+              aria-label="buttonForTitle"
+              tabindex=""
               type="button"
             >
-              product1
+              project1
             </button>
           </h3>
           <p>
@@ -46,21 +49,23 @@ exports[`Renders Products Component should return Products DOM 1`] = `
           >
             <a
               href="#live"
+              tabindex=""
               target="_blank"
             >
               Live
               <img
-                alt="live (opens in new tab)"
+                alt="(opens in new tab)"
                 src="open-in-new-icon.png"
               />
             </a>
             <a
               href="#source"
+              tabindex=""
               target="_blank"
             >
               Source
               <img
-                alt="github (opens in new tab)"
+                alt="(opens in new tab)"
                 src="github-icon.png"
               />
             </a>
@@ -69,51 +74,57 @@ exports[`Renders Products Component should return Products DOM 1`] = `
       </li>
       <li>
         <button
-          aria-label="product2Img"
+          aria-label="buttonForImage"
+          class="test"
+          tabindex=""
           type="button"
         >
           <div
             class="wrap"
           >
             <img
-              alt="product2"
+              alt="project2"
               sizes="(max-width: 1920px) 100vw, 1920px"
-              src="https://fakeimg.pl/1920x1280/195c86/"
-              srcset="https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w"
+              src="https://fakeimg.pl/1820x1213/195c86/"
+              srcset="https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w, https://fakeimg.pl/1372x915/195c86/ 1372w, https://fakeimg.pl/1820x1213/195c86/ 1820w"
             />
           </div>
         </button>
         <article>
           <h3>
             <button
+              aria-label="buttonForTitle"
+              tabindex=""
               type="button"
             >
-              product2
+              project2
             </button>
           </h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam optio quis dicta laborum reprehenderit iste asperiores doloremque labore molestiae delectus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit adipisci tenetur, rerum impedit ex atque fugiat repudiandae ad ipsum temporibus totam! Repudiandae iure nisi quidem unde laudantium, totam nobis!
           </p>
           <div
             class="link"
           >
             <a
               href="#live"
+              tabindex=""
               target="_blank"
             >
               Live
               <img
-                alt="live (opens in new tab)"
+                alt="(opens in new tab)"
                 src="open-in-new-icon.png"
               />
             </a>
             <a
               href="#source"
+              tabindex=""
               target="_blank"
             >
               Source
               <img
-                alt="github (opens in new tab)"
+                alt="(opens in new tab)"
                 src="github-icon.png"
               />
             </a>
