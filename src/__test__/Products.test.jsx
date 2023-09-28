@@ -159,7 +159,7 @@ describe("Renders Products Component", () => {
 			/>
 		);
 
-		const buttonForImage = screen.getByRole("button", {
+		const [firstButtonForImage] = screen.getAllByRole("button", {
 			name: "buttonForImage",
 		});
 
