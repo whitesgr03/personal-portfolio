@@ -3,6 +3,7 @@ import { useState, forwardRef } from "react";
 import PropTypes from "prop-types";
 
 const Modal = forwardRef(({ showModal,
+	product
 }, ref) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
@@ -34,48 +35,49 @@ const Modal = forwardRef(({ showModal,
 			>
 				<button type="button" className="close"></button>
 			</div>
-			<ProductModal />
+			{product && <ProductModal product={product} />}
 		</div>
 	);
 });
 
-const ProductModal = () => (
-	<div className="productModal">
-		<div className="describe">
-			<h3>Product 1 Product 1 Product 1</h3>
-			<div>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi,
-				voluptate.Lorem ipsum dolor sit amet consectetur, adipisicing
-				elit. Modi, voluptate.Lorem ipsum dolor sit amet consectetur,
-				adipisicing elit. Modi, voluptate.Lorem ipsum dolor sit amet
-				consectetur, adipisicing elit. Modi, voluptate.Lorem ipsum dolor
-				sit amet consectetur, adipisicing elit. Modi, voluptate.
+const ProductModal = ({ product }) => {
+	return (
+		<div className="productModal">
+			<div className="describe">
+				<h3>{product.name}</h3>
+				<div>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+					Modi, voluptate.Lorem ipsum dolor sit amet consectetur,
+					adipisicing elit. Modi, voluptate.Lorem ipsum dolor sit amet
+					consectetur, adipisicing elit. Modi, voluptate.Lorem ipsum
+					dolor sit amet consectetur, adipisicing elit. Modi,
+					voluptate.Lorem ipsum dolor sit amet consectetur,
+					adipisicing elit. Modi, voluptate.
+				</div>
 			</div>
+			<ul>
+				{product.image.pictures.map(picture => (
+					<li key={picture.id}>
+						<img
+							sizes="(max-width: 1920px) 100vw, 1920px"
+							srcSet={`${picture.url.phone} 480w, ${picture.url.table} 1004w, ${picture.url.laptop} 1372w, ${picture.url.desktop} 1820w`}
+							src={picture.url.desktop}
+							alt={product.name}
+						/>
+					</li>
+				))}
+			</ul>
 		</div>
-		<ul>
-			<li>
-				<img
-					sizes="(max-width: 1920px) 100vw, 1920px"
-					srcSet={`https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w`}
-					src="https://fakeimg.pl/1920x1280/195c86/"
-					alt="product1"
-				/>
-			</li>
-			<li>
-				<img
-					sizes="(max-width: 1920px) 100vw, 1920px"
-					srcSet={`https://fakeimg.pl/480x320/195c86/ 480w, https://fakeimg.pl/1004x669/195c86/ 1004w,https://fakeimg.pl/1372x915/195c86/ 1372w,https://fakeimg.pl/1820x1213/195c86/ 1820w`}
-					src="https://fakeimg.pl/1920x1280/195c86/"
-					alt="product1"
-				/>
-			</li>
-		</ul>
-	</div>
-);
+	);
+};
 
 Modal.propTypes = {
 	showModal: PropTypes.bool,
+	product: PropTypes.object,
 };
+
+ProductModal.propTypes = {
+	product: PropTypes.object,
 };
 
 export { Modal as default, ProductModal };
