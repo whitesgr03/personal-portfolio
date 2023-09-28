@@ -3,12 +3,11 @@ import { render, screen } from "@testing-library/react";
 import Footer from "../components/Footer";
 
 describe("Renders Footer Component", () => {
-	it("Should return Footer DOM", () => {
-		const { container } = render(<Footer />);
+	it("Should be able to focus link", () => {
 
 		expect(container).toMatchSnapshot();
 	});
-	it("Should disable link from being focused", () => {
+	it("Should disable focus link", () => {
 		const mokeShowProduct = true;
 
 		render(<Footer showProduct={mokeShowProduct} />);
