@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
-const Footer = ({ showProduct }) => {
+const Footer = ({ showModal }) => {
 	return (
 		<footer>
 			<a
 				href="https://github.com/whitesgr03/personal-portfolio"
 				rel="noreferrer"
 				target="_blank"
-				tabIndex={showProduct ? "-1" : ""}
+				tabIndex={showModal ? "-1" : ""}
 			>
 				<Icon path={mdiGithub} />
 			</a>
@@ -20,7 +20,7 @@ const Footer = ({ showProduct }) => {
 };
 
 Footer.propTypes = {
-	onShowProduct: PropTypes.func,
+	product: PropTypes.bool,
 };
 
 export default Footer;
