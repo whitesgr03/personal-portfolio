@@ -15,28 +15,26 @@ Object.defineProperty(window, "matchMedia", {
 });
 
 describe("Renders App Component", () => {
-	it("Should return App DOM with dark scheme", () => {
+	it("Should return App DOM with dark scheme", async () => {
 		window.matchMedia = jest.fn(() => ({
 			matches: true,
 		}));
 
 		render(<App />);
 
-		const element = screen.getByTestId("app");
-
+		const element = await screen.findByTestId("app");
 		const scheme = "dark";
 
 		expect(element).toHaveClass(scheme);
 	});
-	it("Should return App DOM with light scheme", () => {
+	it("Should return App DOM with light scheme", async () => {
 		window.matchMedia = jest.fn(() => ({
 			matches: false,
 		}));
 
 		render(<App />);
 
-		const element = screen.getByTestId("app");
-
+		const element = await screen.findByTestId("app");
 		const scheme = "light";
 
 		expect(element).toHaveClass(scheme);
