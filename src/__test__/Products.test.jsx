@@ -223,6 +223,9 @@ describe("Renders Products Component", () => {
 			},
 		];
 
+		render(
+			<Products allProducts={mockAllProducts} showModal={mokeShowModal} />
+		);
 
 		const [firstButtonForImage] = screen.getAllByRole("button", {
 			name: "buttonForImage",
