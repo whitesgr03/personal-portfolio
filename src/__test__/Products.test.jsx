@@ -176,8 +176,7 @@ describe("Renders Products Component", () => {
 		expect(mockShowProduct).toBeCalledTimes(2);
 	});
 	it("Should disable focus button", () => {
-
-		render(<Products showProduct={mokeShowProduct} />);
+		const mokeShowModal = true;
 
 		const [firstButtonForImage] = screen.getAllByRole("button", {
 			name: "buttonForImage",
