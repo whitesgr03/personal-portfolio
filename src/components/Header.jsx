@@ -23,6 +23,7 @@ const Header = ({
 					behavior: "smooth",
 					block: "start",
 			  });
+
 	return (
 		<header>
 			<nav>
