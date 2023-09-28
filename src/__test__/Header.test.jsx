@@ -22,9 +22,9 @@ describe("Renders Header Component", () => {
 		);
 	});
 	it("Should disable focus button", () => {
-		const mokeShowProduct = true;
+		const mokeShowModal = true;
 
-		render(<Header showProduct={mokeShowProduct} />);
+		render(<Header showModal={mokeShowModal} />);
 
 		const titleButton = screen.getByRole("button", { name: "Bai" });
 		const aboutButton = screen.getByRole("button", { name: "About" });
