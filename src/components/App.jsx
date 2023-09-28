@@ -13,6 +13,8 @@ const App = () => {
 	);
 	const [allProducts, setAllProducts] = useState([]);
 	const [product, setProduct] = useState(null);
+	const [showModal, setShowModal] = useState(false);
+
 	const appRef = useRef(null);
 	const aboutRef = useRef(null);
 	const productsRef = useRef(null);
