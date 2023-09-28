@@ -163,15 +163,15 @@ describe("Renders Products Component", () => {
 			name: "buttonForImage",
 		});
 
-		await user.click(buttonForImage);
+		await user.click(firstButtonForImage);
 
 		expect(mockShowProduct).toBeCalledTimes(1);
 
-		const buttonForTitle = screen.getByRole("button", {
-			name: "product1",
+		const [firstButtonForTitle] = screen.getAllByRole("button", {
+			name: "buttonForTitle",
 		});
 
-		await user.click(buttonForTitle);
+		await user.click(firstButtonForTitle);
 
 		expect(mockShowProduct).toBeCalledTimes(2);
 	});
