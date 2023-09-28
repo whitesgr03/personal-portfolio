@@ -12,6 +12,7 @@ const App = () => {
 	const [darkTheme, setDarkTheme] = useState(
 		window.matchMedia("(prefers-color-scheme: dark)")?.matches ?? false
 	);
+	const [allProducts, setAllProducts] = useState([]);
 	const appRef = useRef(null);
 	const aboutRef = useRef(null);
 	const productsRef = useRef(null);
