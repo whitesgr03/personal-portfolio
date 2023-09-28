@@ -14,7 +14,7 @@ const Header = ({
 	productsRef,
 	darkTheme,
 	onChangeTheme,
-	showProduct,
+	showModal,
 }) => {
 	const handleClick = ref =>
 		ref.current.classList.contains("app")
@@ -29,7 +29,7 @@ const Header = ({
 				<h1>
 					<button
 						type="button"
-						tabIndex={showProduct ? "-1" : ""}
+						tabIndex={showModal ? "-1" : ""}
 						onClick={() => handleClick(appRef)}
 					>
 						Bai
@@ -39,7 +39,7 @@ const Header = ({
 					<li>
 						<button
 							type="button"
-							tabIndex={showProduct ? "-1" : ""}
+							tabIndex={showModal ? "-1" : ""}
 							onClick={() => handleClick(aboutRef)}
 						>
 							<Icon path={mdiAccountOutline} />
@@ -49,7 +49,7 @@ const Header = ({
 					<li>
 						<button
 							type="button"
-							tabIndex={showProduct ? "-1" : ""}
+							tabIndex={showModal ? "-1" : ""}
 							onClick={() => handleClick(productsRef)}
 						>
 							<Icon path={mdiClipboardListOutline} />
@@ -59,7 +59,7 @@ const Header = ({
 					<li>
 						<button
 							type="button"
-							tabIndex={showProduct ? "-1" : ""}
+							tabIndex={showModal ? "-1" : ""}
 							className={darkTheme ? "dark" : "light"}
 							onClick={onChangeTheme}
 						>
@@ -83,6 +83,7 @@ Header.propTypes = {
 	appRef: PropTypes.object,
 	darkTheme: PropTypes.bool,
 	onChangeTheme: PropTypes.func,
+	showModal: PropTypes.bool,
 };
 
 export default Header;
