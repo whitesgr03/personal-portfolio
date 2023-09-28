@@ -6,6 +6,7 @@ exports[`Renders Footer Component Should return Footer DOM 1`] = `
     <a
       href="https://github.com/whitesgr03/personal-portfolio"
       rel="noreferrer"
+      tabindex=""
       target="_blank"
     >
       <svg
