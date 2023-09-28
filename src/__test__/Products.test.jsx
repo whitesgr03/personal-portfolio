@@ -94,6 +94,9 @@ describe("Renders Products Component", () => {
 			},
 		];
 
+		const { container } = render(
+			<Products allProducts={mockAllProducts} />
+		);
 
 		expect(container).toMatchSnapshot();
 	});
