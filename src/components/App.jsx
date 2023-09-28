@@ -22,9 +22,9 @@ const App = () => {
 
 	const handleChangeTheme = () => setDarkTheme(!darkTheme);
 
-	const handleShowModal = (e, product) => {
-		setShowProduct(true);
-		// get product img
+	const handleShowModal = product => {
+		setProduct(product);
+		setShowModal(true);
 	};
 
 	const handleIfShowProduct = e =>
