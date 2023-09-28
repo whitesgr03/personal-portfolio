@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
-const About = forwardRef(({ showProduct }, ref) => {
+const About = forwardRef(({ showModal }, ref) => {
 	return (
 		<article className="about" ref={ref}>
 			<div className="describe">
@@ -43,7 +43,7 @@ const About = forwardRef(({ showProduct }, ref) => {
 						href="https://github.com/whitesgr03/personal-portfolio"
 						target="_blank"
 						rel="noreferrer"
-						tabIndex={showProduct ? "-1" : ""}
+						tabIndex={showModal ? "-1" : ""}
 					>
 						<Icon path={mdiGithub} />
 					</a>
@@ -54,7 +54,7 @@ const About = forwardRef(({ showProduct }, ref) => {
 });
 
 About.propTypes = {
-	onShowProduct: PropTypes.func,
+	showModal: PropTypes.bool,
 };
 
 export default About;
