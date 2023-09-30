@@ -17,6 +17,12 @@ const Modal = forwardRef(({ onCloseModal, showModal, product }, ref) => {
 			: setIsModalScroll(false);
 	};
 
+	const handleTouchStart = e => {
+		e.target.closest(".productModal") &&
+			setTouchPosition(e.changedTouches[0].clientY);
+	};
+
+
 	return (
 		<div
 			className={`modal ${showModal ? "show" : ""} ${
