@@ -12,7 +12,13 @@ const Modal = forwardRef(({ onCloseModal, showModal, product }, ref) => {
 	const handlePointerOut = () => setDisableModalScroll(false);
 
 	const handleScroll = e => {
-		e.target.scrollTop > e.target.firstElementChild.clientHeight
+		e.target.clientHeight +
+			e.target.scrollTop +
+			e.target.firstElementChild.clientHeight -
+			e.target.nextElementSibling.clientHeight >=
+		e.target.scrollHeight -
+			e.target.firstElementChild.clientHeight -
+			e.target.nextElementSibling.clientHeight
 			? setIsModalScroll(true)
 			: setIsModalScroll(false);
 	};
