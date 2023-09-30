@@ -99,9 +99,22 @@
 }
 
 /* dark */
+
+.app.dark .modal .productModal {
+	border-top: 1px solid var(--dark-scheme-color);
+}
+
+.app.dark .modal,
+.app.dark .modal.bgc .productModal {
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+}
+
 .app.dark .modal .productModal,
 .app.dark .modal.bgc {
 	background-color: var(--light-scheme-color);
+	border-right: 1px solid var(--dark-scheme-color);
+	border-left: 1px solid var(--dark-scheme-color);
 }
 
 .app.dark .padding .close::after,
