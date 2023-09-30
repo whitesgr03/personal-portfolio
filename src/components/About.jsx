@@ -13,9 +13,8 @@ const About = forwardRef(({ showModal }, ref) => {
 					sizes="(max-width: 1920px) 100vw, 1920px"
 					srcSet={`https://fakeimg.pl/150x150/ 480w, https://fakeimg.pl/300x300/ 1372w`}
 					src="https://fakeimg.pl/300x300/"
-					alt="Weiss Bai"
+					alt="profile"
 				/>
-
 				<p>
 					<span>Hey I'm</span>
 					<span>Weiss Bai</span>
