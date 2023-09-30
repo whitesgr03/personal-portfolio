@@ -123,6 +123,24 @@
 }
 
 /* light */
+
+.app.light .modal .productModal {
+	border-top: 1px solid var(--light-scheme-color);
+}
+
+.app.light .modal,
+.app.light .modal.bgc .productModal {
+	border-right: 2px solid transparent;
+	border-left: 2px solid transparent;
+}
+
+.app.light .modal .productModal,
+.app.light .modal.bgc {
+	background-color: var(--light-scheme-color);
+	border-right: 1px solid var(--light-scheme-color);
+	border-left: 1px solid var(--light-scheme-color);
+}
+
 .app.light .modal .productModal,
 .app.light .modal.bgc {
 	background-color: var(--dark-scheme-color);
