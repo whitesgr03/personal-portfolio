@@ -14,7 +14,7 @@ const Modal = forwardRef(({ onCloseModal, showModal, product }, ref) => {
 	const handleScroll = e => {
 		e.target.clientHeight +
 			e.target.scrollTop +
-			e.target.firstElementChild.clientHeight -
+			e.target.firstElementChild.clientHeight +
 			e.target.nextElementSibling.clientHeight >=
 		e.target.scrollHeight -
 			e.target.firstElementChild.clientHeight -
