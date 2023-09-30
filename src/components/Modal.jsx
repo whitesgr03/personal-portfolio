@@ -22,6 +22,11 @@ const Modal = forwardRef(({ onCloseModal, showModal, product }, ref) => {
 			setTouchPosition(e.changedTouches[0].clientY);
 	};
 
+	const handleTouchEnd = e => {
+		e.target.closest(".modal").scrollTop <= 0 &&
+			e.changedTouches[0].clientY - touchPosition > 150 &&
+			onCloseModal();
+	};
 
 	return (
 		<div
