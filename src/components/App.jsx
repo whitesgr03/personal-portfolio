@@ -60,7 +60,12 @@ const App = () => {
 			data-testid="app"
 			ref={appRef}
 		>
-			<Modal showModal={showModal} product={product} ref={modalRef} />
+			<Modal
+				onCloseModal={handleCloseModal}
+				showModal={showModal}
+				product={product}
+				ref={modalRef}
+			/>
 			<Header
 				aboutRef={aboutRef}
 				productsRef={productsRef}
