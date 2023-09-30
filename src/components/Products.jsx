@@ -59,22 +59,14 @@ const Products = forwardRef(
 										target="_blank"
 										tabIndex={showModal ? "-1" : ""}
 									>
-										Live
-										<img
-											src={openNewTabIcon}
-											alt="(opens in new tab)"
-										/>
+										<img src={openNewTabIcon} alt="" />
 									</a>
 									<a
 										href="#source"
 										target="_blank"
 										tabIndex={showModal ? "-1" : ""}
 									>
-										Source
-										<img
-											src={githubIcon}
-											alt="(opens in new tab)"
-										/>
+										<img src={githubIcon} alt="" />
 									</a>
 								</div>
 							</article>
