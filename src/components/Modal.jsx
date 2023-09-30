@@ -6,6 +6,8 @@ const Modal = forwardRef(({ onCloseModal, showModal, product }, ref) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
 
+	const [touchPosition, setTouchPosition] = useState(null);
+
 	const handlePointerOver = () => setDisableModalScroll(true);
 	const handlePointerOut = () => setDisableModalScroll(false);
 
