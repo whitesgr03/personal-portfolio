@@ -37,6 +37,8 @@ const Modal = forwardRef(({ onCloseModal, showModal, product }, ref) => {
 			data-testid="modal"
 			ref={ref}
 			tabIndex="-1"
+			onTouchStart={handleTouchStart}
+			onTouchEnd={handleTouchEnd}
 		>
 			<div
 				className="padding"
