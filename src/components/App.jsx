@@ -134,34 +134,12 @@ const App = () => {
 			data-testid="app"
 			ref={appRef}
 		>
-			<Modal
-				onCloseModal={handleCloseModal}
-				showModal={showModal}
-				product={product}
-				ref={modalRef}
-			/>
-			<Header
-				aboutRef={aboutRef}
-				productsRef={productsRef}
-				appRef={appRef}
-				darkTheme={darkTheme}
-				onChangeTheme={handleChangeTheme}
-				showModal={showModal}
-			/>
-			<main>
-				<div className={`backdrop ${showModal ? "blur" : ""}`}></div>
-				<div>
-					<About ref={aboutRef} showModal={showModal} />
-					<Products
-						ref={productsRef}
-						onShowProduct={handleShowModal}
-						allProducts={allProducts}
-						showModal={showModal}
-					/>
-					<Contact />
-				</div>
-			</main>
-			<Footer showModal={showModal} />
+							<About
+								ref={aboutRef}
+								showModal={showModal}
+								avatar={avatar}
+								imageSize={imageSize}
+							/>
 		</div>
 	);
 };
