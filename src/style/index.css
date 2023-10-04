@@ -66,6 +66,7 @@ button {
 	cursor: pointer;
 	color: inherit;
 	font-weight: inherit;
+	vertical-align: middle;
 }
 
 li {
