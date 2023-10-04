@@ -105,6 +105,11 @@
 	font-weight: 400;
 }
 
+.app.dark .imageWrap {
+	background-color: var(--dark-scheme-color);
+}
+
+
 /* light mode */
 .app.light {
 	font-weight: 400;
