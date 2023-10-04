@@ -36,6 +36,12 @@
 	transform: scale(1);
 }
 
+.products li article {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+}
+
 .products li article h3 {
 	font-size: 1.2rem;
 }
