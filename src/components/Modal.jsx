@@ -69,7 +69,7 @@ const Modal = forwardRef(
 	}
 );
 
-const ProductModal = ({ product }) => {
+const ProductModal = ({ product, imageSize, onLoad }) => {
 	return (
 		product && (
 			<div className="productModal">
