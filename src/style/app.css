@@ -109,6 +109,14 @@
 	background-color: var(--dark-scheme-color);
 }
 
+.app.dark .imageLoading {
+	background: linear-gradient(
+		to right,
+		var(--dark-scheme-color) 8%,
+		var(--dark-image-load-gradient) 18%,
+		var(--dark-scheme-color) 33%
+	);
+}
 
 /* light mode */
 .app.light {
