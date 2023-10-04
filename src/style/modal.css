@@ -117,8 +117,8 @@
 	border-left: 1px solid var(--dark-scheme-color);
 }
 
-.app.dark .padding .close::after,
-.app.dark .padding .close::before {
+.app.dark .modal .padding .close::after,
+.app.dark .modal .padding .close::before {
 	background-color: var(--dark-scheme-highlight-color);
 }
 
@@ -145,8 +145,8 @@
 .app.light .modal.bgc {
 	background-color: var(--dark-scheme-color);
 }
-.app.light .padding .close::after,
-.app.light .padding .close::before {
+.app.light .modal .padding .close::after,
+.app.light .modal .padding .close::before {
 	background-color: var(--light-scheme-highlight-color);
 }
 
