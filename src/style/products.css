@@ -160,8 +160,6 @@
 
 	.products li button {
 		flex: 1 1 100%;
-
-		align-items: center;
 	}
 
 	.products li article {
