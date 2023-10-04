@@ -78,18 +78,4 @@
 	.about {
 		flex-direction: row;
 	}
-
-	.about .describe {
-		flex: 1 1 100%;
-		align-items: center;
-	}
-
-	.about .describe img {
-		border-radius: 0px;
-		max-width: 300px;
-	}
-
-	.about .content {
-		flex: 1 1 100%;
-	}
 }
