@@ -76,7 +76,7 @@ const App = () => {
 			const fakeAvatar = await getAvatar();
 
 			fakeProducts && !ignore && setProductsImage(fakeProducts);
-			fakeAvatar && ignore && setAvatar(fakeAvatar);
+			fakeAvatar && !ignore && setAvatar(fakeAvatar);
 
 			fakeProducts && fakeAvatar && setLoading(false);
 		})();
