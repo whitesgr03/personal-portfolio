@@ -47,6 +47,8 @@ const App = () => {
 		modalRef.current.scrollTop = 0;
 	};
 
+	const handleLoad = e => (e.target.previousElementSibling.hidden = true);
+
 	const getPixelDensity = () =>
 		Math.max(
 			document.documentElement.clientWidth || 0,
