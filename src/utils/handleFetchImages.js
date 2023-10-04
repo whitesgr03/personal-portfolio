@@ -1,3 +1,16 @@
+const getAvatar = () => {
+	const fakeData = {
+		small: {
+			url: "https://i.pravatar.cc/150",
+		},
+		large: {
+			url: "https://i.pravatar.cc/250",
+		},
+	};
+
+	return fakeData;
+};
+
 const getProductImages = () => {
 	const fakeData = [
 		{
