@@ -24,7 +24,6 @@ const Products = forwardRef(
 								tabIndex={showModal ? "-1" : ""}
 								aria-label="buttonForImage"
 								onClick={() => onShowProduct(product)}
-								className="test"
 							>
 								<div className="imageWrap">
 									<div className="imageLoading"></div>
