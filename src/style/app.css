@@ -142,6 +142,10 @@
 	font-weight: 700;
 }
 
+.app.light .imageWrap {
+	background-color: var(--light-scheme-color);
+}
+
 .app.light .imageLoading {
 	background: linear-gradient(
 		to right,
