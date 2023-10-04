@@ -3,12 +3,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	row-gap: 40px;
 	scroll-margin-top: 100px;
-}
-
-.about .describe img {
-	border-radius: 100%;
 }
 
 .about .describe {
