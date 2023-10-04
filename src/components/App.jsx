@@ -9,6 +9,9 @@ import Products from "./Products";
 import Modal from "./Modal";
 import Contact from "./Contact";
 
+import Icon from "@mdi/react";
+import { mdiLoading } from "@mdi/js";
+
 const App = () => {
 	const [darkTheme, setDarkTheme] = useState(
 		window.matchMedia("(prefers-color-scheme: dark)")?.matches ?? false
