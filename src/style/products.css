@@ -62,6 +62,7 @@
 	border: 1px solid transparent;
 	transition: background-color 0.3s ease;
 	position: relative;
+	overflow: hidden;
 }
 
 .products .link span {
