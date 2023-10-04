@@ -14,6 +14,8 @@ const App = () => {
 		window.matchMedia("(prefers-color-scheme: dark)")?.matches ?? false
 	);
 	const [productsImage, setProductsImage] = useState([]);
+	const [avatar, setAvatar] = useState(null);
+
 	const [product, setProduct] = useState(null);
 	const [showModal, setShowModal] = useState(false);
 
