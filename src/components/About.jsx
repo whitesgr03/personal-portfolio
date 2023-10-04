@@ -49,6 +49,7 @@ const About = forwardRef(({ showModal, avatar, imageSize, onLoad }, ref) => {
 						target="_blank"
 						rel="noreferrer"
 						tabIndex={showModal ? "-1" : ""}
+						aria-label="visit author's github"
 					>
 						<Icon path={mdiGithub} />
 					</a>
