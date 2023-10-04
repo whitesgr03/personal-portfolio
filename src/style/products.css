@@ -19,23 +19,10 @@
 	row-gap: 2rem;
 }
 
-.products li article {
-	display: flex;
-	flex-direction: column;
-	row-gap: 2rem;
-}
-
 .products li button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
 	padding: 1px;
 }
 
-.products li button .wrap {
-	overflow: hidden;
-}
 
 .products li button .wrap img {
 	transition: all 0.3s ease;
