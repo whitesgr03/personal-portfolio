@@ -50,6 +50,15 @@ const App = () => {
 			window.innerWidth || 0
 		) * window.devicePixelRatio;
 
+	const getImageIntrinsicSize = (sizes, pixelDensity) =>
+		sizes
+			.map(item => item.width)
+			.reduce((prev, curr) =>
+				Math.abs(curr - pixelDensity) < Math.abs(prev - pixelDensity)
+					? curr
+					: prev
+			);
+
 	useEffect(() => {
 		product && modalRef.current.focus();
 	}, [product]);
