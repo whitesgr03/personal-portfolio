@@ -134,6 +134,13 @@ const App = () => {
 			data-testid="app"
 			ref={appRef}
 		>
+			{loading ? (
+				<div className="loading">
+					<Icon path={mdiLoading} spin={1} size={3} />
+					Loading...
+				</div>
+			) : (
+				<>
 					<Modal
 						ref={modalRef}
 						onCloseModal={handleCloseModal}
@@ -141,6 +148,19 @@ const App = () => {
 						product={product}
 						imageSize={imageSize}
 					/>
+					<Header
+						aboutRef={aboutRef}
+						productsRef={productsRef}
+						appRef={appRef}
+						darkTheme={darkTheme}
+						onChangeTheme={handleChangeTheme}
+						showModal={showModal}
+					/>
+					<main>
+						<div
+							className={`backdrop ${showModal ? "blur" : ""}`}
+						></div>
+						<div>
 							<About
 								ref={aboutRef}
 								showModal={showModal}
@@ -154,6 +174,12 @@ const App = () => {
 								showModal={showModal}
 								imageSize={imageSize}
 							/>
+							<Contact />
+						</div>
+					</main>
+					<Footer showModal={showModal} />
+				</>
+			)}
 		</div>
 	);
 };
