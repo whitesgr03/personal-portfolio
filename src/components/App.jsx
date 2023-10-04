@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-import getProducts from "../utils/getProducts";
+import { getAvatar, getProductImages } from "../utils/handleFetchImages";
 
 import Header from "./Header";
 import Footer from "./Footer";
