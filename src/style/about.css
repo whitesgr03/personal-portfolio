@@ -17,6 +17,8 @@
 	flex: 1 1 100%;
 }
 
+.about .describe > :first-child {
+	border-radius: 100%;
 }
 
 .about .describe p {
