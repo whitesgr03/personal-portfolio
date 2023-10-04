@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
-const About = forwardRef(({ showModal }, ref) => {
+const About = forwardRef(({ showModal, avatar, imageSize }, ref) => {
 	return (
 		<article className="about" ref={ref}>
 			<div className="describe">
