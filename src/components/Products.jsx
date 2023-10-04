@@ -89,6 +89,8 @@ Products.propTypes = {
 	onShowProduct: PropTypes.func,
 	productsImage: PropTypes.array,
 	showModal: PropTypes.bool,
+	imageSize: PropTypes.object,
+	onLoad: PropTypes.func,
 };
 
 export default Products;
