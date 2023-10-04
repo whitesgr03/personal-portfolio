@@ -6,14 +6,17 @@ import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
 const Products = forwardRef(
-	({ onShowProduct, allProducts, showModal }, ref) => {
+	({ onShowProduct, productsImage,
+		showModal,
+	}, ref) => {
 		return (
 			<div id="products" className="products" ref={ref}>
 				<h2>
 					My <span>Works</span>
 				</h2>
 				<ul>
-					{allProducts.map(product => (
+					{productsImage.map((product,
+					) => (
 						<li key={product.id}>
 							<button
 								type="button"
@@ -82,7 +85,7 @@ const Products = forwardRef(
 
 Products.propTypes = {
 	onShowProduct: PropTypes.func,
-	allProducts: PropTypes.array,
+	productsImage: PropTypes.array,
 	showModal: PropTypes.bool,
 };
 
