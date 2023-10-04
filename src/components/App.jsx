@@ -140,6 +140,13 @@ const App = () => {
 								avatar={avatar}
 								imageSize={imageSize}
 							/>
+							<Products
+								ref={productsRef}
+								onShowProduct={handleShowModal}
+								productsImage={productsImage}
+								showModal={showModal}
+								imageSize={imageSize}
+							/>
 		</div>
 	);
 };
