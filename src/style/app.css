@@ -61,6 +61,21 @@
 	overflow: hidden;
 }
 
+.app .imageLoading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	transform: translateX(-100%);
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: shimmer;
+	animation-timing-function: linear;
+}
+
 
 /* dark mode */
 .app.dark {
