@@ -134,6 +134,13 @@ const App = () => {
 			data-testid="app"
 			ref={appRef}
 		>
+					<Modal
+						ref={modalRef}
+						onCloseModal={handleCloseModal}
+						showModal={showModal}
+						product={product}
+						imageSize={imageSize}
+					/>
 							<About
 								ref={aboutRef}
 								showModal={showModal}
