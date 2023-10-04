@@ -24,15 +24,15 @@
 }
 
 
-.products li button .wrap img {
+.products li button img {
 	transition: all 0.3s ease;
 }
 
-.products li button:hover .wrap img {
+.products li button:hover img {
 	transform: scale(1.2);
 }
 
-.products li button:focus .wrap img {
+.products li button:focus img {
 	transform: scale(1);
 }
 
