@@ -16,6 +16,7 @@
 :root {
 	--dark-scheme-highlight-color: #f2a145;
 	--dark-scheme-color: #b0b0b0;
+	--dark-image-load-gradient: #b5b5b5;
 	--dark-scheme-bgc: #0a1324;
 	--light-scheme-highlight-color: #195c86;
 	--light-scheme-color: #000000;
