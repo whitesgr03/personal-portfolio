@@ -26,7 +26,8 @@ const Products = forwardRef(
 								onClick={() => onShowProduct(product)}
 								className="test"
 							>
-								<div className="wrap">
+								<div className="imageWrap">
+									<div className="imageLoading"></div>
 									<img
 										sizes="(max-width: 1920px) 100vw, 1920px"
 										srcSet={`${product.image.preview.url.phone} 480w, ${product.image.preview.url.table} 1004w, ${product.image.preview.url.laptop} 1372w, ${product.image.preview.url.desktop} 1820w`}
