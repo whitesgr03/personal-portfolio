@@ -24,7 +24,9 @@
 	row-gap: 40px;
 	grid-template:
 		"about" auto
-		"products" auto;
+		"products" auto
+		"contact" auto
+		/ auto;
 	padding: 20px;
 }
 
