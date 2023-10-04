@@ -11,6 +11,15 @@ const About = forwardRef(({ showModal, avatar, imageSize, onLoad }, ref) => {
 			<div className="describe">
 				<div className="imageWrap">
 					<div className="imageLoading"></div>
+					<img
+						sizes="(max-width: 1920px) 100vw, 1920px"
+						srcSet={`${avatar?.small.url} 1004w, ${avatar?.large.url} 1372w`}
+						src={avatar?.large.url}
+						alt="avatar"
+						width={imageSize?.width <= 1004 ? "150" : "250"}
+						height={imageSize?.width <= 1004 ? "150" : "250"}
+						onLoad={onLoad}
+					/>
 				</div>
 				<p>
 					<span>Hey I'm</span>
