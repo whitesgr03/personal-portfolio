@@ -152,6 +152,7 @@ const App = () => {
 						showModal={showModal}
 						product={product}
 						imageSize={imageSize}
+						onLoad={handleLoad}
 					/>
 					<Header
 						aboutRef={aboutRef}
@@ -171,6 +172,7 @@ const App = () => {
 								showModal={showModal}
 								avatar={avatar}
 								imageSize={imageSize}
+								onLoad={handleLoad}
 							/>
 							<Products
 								ref={productsRef}
@@ -178,6 +180,7 @@ const App = () => {
 								productsImage={productsImage}
 								showModal={showModal}
 								imageSize={imageSize}
+								onLoad={handleLoad}
 							/>
 							<Contact />
 						</div>
