@@ -11,6 +11,7 @@ const Footer = ({ showModal }) => {
 				rel="noreferrer"
 				target="_blank"
 				tabIndex={showModal ? "-1" : ""}
+				aria-label="visit author's github"
 			>
 				<Icon path={mdiGithub} />
 			</a>
