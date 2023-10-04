@@ -58,6 +58,7 @@ const App = () => {
 			fakeProducts && !ignore && setProductsImage(fakeProducts);
 			fakeAvatar && ignore && setAvatar(fakeAvatar);
 
+			fakeProducts && fakeAvatar && setLoading(false);
 		})();
 		return () => {
 			ignore = true;
