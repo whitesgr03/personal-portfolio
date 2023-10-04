@@ -18,6 +18,7 @@ const App = () => {
 
 	const [product, setProduct] = useState(null);
 	const [showModal, setShowModal] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const appRef = useRef(null);
 	const aboutRef = useRef(null);
