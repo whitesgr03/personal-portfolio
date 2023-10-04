@@ -117,6 +117,12 @@ const App = () => {
 		};
 
 		handleSetImageSize();
+
+		window.addEventListener("resize", handleSetImageSize);
+
+		return () => {
+			window.removeEventListener("resize", handleSetImageSize);
+		};
 	}, []);
 
 	return (
