@@ -59,11 +59,15 @@ const Modal = forwardRef(
 						aria-label="close button"
 					></button>
 				</div>
+				<ProductModal
+					product={product}
+					imageSize={imageSize}
+					onLoad={onLoad}
+				/>
 			</div>
-			<ProductModal product={product} />
-		</div>
-	);
-});
+		);
+	}
+);
 
 const ProductModal = ({ product }) => {
 	return (
