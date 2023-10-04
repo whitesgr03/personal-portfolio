@@ -88,12 +88,9 @@ const ProductModal = ({ product, imageSize, onLoad }) => {
 				<ul>
 					{product.image.pictures.map(picture => (
 						<li key={picture.id}>
-							<img
-								sizes="(max-width: 1920px) 100vw, 1920px"
-								srcSet={`${picture.url.phone} 480w, ${picture.url.table} 1004w, ${picture.url.laptop} 1372w, ${picture.url.desktop} 1820w`}
-								src={picture.url.desktop}
-								alt={product.name}
-							/>
+							<div className="imageWrap">
+								<div className="imageLoading"></div>
+							</div>
 						</li>
 					))}
 				</ul>
