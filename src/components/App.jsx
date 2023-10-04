@@ -49,10 +49,20 @@ const App = () => {
 	}, [product]);
 
 	useEffect(() => {
+		let ignore = false;
 		(async () => {
-			const fakeResult = await getProducts();
-			fakeResult && setAllProducts(fakeResult);
+			setLoading(true);
+			const fakeProducts = await getProductImages();
+			const fakeAvatar = await getAvatar();
+
+			fakeProducts && !ignore && setProductsImage(fakeProducts);
+			fakeAvatar && ignore && setAvatar(fakeAvatar);
+
 		})();
+		return () => {
+			ignore = true;
+		};
+	}, []);
 	}, []);
 
 	return (
