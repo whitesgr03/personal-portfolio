@@ -49,6 +49,12 @@
 	transition: all 0.3s ease-in-out;
 }
 
+.app .imageWrap {
+	position: relative;
+	overflow: hidden;
+}
+
+
 /* dark mode */
 .app.dark {
 	font-weight: 300;
