@@ -8,6 +8,7 @@ import githubIcon from "../image/github-icon.png";
 const Products = forwardRef(
 	({ onShowProduct, productsImage,
 		showModal,
+		imageSize, onLoad
 	}, ref) => {
 		return (
 			<div id="products" className="products" ref={ref}>
