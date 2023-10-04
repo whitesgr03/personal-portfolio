@@ -142,6 +142,15 @@
 	font-weight: 700;
 }
 
+.app.light .imageLoading {
+	background: linear-gradient(
+		to right,
+		var(--light-scheme-color) 8%,
+		var(--light-image-load-gradient) 18%,
+		var(--light-scheme-color) 33%
+	);
+}
+
 @media (min-width: 769px) {
 	.app main > div:nth-child(2) {
 		margin: 0 5%;
