@@ -53,6 +53,11 @@ const Modal = forwardRef(
 					onPointerOut={handlePointerOut}
 					data-testid="padding"
 				>
+					<button
+						type="button"
+						className="close"
+						aria-label="close button"
+					></button>
 				</div>
 			</div>
 			<ProductModal product={product} />
