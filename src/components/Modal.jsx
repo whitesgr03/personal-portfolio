@@ -35,25 +35,25 @@ const Modal = forwardRef(
 				onCloseModal();
 		};
 
-	return (
-		<div
-			className={`modal ${showModal ? "show" : ""} ${
-				isModalScroll ? "bgc" : ""
-			} ${disableModalScroll ? "unScroll" : ""}`}
-			onScroll={handleScroll}
-			data-testid="modal"
-			ref={ref}
-			tabIndex="-1"
-			onTouchStart={handleTouchStart}
-			onTouchEnd={handleTouchEnd}
-		>
+		return (
 			<div
-				className="padding"
-				onPointerOver={handlePointerOver}
-				onPointerOut={handlePointerOut}
-				data-testid="padding"
+				className={`modal ${showModal ? "show" : ""} ${
+					isModalScroll ? "bgc" : ""
+				} ${disableModalScroll ? "unScroll" : ""}`}
+				onScroll={handleScroll}
+				data-testid="modal"
+				ref={ref}
+				tabIndex="-1"
+				onTouchStart={handleTouchStart}
+				onTouchEnd={handleTouchEnd}
 			>
-				<button type="button" className="close"></button>
+				<div
+					className="padding"
+					onPointerOver={handlePointerOver}
+					onPointerOut={handlePointerOut}
+					data-testid="padding"
+				>
+				</div>
 			</div>
 			<ProductModal product={product} />
 		</div>
