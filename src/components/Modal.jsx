@@ -113,10 +113,14 @@ const ProductModal = ({ product, imageSize, onLoad }) => {
 Modal.propTypes = {
 	showModal: PropTypes.bool,
 	product: PropTypes.object,
+	imageSize: PropTypes.object,
+	onLoad: PropTypes.func,
 };
 
 ProductModal.propTypes = {
 	product: PropTypes.object,
+	imageSize: PropTypes.object,
+	onLoad: PropTypes.func,
 };
 
 export { Modal as default, ProductModal };
