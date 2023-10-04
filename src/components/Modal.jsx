@@ -86,10 +86,21 @@ const ProductModal = ({ product, imageSize, onLoad }) => {
 					</div>
 				</div>
 				<ul>
-					{product.image.pictures.map(picture => (
+					{product.image.pictures.map((picture, index) => (
 						<li key={picture.id}>
 							<div className="imageWrap">
 								<div className="imageLoading"></div>
+								<img
+									sizes="(max-width: 1920px) 100vw, 1920px"
+									srcSet={`${picture.phone.url} 480w, ${picture.tablet.url} 1004w, ${picture.laptop.url} 1372w, ${picture.desktop.url} 1820w`}
+									src={picture.desktop.url}
+									alt={product.name}
+									loading={index > 0 ? "lazy" : "eager"}
+									decoding={index > 0 ? "async" : "auto"}
+									width={imageSize?.width}
+									height={imageSize?.height}
+									onLoad={onLoad}
+								/>
 							</div>
 						</li>
 					))}
