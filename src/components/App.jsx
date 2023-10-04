@@ -79,6 +79,44 @@ const App = () => {
 			ignore = true;
 		};
 	}, []);
+
+	useEffect(() => {
+		const IMAGES_SIZE = [
+			{
+				device: "phone",
+				width: 480,
+				height: 320,
+			},
+			{
+				device: "tablet",
+				width: 1004,
+				height: 669,
+			},
+			{
+				device: "laptop",
+				width: 1372,
+				height: 915,
+			},
+			{
+				device: "desktop",
+				width: 1820,
+				height: 1213,
+			},
+		];
+
+		const handleSetImageSize = () => {
+			const pixelDensity = getPixelDensity();
+
+			const currentImageSize = IMAGES_SIZE.find(
+				item =>
+					item.width ===
+					getImageIntrinsicSize(IMAGES_SIZE, pixelDensity)
+			);
+
+			setImageSize(currentImageSize);
+		};
+
+		handleSetImageSize();
 	}, []);
 
 	return (
