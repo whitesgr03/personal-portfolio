@@ -9,12 +9,9 @@ const About = forwardRef(({ showModal, avatar, imageSize, onLoad }, ref) => {
 	return (
 		<article className="about" ref={ref}>
 			<div className="describe">
-				<img
-					sizes="(max-width: 1920px) 100vw, 1920px"
-					srcSet={`https://fakeimg.pl/150x150/ 480w, https://fakeimg.pl/300x300/ 1372w`}
-					src="https://fakeimg.pl/300x300/"
-					alt="profile"
-				/>
+				<div className="imageWrap">
+					<div className="imageLoading"></div>
+				</div>
 				<p>
 					<span>Hey I'm</span>
 					<span>Weiss Bai</span>
