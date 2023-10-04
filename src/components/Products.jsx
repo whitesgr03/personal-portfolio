@@ -17,6 +17,7 @@ const Products = forwardRef(
 				</h2>
 				<ul>
 					{productsImage.map((product,
+						index
 					) => (
 						<li key={product.id}>
 							<button
