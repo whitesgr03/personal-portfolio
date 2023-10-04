@@ -44,6 +44,12 @@ const App = () => {
 		modalRef.current.scrollTop = 0;
 	};
 
+	const getPixelDensity = () =>
+		Math.max(
+			document.documentElement.clientWidth || 0,
+			window.innerWidth || 0
+		) * window.devicePixelRatio;
+
 	useEffect(() => {
 		product && modalRef.current.focus();
 	}, [product]);
