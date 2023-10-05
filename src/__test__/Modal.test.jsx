@@ -36,40 +36,111 @@ describe("Renders ProductModal Component", () => {
 			id: "project1",
 			name: "project1",
 			image: {
-				preview: {
-					url: {
-						phone: "https://fakeimg.pl/480x320/195c86/",
-						table: "https://fakeimg.pl/1004x669/195c86/",
-						laptop: "https://fakeimg.pl/1372x915/195c86/",
-						desktop: "https://fakeimg.pl/1820x1213/195c86/",
-					},
-				},
 				pictures: [
 					{
 						id: "project1-picture1",
-						url: {
-							phone: "https://fakeimg.pl/480x320/195c86/",
-							table: "https://fakeimg.pl/1004x669/195c86/",
-							laptop: "https://fakeimg.pl/1372x915/195c86/",
-							desktop: "https://fakeimg.pl/1820x1213/195c86/",
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
 						},
 					},
 					{
 						id: "project1-picture2",
-						url: {
-							phone: "https://fakeimg.pl/480x320/195c86/",
-							table: "https://fakeimg.pl/1004x669/195c86/",
-							laptop: "https://fakeimg.pl/1372x915/195c86/",
-							desktop: "https://fakeimg.pl/1820x1213/195c86/",
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
+				],
+			},
+		};
+		const mockProduct = {
+			id: "project1",
+			name: "project1",
+			image: {
+				pictures: [
+					{
+						id: "project1-picture1",
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
 						},
 					},
 					{
-						id: "project1-picture3",
-						url: {
-							phone: "https://fakeimg.pl/480x320/195c86/",
-							table: "https://fakeimg.pl/1004x669/195c86/",
-							laptop: "https://fakeimg.pl/1372x915/195c86/",
-							desktop: "https://fakeimg.pl/1820x1213/195c86/",
+						id: "project1-picture2",
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
+				],
+			},
+		};
+		const mockProduct = {
+			id: "project1",
+			name: "project1",
+			image: {
+				pictures: [
+					{
+						id: "project1-picture1",
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
+					{
+						id: "project1-picture2",
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
 						},
 					},
 				],
