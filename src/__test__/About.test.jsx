@@ -11,7 +11,7 @@ describe("Renders Footer Component", () => {
 		const link = screen.getByRole("link");
 		expect(link).toHaveAttribute("tabIndex", "");
 	});
-	it("Should disable link from being focused", () => {
+	it("Should unable link from being focused", () => {
 		const mokeShowModal = true;
 
 		render(<About showModal={mokeShowModal} />);
