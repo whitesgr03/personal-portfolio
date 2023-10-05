@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Header from "../components/Header";
 
 describe("Renders Header Component", () => {
-	it("Should return Header DOM with dark Theme", () => {
+	it("Should return button icon with dark Theme", () => {
 		const mockDarkTheme = true;
 
 		render(<Header darkTheme={mockDarkTheme} />);
@@ -12,7 +12,7 @@ describe("Renders Header Component", () => {
 
 		expect(button).toHaveClass("dark");
 	});
-	it("Should return Header DOM with light Theme", () => {
+	it("Should return button icon with light Theme", () => {
 		const mockDarkTheme = false;
 
 		render(<Header darkTheme={mockDarkTheme} />);
@@ -21,7 +21,7 @@ describe("Renders Header Component", () => {
 			"light"
 		);
 	});
-	it("Should disable focus button", () => {
+	it("Should unable focus button", () => {
 		const mokeShowModal = true;
 
 		render(<Header showModal={mokeShowModal} />);
