@@ -27,39 +27,34 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 		e.changedTouches[0].clientY - touchPosition > 150 &&
 		onCloseModal();
 
-		return (
+	return (
+		<div
+			className={`modal ${showModal ? "show" : ""} ${
+				isModalScroll ? "bgc" : ""
+			} ${disableModalScroll ? "unScroll" : ""}`}
+			onScroll={handleScroll}
+			data-testid="modal"
+			ref={ref}
+			tabIndex="-1"
+			onTouchStart={handleTouchStart}
+			onTouchEnd={handleTouchEnd}
+		>
 			<div
-				className={`modal ${showModal ? "show" : ""} ${
-					isModalScroll ? "bgc" : ""
-				} ${disableModalScroll ? "unScroll" : ""}`}
-				onScroll={handleScroll}
-				data-testid="modal"
-				ref={ref}
-				tabIndex="-1"
-				onTouchStart={handleTouchStart}
-				onTouchEnd={handleTouchEnd}
+				className="padding"
+				onPointerOver={handlePointerOver}
+				onPointerOut={handlePointerOut}
+				data-testid="padding"
 			>
-				<div
-					className="padding"
-					onPointerOver={handlePointerOver}
-					onPointerOut={handlePointerOut}
-					data-testid="padding"
-				>
-					<button
-						type="button"
-						className="close"
-						aria-label="close button"
-					></button>
-				</div>
-				<ProductModal
-					product={product}
-					imageSize={imageSize}
-					onLoad={onLoad}
-				/>
+				<button
+					type="button"
+					className="close"
+					aria-label="close button"
+				></button>
 			</div>
-		);
-	}
-);
+			{children}
+		</div>
+	);
+});
 
 const ProductModal = ({ product, imageSize, onLoad }) => {
 	return (
