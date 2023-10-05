@@ -73,9 +73,15 @@ const App = () => {
 		(async () => {
 			setLoading(true);
 			const fakeProducts = await getProductImages();
-			const fakeAvatar = await getAvatar();
 
 			fakeProducts && !ignore && setProductsImage(fakeProducts);
+			fakeProducts && setLoading(false);
+		})();
+		return () => {
+			ignore = true;
+		};
+	}, []);
+
 			fakeAvatar && !ignore && setAvatar(fakeAvatar);
 
 			fakeProducts && fakeAvatar && setLoading(false);
