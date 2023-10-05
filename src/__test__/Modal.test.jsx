@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
+import { fireEvent } from "@testing-library/react";
+
 import Modal, { ProductModal } from "../components/Modal";
 
 describe("Renders Modal Component", () => {
