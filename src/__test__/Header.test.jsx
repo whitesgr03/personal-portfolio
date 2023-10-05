@@ -17,9 +17,9 @@ describe("Renders Header Component", () => {
 
 		render(<Header darkTheme={mockDarkTheme} />);
 
-		expect(screen.getByRole("button", { name: "Theme" })).toHaveClass(
-			"light"
-		);
+		const button = screen.getByRole("button", { name: "Theme" });
+
+		expect(button).toHaveClass("light");
 	});
 	it("Should unable focus button", () => {
 		const mokeShowModal = true;
