@@ -4,16 +4,16 @@ import Modal, { ProductModal } from "../components/Modal";
 
 describe("Renders Modal Component", () => {
 	it("Should return modal DOM and display the modal", () => {
-		const mokeShowModal = true;
-		render(<Modal showModal={mokeShowModal} />);
+		const mockShowModal = true;
+		render(<Modal showModal={mockShowModal} />);
 
 		const element = screen.getByTestId("modal");
 
 		expect(element).toHaveClass("show");
 	});
 	it("Should return modal DOM and not show the modal", () => {
-		const mokeShowModal = false;
-		render(<Modal showModal={mokeShowModal} />);
+		const mockShowModal = false;
+		render(<Modal showModal={mockShowModal} />);
 
 		const element = screen.getByTestId("modal");
 
