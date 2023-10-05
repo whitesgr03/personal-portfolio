@@ -143,11 +143,18 @@ describe("Renders Products Component", () => {
 			},
 		];
 
-		const { container } = render(
-			<Products allProducts={mockAllProducts} />
-		);
+		render(<Products productsImage={mockProductsImage} />);
 
-		expect(container).toMatchSnapshot();
+		const [firstButtonForImage] = screen.getAllByRole("button", {
+			name: "buttonForImage",
+		});
+
+		const [firstButtonForTitle] = screen.getAllByRole("button", {
+			name: "buttonForTitle",
+		});
+
+		expect(firstButtonForImage).toBeInTheDocument();
+		expect(firstButtonForTitle).toBeInTheDocument();
 	});
 	it("Should show modal with product on click", async () => {
 			{
