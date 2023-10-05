@@ -21,4 +21,55 @@ describe("Renders Footer Component", () => {
 		const link = screen.getByRole("link");
 		expect(link).toHaveAttribute("tabIndex", "-1");
 	});
+	it("Should return src property of the img tag", () => {
+		const mockAvatar = {
+			small: {
+				url: "https://i.pravatar.cc/150",
+			},
+			large: {
+				url: "https://i.pravatar.cc/250",
+			},
+		};
+
+		render(<About avatar={mockAvatar} />);
+
+		const image = screen.getByRole("img");
+
+		expect(image).toHaveAttribute("src", mockAvatar.large.url);
+	});
+	it("Should return 150px width and height properties of the img tag", () => {
+		const mockImageSize = {
+			width: 1004,
+		};
+
+		render(<About imageSize={mockImageSize} />);
+
+		const image = screen.getByRole("img");
+
+		expect(image).toHaveAttribute("width", "150");
+		expect(image).toHaveAttribute("height", "150");
+	});
+	it("Should return 250px width and height properties of the img tag", () => {
+		const mockImageSize = {
+			width: 1372,
+		};
+
+		render(<About imageSize={mockImageSize} />);
+
+		const image = screen.getByRole("img");
+
+		expect(image).toHaveAttribute("width", "250");
+		expect(image).toHaveAttribute("height", "250");
+	});
+	it("Should call the function through the load event", async () => {
+		const mockOnload = jest.fn();
+
+		render(<About onLoad={mockOnload} />);
+
+		const image = screen.getByRole("img");
+
+		fireEvent.load(image);
+
+		expect(mockOnload).toBeCalledTimes(1);
+	});
 });
