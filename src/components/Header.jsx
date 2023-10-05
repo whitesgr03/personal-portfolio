@@ -16,7 +16,7 @@ const Header = ({
 	onChangeTheme,
 	showModal,
 }) => {
-	const handleClick = ref =>
+	const handleScrollToBlock = ref =>
 		ref.current.classList.contains("app")
 			? (ref.current.scrollTop = 0)
 			: ref.current.scrollIntoView({
@@ -31,7 +31,7 @@ const Header = ({
 					<button
 						type="button"
 						tabIndex={showModal ? "-1" : ""}
-						onClick={() => handleClick(appRef)}
+						onClick={() => handleScrollToBlock(appRef)}
 					>
 						Bai
 					</button>
@@ -41,7 +41,7 @@ const Header = ({
 						<button
 							type="button"
 							tabIndex={showModal ? "-1" : ""}
-							onClick={() => handleClick(aboutRef)}
+							onClick={() => handleScrollToBlock(aboutRef)}
 						>
 							<Icon path={mdiAccountOutline} />
 							<span>About</span>
@@ -51,7 +51,7 @@ const Header = ({
 						<button
 							type="button"
 							tabIndex={showModal ? "-1" : ""}
-							onClick={() => handleClick(productsRef)}
+							onClick={() => handleScrollToBlock(productsRef)}
 						>
 							<Icon path={mdiClipboardListOutline} />
 							<span>Projects</span>
