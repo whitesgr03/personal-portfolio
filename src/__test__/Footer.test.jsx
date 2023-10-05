@@ -9,7 +9,7 @@ describe("Renders Footer Component", () => {
 		const user = userEvent.setup();
 		const mockShowModal = false;
 
-		render(<Footer showModal={mokeShowModal} />);
+		render(<Footer showModal={mockShowModal} />);
 
 		const link = screen.getByRole("link");
 
@@ -23,7 +23,7 @@ describe("Renders Footer Component", () => {
 		const user = userEvent.setup();
 		const mockShowModal = true;
 
-		render(<Footer showModal={mokeShowModal} />);
+		render(<Footer showModal={mockShowModal} />);
 
 		const link = screen.getByRole("link");
 
