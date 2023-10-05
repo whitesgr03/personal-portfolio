@@ -322,7 +322,11 @@ describe("Renders Products Component", () => {
 
 		expect(mockOnShowProduct).toBeCalledTimes(2);
 	});
+
 	it("Should press the Tab key to focus buttons and links", async () => {
+		const user = userEvent.setup();
+		const mockShowModal = false;
+		const mockProductsImage = [
 			{
 				id: "project1",
 				name: "project1",
@@ -459,6 +463,40 @@ describe("Renders Products Component", () => {
 				},
 			},
 		];
+
+		render(
+			<Products
+				productsImage={mockProductsImage}
+				showModal={mockShowModal}
+			/>
+		);
+
+		const [firstButtonForImage] = screen.getAllByRole("button", {
+			name: "buttonForImage",
+		});
+		const [firstButtonForTitle] = screen.getAllByRole("button", {
+			name: "buttonForTitle",
+		});
+		const [firstLinkForLive] = screen.getAllByRole("link", {
+			name: "Live (opens in new tab)",
+		});
+		const [firstLinkForSource] = screen.getAllByRole("link", {
+			name: "Source (opens in new tab)",
+		});
+
+		expect(document.body).toHaveFocus();
+
+		await user.tab();
+		expect(firstButtonForImage).toHaveFocus();
+
+		await user.tab();
+		expect(firstButtonForTitle).toHaveFocus();
+
+		await user.tab();
+		expect(firstLinkForLive).toHaveFocus();
+
+		await user.tab();
+		expect(firstLinkForSource).toHaveFocus();
 
 					pictures: [
 						{
