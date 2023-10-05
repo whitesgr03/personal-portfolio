@@ -19,6 +19,15 @@ describe("Renders Modal Component", () => {
 
 		expect(element).not.toHaveClass("show");
 	});
+	it("Should return Modal component containing children DOM", () => {
+		const mockChildren = <button type="button">test</button>;
+
+		render(<Modal children={mockChildren} />);
+
+		const button = screen.getByRole("button", { name: "test" });
+
+		expect(button).toBeInTheDocument();
+	});
 });
 
 describe("Renders ProductModal Component", () => {
