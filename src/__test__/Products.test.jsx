@@ -159,6 +159,9 @@ describe("Renders Products Component", () => {
 		expect(firstButtonForTitle).toBeInTheDocument();
 	});
 	it("Should show modal with product on click", async () => {
+		const user = userEvent.setup();
+		const mockOnShowProduct = jest.fn();
+		const mockProductsImage = [
 			{
 				id: "project1",
 				name: "project1",
@@ -298,8 +301,8 @@ describe("Renders Products Component", () => {
 
 		render(
 			<Products
-				onShowProduct={mockShowProduct}
-				allProducts={mockAllProducts}
+				onShowProduct={mockOnShowProduct}
+				productsImage={mockProductsImage}
 			/>
 		);
 
@@ -309,7 +312,7 @@ describe("Renders Products Component", () => {
 
 		await user.click(firstButtonForImage);
 
-		expect(mockShowProduct).toBeCalledTimes(1);
+		expect(mockOnShowProduct).toBeCalledTimes(1);
 
 		const [firstButtonForTitle] = screen.getAllByRole("button", {
 			name: "buttonForTitle",
@@ -317,7 +320,7 @@ describe("Renders Products Component", () => {
 
 		await user.click(firstButtonForTitle);
 
-		expect(mockShowProduct).toBeCalledTimes(2);
+		expect(mockOnShowProduct).toBeCalledTimes(2);
 	});
 	it("Should press the Tab key to focus buttons and links", async () => {
 			{
