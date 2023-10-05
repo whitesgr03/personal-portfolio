@@ -32,7 +32,7 @@ describe("Renders Modal Component", () => {
 
 describe("Renders ProductModal Component", () => {
 	it("Should return ProductModal DOM with product data", () => {
-		const mokeProduct = {
+		const mockProduct = {
 			id: "project1",
 			name: "project1",
 			image: {
