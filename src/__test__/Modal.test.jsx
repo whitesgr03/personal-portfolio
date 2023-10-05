@@ -72,6 +72,22 @@ describe("Renders ProductModal Component", () => {
 				],
 			},
 		};
+
+		render(<ProductModal product={mockProduct} />);
+
+		const heading = screen.getByRole("heading", {
+			name: mockProduct.name,
+		});
+
+		const [firstImage] = screen.getAllByRole("img");
+
+		expect(heading).toBeInTheDocument();
+		expect(firstImage).toHaveAttribute(
+			"src",
+			mockProduct.image.pictures[0].desktop.url
+		);
+	});
+	it("Should return width and height properties of the img tag", () => {
 		const mockProduct = {
 			id: "project1",
 			name: "project1",
@@ -110,6 +126,22 @@ describe("Renders ProductModal Component", () => {
 				],
 			},
 		};
+		const mockImageSize = {
+			width: "1372",
+			height: "1372",
+		};
+
+		render(
+			<ProductModal product={mockProduct} imageSize={mockImageSize} />
+		);
+
+		const [firstImage] = screen.getAllByRole("img");
+
+		expect(firstImage).toHaveAttribute("width", mockImageSize.width);
+		expect(firstImage).toHaveAttribute("height", mockImageSize.height);
+	});
+	it("Should call the function through the load event", async () => {
+		const mockOnload = jest.fn();
 		const mockProduct = {
 			id: "project1",
 			name: "project1",
@@ -149,8 +181,16 @@ describe("Renders ProductModal Component", () => {
 			},
 		};
 
-		const { container } = render(<ProductModal product={mokeProduct} />);
+		render(<ProductModal product={mockProduct} onLoad={mockOnload} />);
 
-		expect(container).toMatchSnapshot();
+		const [firstImage, secondImage] = screen.getAllByRole("img");
+
+		fireEvent.load(firstImage);
+
+		expect(mockOnload).toBeCalledTimes(1);
+
+		fireEvent.load(secondImage);
+
+		expect(mockOnload).toBeCalledTimes(2);
 	});
 });
