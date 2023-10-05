@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Modal, { ProductModal } from "../components/Modal";
 
 describe("Renders Modal Component", () => {
-	it("should return modal DOM with show modal", () => {
+	it("Should return modal DOM and display the modal", () => {
 		const mokeShowModal = true;
 		render(<Modal showModal={mokeShowModal} />);
 
@@ -11,7 +11,7 @@ describe("Renders Modal Component", () => {
 
 		expect(element).toHaveClass("show");
 	});
-	it("should return modal DOM without show modal", () => {
+	it("Should return modal DOM and not show the modal", () => {
 		const mokeShowModal = false;
 		render(<Modal showModal={mokeShowModal} />);
 
@@ -22,7 +22,7 @@ describe("Renders Modal Component", () => {
 });
 
 describe("Renders ProductModal Component", () => {
-	it("Should return ProductModal DOM", () => {
+	it("Should return ProductModal DOM with product data", () => {
 		const mokeProduct = {
 			id: "project1",
 			name: "project1",
