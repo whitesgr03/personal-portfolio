@@ -82,9 +82,15 @@ const App = () => {
 		};
 	}, []);
 
-			fakeAvatar && !ignore && setAvatar(fakeAvatar);
+	useEffect(() => {
+		let ignore = false;
+		(async () => {
+			setLoading(true);
 
-			fakeProducts && fakeAvatar && setLoading(false);
+			const fakeAvatar = await getAvatar();
+
+			fakeAvatar && !ignore && setAvatar(fakeAvatar);
+			fakeAvatar && setLoading(false);
 		})();
 		return () => {
 			ignore = true;
