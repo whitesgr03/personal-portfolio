@@ -31,7 +31,7 @@ const App = () => {
 
 	const handleChangeTheme = () => setDarkTheme(!darkTheme);
 
-	const handleShowModal = product => {
+	const handleShowProduct = product => {
 		setProduct(product);
 		setShowModal(true);
 	};
@@ -179,7 +179,7 @@ const App = () => {
 							/>
 							<Products
 								ref={productsRef}
-								onShowProduct={handleShowModal}
+								onShowProduct={handleShowProduct}
 								productsImage={productsImage}
 								showModal={showModal}
 								imageSize={imageSize}
