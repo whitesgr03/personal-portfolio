@@ -19,24 +19,18 @@ describe("Renders App Component", () => {
 		window.matchMedia = jest.fn(() => ({
 			matches: true,
 		}));
-
-		render(<App />);
-
-		const element = await screen.findByTestId("app");
 		const scheme = "dark";
-
+		render(<App />);
+		const element = await screen.findByTestId("app");
 		expect(element).toHaveClass(scheme);
 	});
 	it("Should return App DOM with light scheme", async () => {
 		window.matchMedia = jest.fn(() => ({
 			matches: false,
 		}));
-
-		render(<App />);
-
-		const element = await screen.findByTestId("app");
 		const scheme = "light";
-
+		render(<App />);
+		const element = await screen.findByTestId("app");
 		expect(element).toHaveClass(scheme);
 	});
 });
