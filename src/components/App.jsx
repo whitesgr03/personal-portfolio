@@ -152,6 +152,9 @@ const App = () => {
 						showModal={showModal}
 					>
 						<ProductModal
+							product={product}
+							imageSize={imageSize}
+							onLoad={handleLoad}
 						/>
 					</Modal>
 					<Header
