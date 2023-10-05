@@ -4,17 +4,17 @@ import About from "../components/About";
 
 describe("Renders Footer Component", () => {
 	it("Should able link from being focused", () => {
-		const mokeShowModal = false;
+		const mockShowModal = false;
 
-		render(<About showModal={mokeShowModal} />);
+		render(<About showModal={mockShowModal} />);
 
 		const link = screen.getByRole("link");
 		expect(link).toHaveAttribute("tabIndex", "");
 	});
 	it("Should unable link from being focused", () => {
-		const mokeShowModal = true;
+		const mockShowModal = true;
 
-		render(<About showModal={mokeShowModal} />);
+		render(<About showModal={mockShowModal} />);
 
 		const link = screen.getByRole("link");
 		expect(link).toHaveAttribute("tabIndex", "-1");
