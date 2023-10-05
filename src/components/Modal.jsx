@@ -81,7 +81,7 @@ const ProductModal = ({ product, imageSize, onLoad }) => {
 									sizes="(max-width: 1920px) 100vw, 1920px"
 									srcSet={`${picture.phone.url} 480w, ${picture.tablet.url} 1004w, ${picture.laptop.url} 1372w, ${picture.desktop.url} 1820w`}
 									src={picture.desktop.url}
-									alt={product.name}
+									alt={picture.id}
 									loading={index > 0 ? "lazy" : "eager"}
 									decoding={index > 0 ? "async" : "auto"}
 									width={imageSize?.width}
