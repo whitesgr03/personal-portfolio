@@ -99,6 +99,8 @@ const ProductModal = ({ product, imageSize, onLoad }) => {
 
 Modal.propTypes = {
 	showModal: PropTypes.bool,
+	onCloseModal: PropTypes.func,
+	children: PropTypes.node,
 };
 
 ProductModal.propTypes = {
