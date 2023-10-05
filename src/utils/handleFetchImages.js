@@ -151,7 +151,6 @@ const getProductImages = () => {
 	];
 
 	return fakeData;
-
 };
 
 export { getProductImages, getAvatar };
