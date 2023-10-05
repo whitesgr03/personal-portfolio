@@ -151,6 +151,8 @@ const App = () => {
 						onCloseModal={handleCloseModal}
 						showModal={showModal}
 					>
+						<ProductModal
+						/>
 					</Modal>
 					<Header
 						aboutRef={aboutRef}
