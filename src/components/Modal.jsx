@@ -2,12 +2,10 @@ import { useState, forwardRef } from "react";
 
 import PropTypes from "prop-types";
 
-const Modal = forwardRef(
-	({ onCloseModal, showModal, product, imageSize, onLoad }, ref) => {
-		const [isModalScroll, setIsModalScroll] = useState(false);
-		const [disableModalScroll, setDisableModalScroll] = useState(false);
-
-		const [touchPosition, setTouchPosition] = useState(null);
+const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
+	const [isModalScroll, setIsModalScroll] = useState(false);
+	const [disableModalScroll, setDisableModalScroll] = useState(false);
+	const [touchPosition, setTouchPosition] = useState(null);
 
 		const handlePointerOver = () => setDisableModalScroll(true);
 		const handlePointerOut = () => setDisableModalScroll(false);
