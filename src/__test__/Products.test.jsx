@@ -5,7 +5,7 @@ import Products from "../components/Products";
 
 describe("Renders Products Component", () => {
 	it("Should return Modal DOM with product", () => {
-		const mockAllProducts = [
+		const mockProductsImage = [
 			{
 				id: "project1",
 				name: "project1",
