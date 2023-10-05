@@ -99,9 +99,6 @@ const ProductModal = ({ product, imageSize, onLoad }) => {
 
 Modal.propTypes = {
 	showModal: PropTypes.bool,
-	product: PropTypes.object,
-	imageSize: PropTypes.object,
-	onLoad: PropTypes.func,
 };
 
 ProductModal.propTypes = {
