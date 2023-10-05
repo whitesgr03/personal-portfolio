@@ -150,10 +150,8 @@ const App = () => {
 						ref={modalRef}
 						onCloseModal={handleCloseModal}
 						showModal={showModal}
-						product={product}
-						imageSize={imageSize}
-						onLoad={handleLoad}
-					/>
+					>
+					</Modal>
 					<Header
 						aboutRef={aboutRef}
 						productsRef={productsRef}
