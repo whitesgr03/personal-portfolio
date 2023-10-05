@@ -59,7 +59,7 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 const ProductModal = ({ product, imageSize, onLoad }) => {
 	return (
 		product && (
-			<div className="productModal">
+			<div className="productModal" data-testid="productModal">
 				<div className="describe">
 					<h3>{product.name}</h3>
 					<div>
