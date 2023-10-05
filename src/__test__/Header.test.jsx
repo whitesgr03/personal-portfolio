@@ -40,4 +40,82 @@ describe("Renders Header Component", () => {
 		expect(productsButton).toHaveAttribute("tabIndex", "-1");
 		expect(themeButton).toHaveAttribute("tabIndex", "-1");
 	});
+	it("Should press the Tab key to focus buttons", async () => {
+		const user = userEvent.setup();
+		const mockShowModal = false;
+
+		render(<Header showModal={mockShowModal} />);
+
+		const titleButton = screen.getByRole("button", {
+			name: "Bai",
+		});
+		const aboutButton = screen.getByRole("button", {
+			name: "About",
+		});
+		const productsButton = screen.getByRole("button", {
+			name: "Projects",
+		});
+		const themeButton = screen.getByRole("button", {
+			name: "Theme",
+		});
+
+		expect(document.body).toHaveFocus();
+
+		await user.tab();
+		expect(titleButton).toHaveFocus();
+
+		await user.tab();
+		expect(aboutButton).toHaveFocus();
+
+		await user.tab();
+		expect(productsButton).toHaveFocus();
+
+		await user.tab();
+		expect(themeButton).toHaveFocus();
+	});
+	it("Should disable tab key to focus buttons", async () => {
+		const user = userEvent.setup();
+		const mockShowModal = true;
+
+		render(<Header showModal={mockShowModal} />);
+
+		const titleButton = screen.getByRole("button", {
+			name: "Bai",
+		});
+		const aboutButton = screen.getByRole("button", {
+			name: "About",
+		});
+		const productsButton = screen.getByRole("button", {
+			name: "Projects",
+		});
+		const themeButton = screen.getByRole("button", {
+			name: "Theme",
+		});
+
+		expect(document.body).toHaveFocus();
+
+		await user.tab();
+		expect(titleButton).not.toHaveFocus();
+
+		await user.tab();
+		expect(aboutButton).not.toHaveFocus();
+
+		await user.tab();
+		expect(productsButton).not.toHaveFocus();
+
+		await user.tab();
+		expect(themeButton).not.toHaveFocus();
+	});
+	it("Should change theme with click", async () => {
+		const user = userEvent.setup();
+		const mockOnChangeTheme = jest.fn();
+
+		render(<Header onChangeTheme={mockOnChangeTheme} />);
+
+		const button = screen.getByRole("button", { name: "Theme" });
+
+		await user.click(button);
+
+		expect(mockOnChangeTheme).toBeCalledTimes(1);
+	});
 });
