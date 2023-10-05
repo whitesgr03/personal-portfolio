@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import Products from "../components/Products";
 
 describe("Renders Products Component", () => {
-	it("should return Products DOM", () => {
+	it("Should return Modal DOM with product", () => {
 		const mockAllProducts = [
 			{
 				id: "project1",
@@ -100,11 +100,7 @@ describe("Renders Products Component", () => {
 
 		expect(container).toMatchSnapshot();
 	});
-
-	it("should display the modal with click", async () => {
-		const mockShowProduct = jest.fn();
-
-		const mockAllProducts = [
+	it("Should show modal with product on click", async () => {
 			{
 				id: "project1",
 				name: "project1",
@@ -175,9 +171,7 @@ describe("Renders Products Component", () => {
 
 		expect(mockShowProduct).toBeCalledTimes(2);
 	});
-	it("Should disable focus button", () => {
-		const mokeShowModal = true;
-		const mockAllProducts = [
+	it("Should press the Tab key to focus buttons and links", async () => {
 			{
 				id: "project1",
 				name: "project1",
