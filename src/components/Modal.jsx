@@ -7,31 +7,25 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
 	const [touchPosition, setTouchPosition] = useState(null);
 
-		const handlePointerOver = () => setDisableModalScroll(true);
-		const handlePointerOut = () => setDisableModalScroll(false);
-
-		const handleScroll = e => {
-			e.target.clientHeight +
-				e.target.scrollTop +
-				e.target.firstElementChild.clientHeight +
-				e.target.nextElementSibling.clientHeight >=
-			e.target.scrollHeight -
-				e.target.firstElementChild.clientHeight -
-				e.target.nextElementSibling.clientHeight
-				? setIsModalScroll(true)
-				: setIsModalScroll(false);
-		};
-
-		const handleTouchStart = e => {
-			e.target.closest(".productModal") &&
-				setTouchPosition(e.changedTouches[0].clientY);
-		};
-
-		const handleTouchEnd = e => {
-			e.target.closest(".modal").scrollTop <= 0 &&
-				e.changedTouches[0].clientY - touchPosition > 150 &&
-				onCloseModal();
-		};
+	const handleScroll = e =>
+		e.target.clientHeight +
+			e.target.scrollTop +
+			e.target.firstElementChild.clientHeight +
+			e.target.nextElementSibling.clientHeight >=
+		e.target.scrollHeight -
+			e.target.firstElementChild.clientHeight -
+			e.target.nextElementSibling.clientHeight
+			? setIsModalScroll(true)
+			: setIsModalScroll(false);
+	const handlePointerOver = () => setDisableModalScroll(true);
+	const handlePointerOut = () => setDisableModalScroll(false);
+	const handleTouchStart = e =>
+		e.target.closest(".productModal") &&
+		setTouchPosition(e.changedTouches[0].clientY);
+	const handleTouchEnd = e =>
+		e.target.closest(".modal").scrollTop <= 0 &&
+		e.changedTouches[0].clientY - touchPosition > 150 &&
+		onCloseModal();
 
 		return (
 			<div
