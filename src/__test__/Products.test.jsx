@@ -497,33 +497,141 @@ describe("Renders Products Component", () => {
 
 		await user.tab();
 		expect(firstLinkForSource).toHaveFocus();
+	});
+	it("Should disable tab key to focus an buttons and links", async () => {
+		const user = userEvent.setup();
+		const mockShowModal = true;
+		const mockProductsImage = [
+			{
+				id: "project1",
+				name: "project1",
+				image: {
+					preview: {
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
 
 					pictures: [
 						{
 							id: "project1-picture1",
-							url: {
-								phone: "https://fakeimg.pl/480x320/195c86/",
-								table: "https://fakeimg.pl/1004x669/195c86/",
-								laptop: "https://fakeimg.pl/1372x915/195c86/",
-								desktop: "https://fakeimg.pl/1820x1213/195c86/",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
 							},
 						},
 						{
 							id: "project1-picture2",
-							url: {
-								phone: "https://fakeimg.pl/480x320/195c86/",
-								table: "https://fakeimg.pl/1004x669/195c86/",
-								laptop: "https://fakeimg.pl/1372x915/195c86/",
-								desktop: "https://fakeimg.pl/1820x1213/195c86/",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
 							},
 						},
 						{
 							id: "project1-picture3",
-							url: {
-								phone: "https://fakeimg.pl/480x320/195c86/",
-								table: "https://fakeimg.pl/1004x669/195c86/",
-								laptop: "https://fakeimg.pl/1372x915/195c86/",
-								desktop: "https://fakeimg.pl/1820x1213/195c86/",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+					],
+				},
+			},
+			{
+				id: "project2",
+				name: "project2",
+				image: {
+					preview: {
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
+					pictures: [
+						{
+							id: "project2-picture1",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+						{
+							id: "project2-picture2",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+						{
+							id: "project2-picture3",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
 							},
 						},
 					],
@@ -532,7 +640,10 @@ describe("Renders Products Component", () => {
 		];
 
 		render(
-			<Products allProducts={mockAllProducts} showModal={mokeShowModal} />
+			<Products
+				productsImage={mockProductsImage}
+				showModal={mockShowModal}
+			/>
 		);
 
 		const [firstButtonForImage] = screen.getAllByRole("button", {
@@ -548,9 +659,233 @@ describe("Renders Products Component", () => {
 			name: "Source (opens in new tab)",
 		});
 
-		expect(firstButtonForImage).toHaveAttribute("tabIndex", "-1");
-		expect(firstButtonForTitle).toHaveAttribute("tabIndex", "-1");
-		expect(firstLinkForLive).toHaveAttribute("tabIndex", "-1");
-		expect(firstLinkForSource).toHaveAttribute("tabIndex", "-1");
+		expect(document.body).toHaveFocus();
+
+		await user.tab();
+		expect(firstButtonForImage).not.toHaveFocus();
+
+		await user.tab();
+		expect(firstButtonForTitle).not.toHaveFocus();
+
+		await user.tab();
+		expect(firstLinkForLive).not.toHaveFocus();
+
+		await user.tab();
+		expect(firstLinkForSource).not.toHaveFocus();
+	});
+
+	it("Should return width and height properties of the img tag", () => {
+		const mockProductsImage = [
+			{
+				id: "project1",
+				name: "project1",
+				image: {
+					preview: {
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
+
+					pictures: [
+						{
+							id: "project1-picture1",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+						{
+							id: "project1-picture2",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+						{
+							id: "project1-picture3",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+					],
+				},
+			},
+			{
+				id: "project2",
+				name: "project2",
+				image: {
+					preview: {
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
+					pictures: [
+						{
+							id: "project2-picture1",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+						{
+							id: "project2-picture2",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+						{
+							id: "project2-picture3",
+							phone: {
+								url: "...",
+							},
+							tablet: {
+								url: "...",
+							},
+							laptop: {
+								url: "...",
+							},
+							desktop: {
+								url: "...",
+							},
+						},
+					],
+				},
+			},
+		];
+		const mockImageSize = {
+			width: "1372",
+			height: "1372",
+		};
+
+		render(
+			<Products
+				productsImage={mockProductsImage}
+				imageSize={mockImageSize}
+			/>
+		);
+
+		const [firstImage] = screen.getAllByRole("img");
+
+		expect(firstImage).toHaveAttribute("width", mockImageSize.width);
+		expect(firstImage).toHaveAttribute("height", mockImageSize.height);
+	});
+	it("Should call the function through the load event", async () => {
+		const mockOnload = jest.fn();
+		const mockProductsImage = [
+			{
+				id: "project1",
+				name: "project1",
+				image: {
+					preview: {
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
+				},
+			},
+			{
+				id: "project2",
+				name: "project2",
+				image: {
+					preview: {
+						phone: {
+							url: "...",
+						},
+						tablet: {
+							url: "...",
+						},
+						laptop: {
+							url: "...",
+						},
+						desktop: {
+							url: "...",
+						},
+					},
+				},
+			},
+		];
+
+		render(
+			<Products productsImage={mockProductsImage} onLoad={mockOnload} />
+		);
+
+		const [firstImage, , , secondImage] = screen.getAllByRole("img");
+
+		fireEvent.load(firstImage);
+
+		expect(mockOnload).toBeCalledTimes(1);
+
+		fireEvent.load(secondImage);
+
+		expect(mockOnload).toBeCalledTimes(2);
 	});
 });
