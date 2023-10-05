@@ -6,7 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import About from "./About";
 import Products from "./Products";
-import Modal from "./Modal";
+import Modal, { ProductModal } from "./Modal";
 import Contact from "./Contact";
 
 import Icon from "@mdi/react";
