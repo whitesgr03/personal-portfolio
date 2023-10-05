@@ -22,9 +22,9 @@ describe("Renders Header Component", () => {
 		expect(button).toHaveClass("light");
 	});
 	it("Should unable focus button", () => {
-		const mokeShowModal = true;
+		const mockShowModal = true;
 
-		render(<Header showModal={mokeShowModal} />);
+		render(<Header showModal={mockShowModal} />);
 
 		const titleButton = screen.getByRole("button", { name: "Bai" });
 		const aboutButton = screen.getByRole("button", { name: "About" });
