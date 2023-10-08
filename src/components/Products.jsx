@@ -17,6 +17,11 @@ const Products = forwardRef(
 		},
 		ref
 	) => {
+		const handleLoad = (e, index) => {
+			index === 0 && onLoading(false);
+			onLoad(e);
+		};
+
 		return (
 			<div id="products" className="products" ref={ref}>
 				<h2>
