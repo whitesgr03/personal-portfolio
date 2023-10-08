@@ -116,6 +116,7 @@ Products.propTypes = {
 	showModal: PropTypes.bool,
 	imageSize: PropTypes.object,
 	onLoad: PropTypes.func,
+	onLoading: PropTypes.func,
 };
 
 export default Products;
