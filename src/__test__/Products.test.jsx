@@ -831,6 +831,7 @@ describe("Renders Products Component", () => {
 	});
 	it("Should call the function through the load event", async () => {
 		const mockOnload = jest.fn();
+		const mockOnLoading = jest.fn();
 		const mockProductsImage = [
 			{
 				id: "project1",
@@ -875,7 +876,11 @@ describe("Renders Products Component", () => {
 		];
 
 		render(
-			<Products productsImage={mockProductsImage} onLoad={mockOnload} />
+			<Products
+				productsImage={mockProductsImage}
+				onLoad={mockOnload}
+				onLoading={mockOnLoading}
+			/>
 		);
 
 		const [firstImage, , , secondImage] = screen.getAllByRole("img");
@@ -887,5 +892,6 @@ describe("Renders Products Component", () => {
 		fireEvent.load(secondImage);
 
 		expect(mockOnload).toBeCalledTimes(2);
+		expect(mockOnLoading).toBeCalledTimes(1);
 	});
 });
