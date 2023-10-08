@@ -70,26 +70,11 @@ const App = () => {
 	useEffect(() => {
 		let ignore = false;
 		(async () => {
-			setLoading(true);
+			const fakeAvatar = await getAvatar();
 			const fakeProducts = await getProductImages();
 
-			fakeProducts && !ignore && setProductsImage(fakeProducts);
-			fakeProducts && setLoading(false);
-		})();
-		return () => {
-			ignore = true;
-		};
-	}, []);
-
-	useEffect(() => {
-		let ignore = false;
-		(async () => {
-			setLoading(true);
-
-			const fakeAvatar = await getAvatar();
-
 			fakeAvatar && !ignore && setAvatar(fakeAvatar);
-			fakeAvatar && setLoading(false);
+			fakeProducts && !ignore && setProductsImage(fakeProducts);
 		})();
 		return () => {
 			ignore = true;
