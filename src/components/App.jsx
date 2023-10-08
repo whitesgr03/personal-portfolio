@@ -22,7 +22,7 @@ const App = () => {
 	const [product, setProduct] = useState(null);
 	const [showModal, setShowModal] = useState(false);
 	const [imageSize, setImageSize] = useState(null);
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState(true);
 
 	const appRef = useRef(null);
 	const aboutRef = useRef(null);
