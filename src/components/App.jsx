@@ -135,58 +135,52 @@ const App = () => {
 			data-testid="app"
 			ref={appRef}
 		>
-			{loading ? (
-				<div className="loading">
-					<Icon path={mdiLoading} spin={1} size={3} />
-					Loading...
-				</div>
-			) : (
-				<>
-					<Modal
-						ref={modalRef}
-						onCloseModal={handleCloseModal}
+			<div className="loading" hidden={!loading}>
+				<Icon path={mdiLoading} spin={1} size={3} />
+				Loading...
+			</div>
+			<Modal
+				ref={modalRef}
+				onCloseModal={handleCloseModal}
+				showModal={showModal}
+			>
+				<ProductModal
+					product={product}
+					imageSize={imageSize}
+					onLoad={handleLoad}
+				/>
+			</Modal>
+			<Header
+				aboutRef={aboutRef}
+				productsRef={productsRef}
+				appRef={appRef}
+				darkTheme={darkTheme}
+				onChangeTheme={handleChangeTheme}
+				showModal={showModal}
+			/>
+			<main>
+				<div className={`backdrop ${showModal ? "blur" : ""}`}></div>
+				<div>
+					<About
+						ref={aboutRef}
 						showModal={showModal}
-					>
-						<ProductModal
-							product={product}
-							imageSize={imageSize}
-							onLoad={handleLoad}
-						/>
-					</Modal>
-					<Header
-						aboutRef={aboutRef}
-						productsRef={productsRef}
-						appRef={appRef}
-						darkTheme={darkTheme}
-						onChangeTheme={handleChangeTheme}
-						showModal={showModal}
+						avatar={avatar}
+						imageSize={imageSize}
+						onLoad={handleLoad}
 					/>
-					<main>
-						<div
-							className={`backdrop ${showModal ? "blur" : ""}`}
-						></div>
-						<div>
-							<About
-								ref={aboutRef}
-								showModal={showModal}
-								avatar={avatar}
-								imageSize={imageSize}
-								onLoad={handleLoad}
-							/>
-							<Products
-								ref={productsRef}
-								onShowProduct={handleShowProduct}
-								productsImage={productsImage}
-								showModal={showModal}
-								imageSize={imageSize}
-								onLoad={handleLoad}
-							/>
-							<Contact />
-						</div>
-					</main>
-					<Footer showModal={showModal} />
-				</>
-			)}
+					<Products
+						ref={productsRef}
+						onShowProduct={handleShowProduct}
+						productsImage={productsImage}
+						showModal={showModal}
+						imageSize={imageSize}
+						onLoad={handleLoad}
+						onLoading={setLoading}
+					/>
+					<Contact />
+				</div>
+			</main>
+			<Footer showModal={showModal} />
 		</div>
 	);
 };
