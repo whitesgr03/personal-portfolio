@@ -21,7 +21,7 @@ const Footer = ({ showModal }) => {
 };
 
 Footer.propTypes = {
-	product: PropTypes.bool,
+	showModal: PropTypes.bool,
 };
 
 export default Footer;
