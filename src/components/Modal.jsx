@@ -62,7 +62,7 @@ const ProductModal = ({ product, onLoad }) => {
 			<div className="productModal" data-testid="productModal">
 				<div className="describe">
 					<h3>{product.name}</h3>
-					<div>
+					<p>
 						Lorem ipsum dolor sit amet consectetur, adipisicing
 						elit. Modi, voluptate.Lorem ipsum dolor sit amet
 						consectetur, adipisicing elit. Modi, voluptate.Lorem
@@ -70,7 +70,7 @@ const ProductModal = ({ product, onLoad }) => {
 						Modi, voluptate.Lorem ipsum dolor sit amet consectetur,
 						adipisicing elit. Modi, voluptate.Lorem ipsum dolor sit
 						amet consectetur, adipisicing elit. Modi, voluptate.
-					</div>
+					</p>
 				</div>
 				<ul>
 					{product.image.pictures.map((picture, index) => (
