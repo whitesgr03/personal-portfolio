@@ -21,7 +21,9 @@ const Products = forwardRef(
 								onClick={() => onShowProduct(product)}
 							>
 								<div className="imageWrap">
-									<div className="imageLoading"></div>
+									{index !== 0 && (
+										<div className="imageLoading"></div>
+									)}
 									<img
 										onLoad={e => handleLoad(e, index)}
 										sizes="(max-width: 1920px) 100vw, 1920px"
