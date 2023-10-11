@@ -25,10 +25,11 @@ const Products = forwardRef(
 										<div className="imageLoading"></div>
 									)}
 									<img
-										onLoad={e => handleLoad(e, index)}
-										sizes="(max-width: 1920px) 100vw, 1920px"
-										srcSet={`${product.image.preview.phone.url} 480w, ${product.image.preview.tablet.url} 1004w, ${product.image.preview.laptop.url} 1372w, ${product.image.preview.desktop.url} 1820w`}
-										src={product.image.preview.desktop.url}
+										onLoad={e => {
+											index !== 0
+												? onLoad(e)
+												: onLoading(false);
+										}}
 										alt={product.name}
 										loading={index > 0 ? "lazy" : "eager"}
 										decoding={index > 0 ? "async" : "auto"}
