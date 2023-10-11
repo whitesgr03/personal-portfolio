@@ -6,21 +6,7 @@ import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
 const Products = forwardRef(
-	(
-		{
-			onShowProduct,
-			productsImage,
-			showModal,
-			imageSize,
-			onLoad,
-			onLoading,
-		},
-		ref
-	) => {
-		const handleLoad = (e, index) => {
-			index === 0 && onLoading(false);
-			onLoad(e);
-		};
+	({ onShowProduct, productsImage, showModal, onLoad, onLoading }, ref) => {
 
 		return (
 			<div id="products" className="products" ref={ref}>
@@ -114,7 +100,6 @@ Products.propTypes = {
 	onShowProduct: PropTypes.func,
 	productsImage: PropTypes.array,
 	showModal: PropTypes.bool,
-	imageSize: PropTypes.object,
 	onLoad: PropTypes.func,
 	onLoading: PropTypes.func,
 };
