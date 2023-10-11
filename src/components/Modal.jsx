@@ -78,7 +78,7 @@ const ProductModal = ({ product, onLoad }) => {
 							<div className="imageWrap">
 								<div className="imageLoading"></div>
 								<img
-									sizes="(max-width: 1920px) 100vw, 1920px"
+									sizes="(min-width: 900px) 80vw, (min-width: 500px) 90vw, 100vw"
 									srcSet={`${picture.phone.url} 480w, ${picture.tablet.url} 1004w, ${picture.laptop.url} 1372w, ${picture.desktop.url} 1820w`}
 									src={picture.desktop.url}
 									alt={picture.id}
