@@ -48,21 +48,6 @@ const App = () => {
 	};
 	const handleLoad = e => (e.target.previousElementSibling.hidden = true);
 
-	const getPixelDensity = () =>
-		Math.max(
-			document.documentElement.clientWidth || 0,
-			window.innerWidth || 0
-		) * window.devicePixelRatio;
-
-	const getImageIntrinsicSize = (sizes, pixelDensity) =>
-		sizes
-			.map(item => item.width)
-			.reduce((prev, curr) =>
-				Math.abs(curr - pixelDensity) < Math.abs(prev - pixelDensity)
-					? curr
-					: prev
-			);
-
 	useEffect(() => {
 		product && modalRef.current.focus();
 	}, [product]);
