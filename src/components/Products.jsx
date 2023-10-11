@@ -10,9 +10,7 @@ const Products = forwardRef(
 
 		return (
 			<div id="products" className="products" ref={ref}>
-				<h2>
-					My <span>Works</span>
-				</h2>
+				<h2>My Works</h2>
 				<ul>
 					{productsImage.map((product, index) => (
 						<li key={product.id}>
