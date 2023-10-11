@@ -15,7 +15,7 @@ const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
 						data-testid="imageLoading"
 					></div>
 					<img
-						sizes="(max-width: 1920px) 100vw, 1920px"
+						sizes="(min-width: 1200px) 20vw, (min-width: 1024px) 25vw, (min-width: 500px) 50vw, 60vw"
 						srcSet={`${avatar?.small.url} 1004w, ${avatar?.large.url} 1372w`}
 						src={avatar?.large.url}
 						alt="avatar"
