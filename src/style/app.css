@@ -139,12 +139,10 @@
 .app.light img {
 	filter: brightness(1) contrast(1);
 }
-.app.light h2 {
-	font-weight: 700;
-	color: var(--light-scheme-highlight-color);
-}
+.app.light h2,
 .app.light h3 {
 	font-weight: 700;
+	color: var(--light-scheme-highlight-color);
 }
 
 .app.light .imageWrap {
