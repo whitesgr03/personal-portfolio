@@ -30,6 +30,7 @@ const Products = forwardRef(
 												? onLoad(e)
 												: onLoading(false);
 										}}
+										sizes=" (min-width: 1024px) 30vw, (min-width: 900px) 60vw, (min-width: 768px) 70vw, (min-width: 600px) 80vw, 100vw"
 										alt={product.name}
 										loading={index > 0 ? "lazy" : "eager"}
 										decoding={index > 0 ? "async" : "auto"}
