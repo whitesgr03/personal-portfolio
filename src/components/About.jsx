@@ -10,10 +10,7 @@ const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
 		<article className="about" ref={ref}>
 			<div className="describe">
 				<div className="imageWrap">
-					<div
-						className="imageLoading"
-						data-testid="imageLoading"
-					></div>
+					<div className="imageLoading"></div>
 					<img
 						sizes="(min-width: 1200px) 20vw, (min-width: 1024px) 25vw, (min-width: 500px) 50vw, 60vw"
 						srcSet={`${avatar?.phone_small.url} 350w, ${avatar?.phone_large.url} 600w, ${avatar?.desktop_small.url} 700w, ${avatar?.laptop.url} 800w, ${avatar?.desktop_medium.url} 900w, ${avatar?.desktop_large.url} 1100w`}
