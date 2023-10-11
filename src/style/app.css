@@ -73,7 +73,6 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-
 	transform: translateX(-100%);
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
@@ -158,17 +157,30 @@
 	);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 600px) {
 	.app main > div:nth-child(2) {
-		margin: 0 5%;
+		padding: 20px 10%;
 	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
+	.app main > div:nth-child(2) {
+		padding: 20px 15%;
+	}
+}
+
+
+@media (min-width: 900px) {
+	.app main > div:nth-child(2) {
+		padding: 20px 20%;
+	}
+}
+
+@media (min-width: 1024px) {
 	.app {
 		font-size: 1.2rem;
 	}
 	.app main > div:nth-child(2) {
-		margin: 0 10%;
+		padding: 20px 10%;
 	}
 }
