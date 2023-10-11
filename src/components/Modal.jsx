@@ -56,7 +56,7 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 	);
 });
 
-const ProductModal = ({ product, imageSize, onLoad }) => {
+const ProductModal = ({ product, onLoad }) => {
 	return (
 		product && (
 			<div className="productModal" data-testid="productModal">
@@ -105,7 +105,6 @@ Modal.propTypes = {
 
 ProductModal.propTypes = {
 	product: PropTypes.object,
-	imageSize: PropTypes.object,
 	onLoad: PropTypes.func,
 };
 
