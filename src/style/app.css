@@ -103,12 +103,11 @@
 .app.dark img {
 	filter: brightness(0.8) contrast(1.2);
 }
-.app.dark h2 {
-	font-weight: 400;
-	color: var(--dark-scheme-highlight-color);
-}
+
+.app.dark h2,
 .app.dark h3 {
 	font-weight: 400;
+	color: var(--dark-scheme-highlight-color);
 }
 
 .app.dark .imageWrap {
