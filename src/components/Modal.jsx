@@ -79,8 +79,8 @@ const ProductModal = ({ product, onLoad }) => {
 								<div className="imageLoading"></div>
 								<img
 									sizes="(min-width: 900px) 80vw, (min-width: 500px) 90vw, 100vw"
-									srcSet={`${picture.phone.url} 480w, ${picture.tablet.url} 1004w, ${picture.laptop.url} 1372w, ${picture.desktop.url} 1820w`}
-									src={picture.desktop.url}
+									srcSet={`${picture.phone_small.url} 810w, ${picture.phone_large.url} 1088w, ${picture.tablet.url} 1324w, ${picture.desktop_small.url} 1587w,  ${picture.laptop.url} 1814w,  ${picture.desktop_medium.url} 2400w,`}
+									src={picture.phone_small.url}
 									alt={picture.id}
 									loading={index > 0 ? "lazy" : "eager"}
 									decoding={index > 0 ? "async" : "auto"}
