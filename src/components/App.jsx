@@ -21,7 +21,6 @@ const App = () => {
 
 	const [product, setProduct] = useState(null);
 	const [showModal, setShowModal] = useState(false);
-	const [imageSize, setImageSize] = useState(null);
 	const [loading, setLoading] = useState(true);
 
 	const appRef = useRef(null);
@@ -84,11 +83,7 @@ const App = () => {
 				onCloseModal={handleCloseModal}
 				showModal={showModal}
 			>
-				<ProductModal
-					product={product}
-					imageSize={imageSize}
-					onLoad={handleLoad}
-				/>
+				<ProductModal product={product} onLoad={handleLoad} />
 			</Modal>
 			<Header
 				aboutRef={aboutRef}
@@ -105,7 +100,6 @@ const App = () => {
 						ref={aboutRef}
 						showModal={showModal}
 						avatar={avatar}
-						imageSize={imageSize}
 						onLoad={handleLoad}
 					/>
 					<Products
@@ -113,7 +107,6 @@ const App = () => {
 						onShowProduct={handleShowProduct}
 						productsImage={productsImage}
 						showModal={showModal}
-						imageSize={imageSize}
 						onLoad={handleLoad}
 						onLoading={setLoading}
 					/>
