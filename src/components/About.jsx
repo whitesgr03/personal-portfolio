@@ -61,6 +61,8 @@ const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
 
 About.propTypes = {
 	showModal: PropTypes.bool,
+	avatar: PropTypes.object,
+	onLoad: PropTypes.func,
 };
 
 export default About;
