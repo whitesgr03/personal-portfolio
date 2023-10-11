@@ -31,6 +31,11 @@ const Products = forwardRef(
 												: onLoading(false);
 										}}
 										sizes=" (min-width: 1024px) 30vw, (min-width: 900px) 60vw, (min-width: 768px) 70vw, (min-width: 600px) 80vw, 100vw"
+										srcSet={`${product.image.preview.phone_small.url} 628w, ${product.image.preview.phone_large.url} 867w, ${product.image.preview.tablet.url} 1068w, ${product.image.preview.desktop_small.url} 1235w,  ${product.image.preview.laptop.url} 1378w,  ${product.image.preview.desktop_medium.url} 1561w,  ${product.image.preview.desktop_large.url} 1672w`}
+										src={
+											product.image.preview.phone_small
+												.url
+										}
 										alt={product.name}
 										loading={index > 0 ? "lazy" : "eager"}
 										decoding={index > 0 ? "async" : "auto"}
