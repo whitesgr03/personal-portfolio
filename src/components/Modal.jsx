@@ -61,17 +61,17 @@ const ProductModal = ({ product, onLoad }) => {
 	useLayoutEffect(() => {
 		const IMAGES_SIZE = [
 			{
-				device: "phone_small",
+				device: "small",
 				width: 810,
 				height: 540,
 			},
 			{
-				device: "tablet",
+				device: "medium",
 				width: 1372,
 				height: 915,
 			},
 			{
-				device: "desktop_medium",
+				device: "large",
 				width: 1905,
 				height: 1270,
 			},
@@ -87,10 +87,10 @@ const ProductModal = ({ product, onLoad }) => {
 			);
 			setImageSize(
 				viewPortWidth < 900
-					? getSize("phone_small")
+					? getSize("small")
 					: viewPortWidth < 1700
-					? getSize("tablet")
-					: getSize("desktop_medium")
+					? getSize("medium")
+					: getSize("large")
 			);
 		};
 
