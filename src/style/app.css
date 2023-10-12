@@ -147,6 +147,9 @@
 	color: var(--light-scheme-highlight-color);
 }
 
+.app.light .loading {
+	background-color: var(--light-scheme-bgc);
+}
 .app.light .imageWrap {
 	background-color: var(--light-scheme-color);
 }
