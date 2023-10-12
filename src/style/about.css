@@ -75,8 +75,34 @@
 	color: var(--light-scheme-highlight-color);
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 400px) {
+	.about .describe {
+		padding: 0 25%;
+	}
+}
+
+@media (min-width: 600px) {
+	.about .describe p span:nth-child(1) {
+		font-size: 1.5rem;
+	}
+	.about .describe p span:nth-child(2) {
+		font-size: 2rem;
+	}
+}
+
+@media (min-width: 700px) {
+	.about .describe {
+		padding: 0 30%;
+	}
+}
+
+@media (min-width: 1024px) {
 	.about {
-		flex-direction: row;
+		grid-template:
+			"describe content" auto
+			/ 1fr 1fr;
+	}
+	.about .describe {
+		padding: 0 15%;
 	}
 }
