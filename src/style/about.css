@@ -13,6 +13,7 @@
 	grid-area: describe;
 	display: flex;
 	flex-direction: column;
+	row-gap: 1rem;
 	justify-self: center;
 	padding: 0 20%;
 }
