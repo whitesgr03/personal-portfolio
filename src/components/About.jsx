@@ -1,11 +1,15 @@
 import PropTypes from "prop-types";
 
-import { forwardRef } from "react";
+import {
+	forwardRef,
+	useState
+} from "react";
 
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
 const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
+	const [imageSize, setImageSize] = useState(null);
 	return (
 		<article className="about" ref={ref}>
 			<div className="describe">

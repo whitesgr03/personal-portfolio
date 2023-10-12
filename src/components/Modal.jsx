@@ -57,6 +57,7 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 });
 
 const ProductModal = ({ product, onLoad }) => {
+	const [imageSize, setImageSize] = useState(null);
 	return (
 		product && (
 			<div className="productModal" data-testid="productModal">

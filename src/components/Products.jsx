@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
 
-import { forwardRef } from "react";
+import {
+	forwardRef,
+	useState,
+} from "react";
 
 import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
 const Products = forwardRef(
 	({ onShowProduct, productsImage, showModal, onLoad, onLoading }, ref) => {
+		const [imageSize, setImageSize] = useState(null);
 
 		return (
 			<div id="products" className="products" ref={ref}>
