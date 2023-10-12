@@ -55,9 +55,17 @@ const App = () => {
 		let ignore = false;
 		(async () => {
 			const fakeAvatar = await getAvatar();
-			const fakeProducts = await getProductImages();
-
 			fakeAvatar && !ignore && setAvatar(fakeAvatar);
+		})();
+		return () => {
+			ignore = true;
+		};
+	}, []);
+
+	useEffect(() => {
+		let ignore = false;
+		(async () => {
+			const fakeProducts = await getProductImages();
 			fakeProducts && !ignore && setProductsImage(fakeProducts);
 		})();
 		return () => {
