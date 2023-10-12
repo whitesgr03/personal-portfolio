@@ -33,7 +33,6 @@ const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
 			setImageSize(
 				viewPortWidth < 1500 ? getSize("small") : getSize("large")
 			);
-			console.log("resize about");
 		};
 
 		handleSetImageSize();

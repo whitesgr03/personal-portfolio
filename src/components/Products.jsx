@@ -34,7 +34,6 @@ const Products = forwardRef(
 				setImageSize(
 					viewPortWidth < 1024 ? getSize("small") : getSize("large")
 				);
-				console.log("resize products");
 			};
 
 			handleSetImageSize();

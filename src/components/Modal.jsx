@@ -92,7 +92,6 @@ const ProductModal = ({ product, onLoad }) => {
 					? getSize("tablet")
 					: getSize("desktop_medium")
 			);
-			console.log("resize modal");
 		};
 
 		handleSetImageSize();
