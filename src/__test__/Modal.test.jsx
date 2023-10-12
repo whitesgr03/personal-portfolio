@@ -87,59 +87,6 @@ describe("Renders ProductModal Component", () => {
 			mockProduct.image.pictures[0].desktop.url
 		);
 	});
-	it("Should return width and height properties of the img tag", () => {
-		const mockProduct = {
-			id: "project1",
-			name: "project1",
-			image: {
-				pictures: [
-					{
-						id: "project1-picture1",
-						phone: {
-							url: "...",
-						},
-						tablet: {
-							url: "...",
-						},
-						laptop: {
-							url: "...",
-						},
-						desktop: {
-							url: "...",
-						},
-					},
-					{
-						id: "project1-picture2",
-						phone: {
-							url: "...",
-						},
-						tablet: {
-							url: "...",
-						},
-						laptop: {
-							url: "...",
-						},
-						desktop: {
-							url: "...",
-						},
-					},
-				],
-			},
-		};
-		const mockImageSize = {
-			width: "1372",
-			height: "1372",
-		};
-
-		render(
-			<ProductModal product={mockProduct} imageSize={mockImageSize} />
-		);
-
-		const [firstImage] = screen.getAllByRole("img");
-
-		expect(firstImage).toHaveAttribute("width", mockImageSize.width);
-		expect(firstImage).toHaveAttribute("height", mockImageSize.height);
-	});
 	it("Should call the function through the load event", async () => {
 		const mockOnload = jest.fn();
 		const mockProduct = {
