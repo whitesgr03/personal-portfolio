@@ -152,20 +152,24 @@
 	background-color: var(--light-scheme-highlight-color);
 }
 
-@media (min-width: 481px) {
+@media (min-width: 500px) {
+	.modal {
+		margin-left: 10%;
+	}
 	.modal .padding {
 		padding-bottom: 30%;
 	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 900px) {
 	.modal {
-		margin-left: 10%;
+		margin-left: 20%;
 	}
 }
 
-@media (min-width: 1025px) {
-	.modal .padding {
-		padding-bottom: 20%;
+@media (min-width: 1024px) {
+	.modal {
+		margin-left: 10%;
+		margin-right: 10%;
 	}
 }
