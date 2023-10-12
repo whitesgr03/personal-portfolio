@@ -156,7 +156,7 @@
 		brightness(101%) contrast(90%);
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 	.products li {
 		flex-direction: row;
 		column-gap: 2rem;
