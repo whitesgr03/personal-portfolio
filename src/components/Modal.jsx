@@ -130,8 +130,8 @@ const ProductModal = ({ product, onLoad }) => {
 									alt={picture.id}
 									loading={index > 0 ? "lazy" : "eager"}
 									decoding={index > 0 ? "async" : "auto"}
-									width={imageSize?.width}
-									height={imageSize?.height}
+									width={imageSize && imageSize.width}
+									height={imageSize && imageSize.height}
 									onLoad={onLoad}
 								/>
 							</div>

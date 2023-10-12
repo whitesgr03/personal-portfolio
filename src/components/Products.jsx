@@ -77,8 +77,8 @@ const Products = forwardRef(
 										alt={product.name}
 										loading={index > 0 ? "lazy" : "eager"}
 										decoding={index > 0 ? "async" : "auto"}
-										width={imageSize?.width}
-										height={imageSize?.height}
+										width={imageSize && imageSize.width}
+										height={imageSize && imageSize.height}
 									/>
 								</div>
 							</button>
