@@ -13,10 +13,8 @@
 	grid-area: describe;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	row-gap: 10px;
-	flex: 1 1 100%;
+	justify-self: center;
+	padding: 0 20%;
 }
 
 .about .describe > :first-child {
