@@ -16,21 +16,24 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 2rem;
+
 }
 
-.products li button {
+.products li > button {
 	padding: 1px;
+	display: flex;
+	justify-content: center;
 }
 
-.products li button img {
+.products li > button img {
 	transition: all 0.3s ease;
 }
 
-.products li button:hover img {
+.products li > button:hover img {
 	transform: scale(1.2);
 }
 
-.products li button:focus img {
+.products li > button:focus img {
 	transform: scale(1);
 }
 
@@ -117,6 +120,7 @@
 .app.light .products li article h3 button {
 	color: var(--light-scheme-highlight-color);
 }
+
 .app.light .products .link a {
 	border-width: 2px;
 }
