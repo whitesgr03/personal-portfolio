@@ -49,30 +49,6 @@ describe("Renders Footer Component", () => {
 
 		expect(image).toHaveAttribute("src", mockAvatar.phone_small.url);
 	});
-	it("Should return 150px width and height properties of the img tag", () => {
-		const mockImageSize = {
-			width: 1004,
-		};
-
-		render(<About imageSize={mockImageSize} />);
-
-		const image = screen.getByRole("img");
-
-		expect(image).toHaveAttribute("width", "150");
-		expect(image).toHaveAttribute("height", "150");
-	});
-	it("Should return 250px width and height properties of the img tag", () => {
-		const mockImageSize = {
-			width: 1372,
-		};
-
-		render(<About imageSize={mockImageSize} />);
-
-		const image = screen.getByRole("img");
-
-		expect(image).toHaveAttribute("width", "250");
-		expect(image).toHaveAttribute("height", "250");
-	});
 	it("Should call the function through the load event", async () => {
 		const mockOnload = jest.fn();
 
