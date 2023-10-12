@@ -59,7 +59,6 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 3;
-	background-color: var(--dark-scheme-bgc);
 }
 
 .app .imageWrap {
@@ -168,7 +167,6 @@
 		padding: 20px 15%;
 	}
 }
-
 
 @media (min-width: 900px) {
 	.app main > div:nth-child(2) {
