@@ -135,25 +135,25 @@ const getProductImages = () => {
 			image: {
 				preview: {
 					phone_small: {
-						url: "https://picsum.photos/628/419/?1",
+						url: "https://picsum.photos/628/419/?2",
 					},
 					phone_large: {
-						url: "https://picsum.photos/867/578/?2",
+						url: "https://picsum.photos/867/578/?3",
 					},
 					tablet: {
-						url: "https://picsum.photos/1068/712/?3",
+						url: "https://picsum.photos/1068/712/?4",
 					},
 					desktop_small: {
-						url: "https://picsum.photos/1235/823/?4",
+						url: "https://picsum.photos/1235/823/?5",
 					},
 					laptop: {
-						url: "https://picsum.photos/1378/919/?5",
+						url: "https://picsum.photos/1378/919/?6",
 					},
 					desktop_medium: {
-						url: "https://picsum.photos/1561/1040/?6",
+						url: "https://picsum.photos/1561/1040/?7",
 					},
 					desktop_large: {
-						url: "https://picsum.photos/1672/1115/?7",
+						url: "https://picsum.photos/1672/1115/8",
 					},
 				},
 				pictures: [
