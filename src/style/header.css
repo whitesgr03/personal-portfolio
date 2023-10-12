@@ -106,16 +106,32 @@ nav ul button:hover span::after {
 	color: var(--light-scheme-highlight-color);
 }
 
-@media (min-width: 481px) {
-	header {
-		padding: 10px 50px;
-	}
-
-	.app.dark header h1 {
+@media (min-width: 425px) {
+	nav h1 {
 		font-size: 3rem;
 	}
+}
 
+@media (min-width: 600px) {
 	nav ul {
-		column-gap: 50px;
+		column-gap: 60px;
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		padding: 10px 15%;
+	}
+}
+
+@media (min-width: 900px) {
+	header {
+		padding: 10px 20%;
+	}
+}
+
+@media (min-width: 1024px) {
+	header {
+		padding: 10px 10%;
 	}
 }
