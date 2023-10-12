@@ -1,15 +1,50 @@
 import PropTypes from "prop-types";
 
-import {
-	forwardRef,
-	useState
-} from "react";
+import { forwardRef, useLayoutEffect, useState } from "react";
 
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
 const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
 	const [imageSize, setImageSize] = useState(null);
+
+	useLayoutEffect(() => {
+		const IMAGES_SIZE = [
+			{
+				device: "small",
+				width: 350,
+				height: 350,
+			},
+			{
+				device: "large",
+				width: 600,
+				height: 600,
+			},
+		];
+
+		const getSize = target =>
+			IMAGES_SIZE.find(item => item.device === target);
+
+		const handleSetImageSize = () => {
+			const viewPortWidth = Math.max(
+				document.documentElement.clientWidth || 0,
+				window.innerWidth || 0
+			);
+			setImageSize(
+				viewPortWidth < 1500 ? getSize("small") : getSize("large")
+			);
+			console.log("resize about");
+		};
+
+		handleSetImageSize();
+
+		window.addEventListener("resize", handleSetImageSize);
+
+		return () => {
+			window.removeEventListener("resize", handleSetImageSize);
+		};
+	}, []);
+
 	return (
 		<article className="about" ref={ref}>
 			<div className="describe">

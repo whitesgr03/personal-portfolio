@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
 
-import {
-	forwardRef,
-	useState,
-} from "react";
+import { forwardRef, useState, useLayoutEffect } from "react";
 
 import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
@@ -11,6 +8,43 @@ import githubIcon from "../image/github-icon.png";
 const Products = forwardRef(
 	({ onShowProduct, productsImage, showModal, onLoad, onLoading }, ref) => {
 		const [imageSize, setImageSize] = useState(null);
+
+		useLayoutEffect(() => {
+			const IMAGES_SIZE = [
+				{
+					device: "small",
+					width: 628,
+					height: 419,
+				},
+				{
+					device: "large",
+					width: 867,
+					height: 578,
+				},
+			];
+
+			const getSize = target =>
+				IMAGES_SIZE.find(item => item.device === target);
+
+			const handleSetImageSize = () => {
+				const viewPortWidth = Math.max(
+					document.documentElement.clientWidth || 0,
+					window.innerWidth || 0
+				);
+				setImageSize(
+					viewPortWidth < 1024 ? getSize("small") : getSize("large")
+				);
+				console.log("resize products");
+			};
+
+			handleSetImageSize();
+
+			window.addEventListener("resize", handleSetImageSize);
+
+			return () => {
+				window.removeEventListener("resize", handleSetImageSize);
+			};
+		}, []);
 
 		return (
 			<div id="products" className="products" ref={ref}>

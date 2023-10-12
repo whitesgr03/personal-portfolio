@@ -1,4 +1,4 @@
-import { useState, forwardRef } from "react";
+import { useState, useLayoutEffect, forwardRef } from "react";
 
 import PropTypes from "prop-types";
 
@@ -58,6 +58,51 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 
 const ProductModal = ({ product, onLoad }) => {
 	const [imageSize, setImageSize] = useState(null);
+	useLayoutEffect(() => {
+		const IMAGES_SIZE = [
+			{
+				device: "phone_small",
+				width: 810,
+				height: 540,
+			},
+			{
+				device: "tablet",
+				width: 1372,
+				height: 915,
+			},
+			{
+				device: "desktop_medium",
+				width: 1905,
+				height: 1270,
+			},
+		];
+
+		const getSize = target =>
+			IMAGES_SIZE.find(item => item.device === target);
+
+		const handleSetImageSize = () => {
+			const viewPortWidth = Math.max(
+				document.documentElement.clientWidth || 0,
+				window.innerWidth || 0
+			);
+			setImageSize(
+				viewPortWidth < 900
+					? getSize("phone_small")
+					: viewPortWidth < 1700
+					? getSize("tablet")
+					: getSize("desktop_medium")
+			);
+			console.log("resize modal");
+		};
+
+		handleSetImageSize();
+
+		window.addEventListener("resize", handleSetImageSize);
+
+		return () => {
+			window.removeEventListener("resize", handleSetImageSize);
+		};
+	}, []);
 	return (
 		product && (
 			<div className="productModal" data-testid="productModal">
