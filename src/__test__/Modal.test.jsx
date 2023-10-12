@@ -41,32 +41,50 @@ describe("Renders ProductModal Component", () => {
 				pictures: [
 					{
 						id: "project1-picture1",
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
 					{
 						id: "project1-picture2",
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
 				],
@@ -84,7 +102,7 @@ describe("Renders ProductModal Component", () => {
 		expect(heading).toBeInTheDocument();
 		expect(firstImage).toHaveAttribute(
 			"src",
-			mockProduct.image.pictures[0].desktop.url
+			mockProduct.image.pictures[0].phone_small.url
 		);
 	});
 	it("Should call the function through the load event", async () => {
@@ -96,32 +114,50 @@ describe("Renders ProductModal Component", () => {
 				pictures: [
 					{
 						id: "project1-picture1",
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
 					{
 						id: "project1-picture2",
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
 				],
