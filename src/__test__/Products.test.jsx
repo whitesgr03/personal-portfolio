@@ -13,67 +13,28 @@ describe("Renders Products Component", () => {
 				name: "project1",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
-
-					pictures: [
-						{
-							id: "project1-picture1",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project1-picture2",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project1-picture3",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-					],
 				},
 			},
 			{
@@ -81,66 +42,28 @@ describe("Renders Products Component", () => {
 				name: "project2",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
-					pictures: [
-						{
-							id: "project2-picture1",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project2-picture2",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project2-picture3",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-					],
 				},
 			},
 		];
@@ -167,67 +90,28 @@ describe("Renders Products Component", () => {
 				name: "project1",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
-
-					pictures: [
-						{
-							id: "project1-picture1",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project1-picture2",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project1-picture3",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-					],
 				},
 			},
 			{
@@ -235,66 +119,28 @@ describe("Renders Products Component", () => {
 				name: "project2",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
-					pictures: [
-						{
-							id: "project2-picture1",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project2-picture2",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project2-picture3",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-					],
 				},
 			},
 		];
@@ -322,7 +168,6 @@ describe("Renders Products Component", () => {
 
 		expect(mockOnShowProduct).toBeCalledTimes(2);
 	});
-
 	it("Should press the Tab key to focus buttons and links", async () => {
 		const user = userEvent.setup();
 		const mockShowModal = false;
@@ -332,67 +177,28 @@ describe("Renders Products Component", () => {
 				name: "project1",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
-
-					pictures: [
-						{
-							id: "project1-picture1",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project1-picture2",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project1-picture3",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-					],
 				},
 			},
 			{
@@ -400,66 +206,28 @@ describe("Renders Products Component", () => {
 				name: "project2",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
-					pictures: [
-						{
-							id: "project2-picture1",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project2-picture2",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project2-picture3",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-					],
 				},
 			},
 		];
@@ -507,67 +275,28 @@ describe("Renders Products Component", () => {
 				name: "project1",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
-
-					pictures: [
-						{
-							id: "project1-picture1",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project1-picture2",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project1-picture3",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-					],
 				},
 			},
 			{
@@ -575,66 +304,28 @@ describe("Renders Products Component", () => {
 				name: "project2",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
-					pictures: [
-						{
-							id: "project2-picture1",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project2-picture2",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-						{
-							id: "project2-picture3",
-							phone: {
-								url: "...",
-							},
-							tablet: {
-								url: "...",
-							},
-							laptop: {
-								url: "...",
-							},
-							desktop: {
-								url: "...",
-							},
-						},
-					],
 				},
 			},
 		];
@@ -682,17 +373,26 @@ describe("Renders Products Component", () => {
 				name: "project1",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
 				},
@@ -702,17 +402,26 @@ describe("Renders Products Component", () => {
 				name: "project2",
 				image: {
 					preview: {
-						phone: {
-							url: "...",
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
 						},
 						tablet: {
-							url: "...",
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
 						},
 						laptop: {
-							url: "...",
+							url: "../",
 						},
-						desktop: {
-							url: "...",
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
 						},
 					},
 				},
@@ -731,11 +440,10 @@ describe("Renders Products Component", () => {
 
 		fireEvent.load(firstImage);
 
-		expect(mockOnload).toBeCalledTimes(1);
+		expect(mockOnLoading).toBeCalledTimes(1);
 
 		fireEvent.load(secondImage);
 
-		expect(mockOnload).toBeCalledTimes(2);
-		expect(mockOnLoading).toBeCalledTimes(1);
+		expect(mockOnload).toBeCalledTimes(1);
 	});
 });
