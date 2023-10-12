@@ -41,8 +41,7 @@
 	grid-area: content;
 	display: flex;
 	flex-direction: column;
-	row-gap: 10px;
-	flex: 1 1 100%;
+	row-gap: 1rem;
 }
 
 .about .link {
