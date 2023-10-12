@@ -1,10 +1,22 @@
 const getAvatar = () => {
 	const fakeData = {
-		small: {
-			url: "https://i.pravatar.cc/150",
+		phone_small: {
+			url: "https://i.pravatar.cc/350",
 		},
-		large: {
-			url: "https://i.pravatar.cc/250",
+		phone_large: {
+			url: "https://i.pravatar.cc/600",
+		},
+		desktop_small: {
+			url: "https://i.pravatar.cc/700",
+		},
+		laptop: {
+			url: "https://i.pravatar.cc/800",
+		},
+		desktop_medium: {
+			url: "https://i.pravatar.cc/900",
+		},
+		desktop_large: {
+			url: "https://i.pravatar.cc/1100",
 		},
 	};
 
@@ -18,64 +30,100 @@ const getProductImages = () => {
 			name: "project1",
 			image: {
 				preview: {
-					phone: {
-						url: "https://picsum.photos/480/320/?random44322",
+					phone_small: {
+						url: "https://picsum.photos/628/419/?1",
+					},
+					phone_large: {
+						url: "https://picsum.photos/867/578/?2",
 					},
 					tablet: {
-						url: "https://picsum.photos/1004/669/?random424",
+						url: "https://picsum.photos/1068/712/?3",
+					},
+					desktop_small: {
+						url: "https://picsum.photos/1235/823/?4",
 					},
 					laptop: {
-						url: "https://picsum.photos/1372/915/?random34324",
+						url: "https://picsum.photos/1378/919/?5",
 					},
-					desktop: {
-						url: "https://picsum.photos/1820/1213/?random15345",
+					desktop_medium: {
+						url: "https://picsum.photos/1561/1040/?6",
+					},
+					desktop_large: {
+						url: "https://picsum.photos/1672/1115/?7",
 					},
 				},
 
 				pictures: [
 					{
 						id: "project1-picture1",
-						phone: {
-							url: "https://picsum.photos/480/320/?random25345",
+						phone_small: {
+							url: "https://picsum.photos/810/540/?2",
+						},
+						phone_large: {
+							url: "https://picsum.photos/1088/725/?3",
 						},
 						tablet: {
-							url: "https://picsum.photos/1004/669/?random45542",
+							url: "https://picsum.photos/1372/915/?3",
+						},
+						desktop_small: {
+							url: "https://picsum.photos/1672/1115/?4",
 						},
 						laptop: {
-							url: "https://picsum.photos/1372/915/?random37567",
+							url: "https://picsum.photos/1905/1270/?5",
 						},
-						desktop: {
-							url: "https://picsum.photos/1820/1213/?random1gdfg",
+						desktop_medium: {
+							url: "https://picsum.photos/2400/1600/?6",
+						},
+						desktop_large: {
+							url: "https://picsum.photos/3840/2160/?057",
 						},
 					},
 					{
 						id: "project1-picture2",
-						phone: {
-							url: "https://picsum.photos/480/320/?random2ewq",
+						phone_small: {
+							url: "https://picsum.photos/810/540/?2",
+						},
+						phone_large: {
+							url: "https://picsum.photos/1088/725/?3",
 						},
 						tablet: {
-							url: "https://picsum.photos/1004/669/?random4jty",
+							url: "https://picsum.photos/1324/883/?3",
+						},
+						desktop_small: {
+							url: "https://picsum.photos/1587/1058/?4",
 						},
 						laptop: {
-							url: "https://picsum.photos/1372/915/?random3sd",
+							url: "https://picsum.photos/1814/1209/?5",
 						},
-						desktop: {
-							url: "https://picsum.photos/1820/1213/?random1iuy",
+						desktop_medium: {
+							url: "https://picsum.photos/2400/1600/?6",
+						},
+						desktop_large: {
+							url: "https://picsum.photos/3840/2160/?057",
 						},
 					},
 					{
 						id: "project1-picture3",
-						phone: {
-							url: "https://picsum.photos/480/320/?random2423",
+						phone_small: {
+							url: "https://picsum.photos/810/540/?2",
+						},
+						phone_large: {
+							url: "https://picsum.photos/1088/725/?3",
 						},
 						tablet: {
-							url: "https://picsum.photos/1004/669/?random4fsdf",
+							url: "https://picsum.photos/1324/883/?3",
+						},
+						desktop_small: {
+							url: "https://picsum.photos/1587/1058/?4",
 						},
 						laptop: {
-							url: "https://picsum.photos/1372/915/?random3ej",
+							url: "https://picsum.photos/1814/1209/?5",
 						},
-						desktop: {
-							url: "https://picsum.photos/1820/1213/?random1tytr",
+						desktop_medium: {
+							url: "https://picsum.photos/2400/1600/?6",
+						},
+						desktop_large: {
+							url: "https://picsum.photos/3840/2160/?057",
 						},
 					},
 				],
@@ -86,63 +134,99 @@ const getProductImages = () => {
 			name: "project2",
 			image: {
 				preview: {
-					phone: {
-						url: "https://picsum.photos/480/320/?random81t",
+					phone_small: {
+						url: "https://picsum.photos/628/419/?1",
+					},
+					phone_large: {
+						url: "https://picsum.photos/867/578/?2",
 					},
 					tablet: {
-						url: "https://picsum.photos/1004/669/?random2e",
+						url: "https://picsum.photos/1068/712/?3",
+					},
+					desktop_small: {
+						url: "https://picsum.photos/1235/823/?4",
 					},
 					laptop: {
-						url: "https://picsum.photos/1372/915/?random1e",
+						url: "https://picsum.photos/1378/919/?5",
 					},
-					desktop: {
-						url: "https://picsum.photos/1820/1213/?random9e",
+					desktop_medium: {
+						url: "https://picsum.photos/1561/1040/?6",
+					},
+					desktop_large: {
+						url: "https://picsum.photos/1672/1115/?7",
 					},
 				},
 				pictures: [
 					{
 						id: "project2-picture1",
-						phone: {
-							url: "https://picsum.photos/480/320/?random2s",
+						phone_small: {
+							url: "https://picsum.photos/810/540/?2",
+						},
+						phone_large: {
+							url: "https://picsum.photos/1088/725/?3",
 						},
 						tablet: {
-							url: "https://picsum.photos/1004/669/?random4y",
+							url: "https://picsum.photos/1324/883/?3",
+						},
+						desktop_small: {
+							url: "https://picsum.photos/1587/1058/?4",
 						},
 						laptop: {
-							url: "https://picsum.photos/1372/915/?random37",
+							url: "https://picsum.photos/1814/1209/?5",
 						},
-						desktop: {
-							url: "https://picsum.photos/1820/1213/?random1y",
+						desktop_medium: {
+							url: "https://picsum.photos/2400/1600/?6",
+						},
+						desktop_large: {
+							url: "https://picsum.photos/3840/2160/?057",
 						},
 					},
 					{
 						id: "project2-picture2",
-						phone: {
-							url: "https://picsum.photos/480/320/?random242",
+						phone_small: {
+							url: "https://picsum.photos/810/540/?2",
+						},
+						phone_large: {
+							url: "https://picsum.photos/1088/725/?3",
 						},
 						tablet: {
-							url: "https://picsum.photos/1004/669/?random443",
+							url: "https://picsum.photos/1324/883/?3",
+						},
+						desktop_small: {
+							url: "https://picsum.photos/1587/1058/?4",
 						},
 						laptop: {
-							url: "https://picsum.photos/1372/915/?random35435",
+							url: "https://picsum.photos/1814/1209/?5",
 						},
-						desktop: {
-							url: "https://picsum.photos/1820/1213/?random1654",
+						desktop_medium: {
+							url: "https://picsum.photos/2400/1600/?6",
+						},
+						desktop_large: {
+							url: "https://picsum.photos/3840/2160/?057",
 						},
 					},
 					{
 						id: "project2-picture3",
-						phone: {
-							url: "https://picsum.photos/480/320/?random2y5r",
+						phone_small: {
+							url: "https://picsum.photos/810/540/?2",
+						},
+						phone_large: {
+							url: "https://picsum.photos/1088/725/?3",
 						},
 						tablet: {
-							url: "https://picsum.photos/1004/669/?random4fs",
+							url: "https://picsum.photos/1324/883/?3",
+						},
+						desktop_small: {
+							url: "https://picsum.photos/1587/1058/?4",
 						},
 						laptop: {
-							url: "https://picsum.photos/1372/915/?random43243",
+							url: "https://picsum.photos/1814/1209/?5",
 						},
-						desktop: {
-							url: "https://picsum.photos/1820/1213/?random144",
+						desktop_medium: {
+							url: "https://picsum.photos/2400/1600/?6",
+						},
+						desktop_large: {
+							url: "https://picsum.photos/3840/2160/?057",
 						},
 					},
 				],
