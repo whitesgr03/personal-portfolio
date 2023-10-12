@@ -23,11 +23,23 @@ describe("Renders Footer Component", () => {
 	});
 	it("Should return src property of the img tag", () => {
 		const mockAvatar = {
-			small: {
-				url: "https://i.pravatar.cc/150",
+			phone_small: {
+				url: "../",
 			},
-			large: {
-				url: "https://i.pravatar.cc/250",
+			phone_large: {
+				url: "../",
+			},
+			desktop_small: {
+				url: "../",
+			},
+			laptop: {
+				url: "../",
+			},
+			desktop_medium: {
+				url: "../",
+			},
+			desktop_large: {
+				url: "../",
 			},
 		};
 
@@ -35,7 +47,7 @@ describe("Renders Footer Component", () => {
 
 		const image = screen.getByRole("img");
 
-		expect(image).toHaveAttribute("src", mockAvatar.large.url);
+		expect(image).toHaveAttribute("src", mockAvatar.phone_small.url);
 	});
 	it("Should return 150px width and height properties of the img tag", () => {
 		const mockImageSize = {
