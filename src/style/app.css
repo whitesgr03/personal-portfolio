@@ -108,6 +108,10 @@
 	color: var(--dark-scheme-highlight-color);
 }
 
+.app.dark .loading {
+	background-color: var(--dark-scheme-bgc);
+}
+
 .app.dark .imageWrap {
 	background-color: var(--dark-scheme-color);
 }
