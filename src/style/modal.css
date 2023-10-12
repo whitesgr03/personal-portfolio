@@ -78,8 +78,9 @@
 
 .productModal .describe {
 	display: flex;
-	justify-content: space-between;
-	margin: 40px 0px;
+	flex-direction: column;
+	margin-top: 20px;
+	row-gap: 1rem;
 }
 
 .productModal .describe h3 {
