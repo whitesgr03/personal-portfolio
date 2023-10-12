@@ -89,7 +89,7 @@
 	font-weight: bolder;
 }
 
-.productModal .describe div {
+.productModal .describe p {
 	flex: 1 1 100%;
 }
 
