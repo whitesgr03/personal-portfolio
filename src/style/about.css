@@ -1,10 +1,11 @@
 .about {
 	grid-area: about;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	row-gap: 40px;
+	display: grid;
+	grid-template:
+		"describe" auto
+		"content" auto / 1fr;
 	scroll-margin-top: 100px;
 }
 
