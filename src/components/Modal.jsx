@@ -28,6 +28,7 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 	const [touchPosition, setTouchPosition] = useState(null);
 
 	const handlePointerEnter = () => setDisableModalScroll(true);
+	const handlePointerLeave = () => setDisableModalScroll(false);
 	const handleScroll = e =>
 		e.target.clientHeight +
 			e.target.scrollTop +
@@ -38,8 +39,6 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 			e.target.nextElementSibling.clientHeight
 			? setIsModalScroll(true)
 			: setIsModalScroll(false);
-	const handlePointerOver = () => setDisableModalScroll(true);
-	const handlePointerOut = () => setDisableModalScroll(false);
 	const handleTouchStart = e =>
 		e.target.closest(".productModal") &&
 		setTouchPosition(e.changedTouches[0].clientY);
@@ -63,7 +62,7 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 			<div
 				className="padding"
 				onPointerEnter={handlePointerEnter}
-				onPointerOut={handlePointerOut}
+				onPointerLeave={handlePointerLeave}
 				data-testid="padding"
 			>
 				<button
