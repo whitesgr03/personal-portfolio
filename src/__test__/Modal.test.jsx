@@ -1,6 +1,5 @@
-import { render, screen } from "@testing-library/react";
-
-import { fireEvent } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import Modal, { ProductModal } from "../components/Modal";
 
@@ -30,10 +29,42 @@ describe("Modal Component", () => {
 
 		expect(button).toBeInTheDocument();
 	});
+	it("Should disable scrolling on modal block when padding block is pointOver.", async () => {
+		const user = userEvent.setup();
+
+		render(<Modal />);
+
+		const div = screen.getByTestId("padding");
+		const element = screen.getByTestId("modal");
+
+		await waitFor(async () => {
+			await user.pointer([{ target: div }]);
+		});
+
+		expect(element).toHaveClass("unScroll");
+	});
+	it("Should scroll on modal block when padding block goes from pointerover to pointerout.", async () => {
+		const user = userEvent.setup();
+
+		render(<Modal />);
+
+		const div = screen.getByTestId("padding");
+		const element = screen.getByTestId("modal");
+
+		await waitFor(async () => {
+			await user.pointer([{ target: div }]);
+		});
+
+		expect(element).toHaveClass("unScroll");
+
+		await waitFor(async () => {
+			await user.pointer({ target: element });
+		});
+
+		expect(element).not.toHaveClass("unScroll");
+	});
 });
 
-describe("Renders ProductModal Component", () => {
-	it("Should return ProductModal DOM with product data", () => {
 		const mockProduct = {
 			id: "project1",
 			name: "project1",
