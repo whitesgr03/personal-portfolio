@@ -4,8 +4,8 @@ import { fireEvent } from "@testing-library/react";
 
 import Modal, { ProductModal } from "../components/Modal";
 
-describe("Renders Modal Component", () => {
-	it("Should return modal DOM and display the modal", () => {
+describe("Modal Component", () => {
+	it("Should add class name if showModal is true", () => {
 		const mockShowModal = true;
 		render(<Modal showModal={mockShowModal} />);
 
@@ -13,7 +13,7 @@ describe("Renders Modal Component", () => {
 
 		expect(element).toHaveClass("show");
 	});
-	it("Should return modal DOM and not show the modal", () => {
+	it("Should not add class name if showModal is false", () => {
 		const mockShowModal = false;
 		render(<Modal showModal={mockShowModal} />);
 
@@ -21,12 +21,12 @@ describe("Renders Modal Component", () => {
 
 		expect(element).not.toHaveClass("show");
 	});
-	it("Should return Modal component containing children DOM", () => {
-		const mockChildren = <button type="button">test</button>;
+	it("Should render children props", () => {
+		const mockChildren = <button type="button">mock button</button>;
 
 		render(<Modal children={mockChildren} />);
 
-		const button = screen.getByRole("button", { name: "test" });
+		const button = screen.getByRole("button", { name: "mock button" });
 
 		expect(button).toBeInTheDocument();
 	});
