@@ -65,6 +65,8 @@ describe("Modal Component", () => {
 	});
 });
 
+describe("ProductModal Component", () => {
+	it("Should render ProductModal when providing product prop", () => {
 		const mockProduct = {
 			id: "project1",
 			name: "project1",
