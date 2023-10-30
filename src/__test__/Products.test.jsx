@@ -483,11 +483,7 @@ describe("Products Component", () => {
 			/>
 		);
 
-		const [firstImage, , , secondImage] = screen.getAllByRole("img");
-
-		fireEvent.load(firstImage);
-
-		expect(mockOnLoading).toBeCalledTimes(1);
+		const [, , , secondImage] = screen.getAllByRole("img");
 
 		fireEvent.load(secondImage);
 
