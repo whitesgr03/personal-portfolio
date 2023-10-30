@@ -4,8 +4,8 @@ import userEvent from "@testing-library/user-event";
 
 import Footer from "../components/Footer";
 
-describe("Renders Footer Component", () => {
-	it("Should press the Tab key to focus an link", async () => {
+describe("Footer Component", () => {
+	it("Should unable focus link when showModal is false", async () => {
 		const user = userEvent.setup();
 		const mockShowModal = false;
 
@@ -19,7 +19,7 @@ describe("Renders Footer Component", () => {
 
 		expect(link).toHaveFocus();
 	});
-	it("Should disable tab key to focus an link", async () => {
+	it("Should able focus link when showModal is true", async () => {
 		const user = userEvent.setup();
 		const mockShowModal = true;
 
