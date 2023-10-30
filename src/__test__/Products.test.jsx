@@ -5,8 +5,8 @@ import { fireEvent } from "@testing-library/react";
 
 import Products from "../components/Products";
 
-describe("Renders Products Component", () => {
-	it("Should return Modal DOM with product", () => {
+describe("Products Component", () => {
+	it("Should render Products component list when providing productImage prop", () => {
 		const mockProductsImage = [
 			{
 				id: "project1",
@@ -81,7 +81,7 @@ describe("Renders Products Component", () => {
 		expect(firstButtonForImage).toBeInTheDocument();
 		expect(firstButtonForTitle).toBeInTheDocument();
 	});
-	it("Should show modal with product on click", async () => {
+	it("Should display modal when button is clicked", async () => {
 		const user = userEvent.setup();
 		const mockOnShowProduct = jest.fn();
 		const mockProductsImage = [
@@ -144,14 +144,12 @@ describe("Renders Products Component", () => {
 				},
 			},
 		];
-
 		render(
 			<Products
 				onShowProduct={mockOnShowProduct}
 				productsImage={mockProductsImage}
 			/>
 		);
-
 		const [firstButtonForImage] = screen.getAllByRole("button", {
 			name: "buttonForImage",
 		});
@@ -168,7 +166,7 @@ describe("Renders Products Component", () => {
 
 		expect(mockOnShowProduct).toBeCalledTimes(2);
 	});
-	it("Should press the Tab key to focus buttons and links", async () => {
+	it("Should able focus link when showModal is true", async () => {
 		const user = userEvent.setup();
 		const mockShowModal = false;
 		const mockProductsImage = [
@@ -266,7 +264,7 @@ describe("Renders Products Component", () => {
 		await user.tab();
 		expect(firstLinkForSource).toHaveFocus();
 	});
-	it("Should disable tab key to focus an buttons and links", async () => {
+	it("Should unable focus link when showModal is false", async () => {
 		const user = userEvent.setup();
 		const mockShowModal = true;
 		const mockProductsImage = [
@@ -364,7 +362,56 @@ describe("Renders Products Component", () => {
 		await user.tab();
 		expect(firstLinkForSource).not.toHaveFocus();
 	});
-	it("Should call the function through the load event", async () => {
+	it("Should call the onLoading when productsImage's index is 0", async () => {
+		const mockOnload = jest.fn();
+		const mockOnLoading = jest.fn();
+		const mockProductsImage = [
+			{
+				id: "project1",
+				name: "project1",
+				image: {
+					preview: {
+						phone_small: {
+							url: "../",
+						},
+						phone_large: {
+							url: "../",
+						},
+						tablet: {
+							url: "../",
+						},
+						desktop_small: {
+							url: "../",
+						},
+						laptop: {
+							url: "../",
+						},
+						desktop_medium: {
+							url: "../",
+						},
+						desktop_large: {
+							url: "../",
+						},
+					},
+				},
+			},
+		];
+
+		render(
+			<Products
+				productsImage={mockProductsImage}
+				onLoad={mockOnload}
+				onLoading={mockOnLoading}
+			/>
+		);
+
+		const [firstImage] = screen.getAllByRole("img");
+
+		fireEvent.load(firstImage);
+
+		expect(mockOnLoading).toBeCalledTimes(1);
+	});
+	it("Should call the onLoad when productsImage's index is not 0", async () => {
 		const mockOnload = jest.fn();
 		const mockOnLoading = jest.fn();
 		const mockProductsImage = [
