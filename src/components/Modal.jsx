@@ -79,26 +79,7 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 const ProductModal = ({ product, onLoad }) => {
 	const [imageSize, setImageSize] = useState(null);
 	useLayoutEffect(() => {
-		const IMAGES_SIZE = [
-			{
-				device: "small",
-				width: 810,
-				height: 540,
-			},
-			{
-				device: "medium",
-				width: 1372,
-				height: 915,
-			},
-			{
-				device: "large",
-				width: 1905,
-				height: 1270,
-			},
-		];
-
-		const getSize = target =>
-			IMAGES_SIZE.find(item => item.device === target);
+		const size = getImageSize(IMAGES_SIZE);
 
 		const handleSetImageSize = () => {
 			const viewPortWidth = Math.max(
@@ -107,10 +88,10 @@ const ProductModal = ({ product, onLoad }) => {
 			);
 			setImageSize(
 				viewPortWidth < 900
-					? getSize("small")
+					? size("small")
 					: viewPortWidth < 1700
-					? getSize("medium")
-					: getSize("large")
+					? size("medium")
+					: size("large")
 			);
 		};
 

@@ -23,15 +23,15 @@ const IMAGES_SIZE = [
 const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
 	const [imageSize, setImageSize] = useState(null);
 
+	useLayoutEffect(() => {
+		const size = getImageSize(IMAGES_SIZE);
 
 		const handleSetImageSize = () => {
 			const viewPortWidth = Math.max(
 				document.documentElement.clientWidth || 0,
 				window.innerWidth || 0
 			);
-			setImageSize(
-				viewPortWidth < 1500 ? getSize("small") : getSize("large")
-			);
+			setImageSize(viewPortWidth < 1500 ? size("small") : size("large"));
 		};
 
 		handleSetImageSize();

@@ -24,6 +24,8 @@ const Products = forwardRef(
 	({ onShowProduct, productsImage, showModal, onLoad, onLoading }, ref) => {
 		const [imageSize, setImageSize] = useState(null);
 
+		useLayoutEffect(() => {
+			const size = getImageSize(IMAGES_SIZE);
 
 			const handleSetImageSize = () => {
 				const viewPortWidth = Math.max(
@@ -31,7 +33,7 @@ const Products = forwardRef(
 					window.innerWidth || 0
 				);
 				setImageSize(
-					viewPortWidth < 1024 ? getSize("small") : getSize("large")
+					viewPortWidth < 1024 ? size("small") : size("large")
 				);
 			};
 
