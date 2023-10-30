@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders Footer Component Should return Footer DOM 1`] = `
+exports[`Contact Component Should render Contact component 1`] = `
 <div>
   <div
     class="contact"
