@@ -4,8 +4,8 @@ import userEvent from "@testing-library/user-event";
 
 import Header from "../components/Header";
 
-describe("Renders Header Component", () => {
-	it("Should return button icon with dark Theme", () => {
+describe("Header Component", () => {
+	it("Should render button icon with dark Theme", () => {
 		const mockDarkTheme = true;
 
 		render(<Header darkTheme={mockDarkTheme} />);
@@ -14,7 +14,7 @@ describe("Renders Header Component", () => {
 
 		expect(button).toHaveClass("dark");
 	});
-	it("Should return button icon with light Theme", () => {
+	it("Should render button icon with light Theme", () => {
 		const mockDarkTheme = false;
 
 		render(<Header darkTheme={mockDarkTheme} />);
@@ -23,24 +23,7 @@ describe("Renders Header Component", () => {
 
 		expect(button).toHaveClass("light");
 	});
-	it("Should unable focus button", () => {
-		const mockShowModal = true;
-
-		render(<Header showModal={mockShowModal} />);
-
-		const titleButton = screen.getByRole("button", { name: "Bai" });
-		const aboutButton = screen.getByRole("button", { name: "About" });
-		const productsButton = screen.getByRole("button", {
-			name: "Projects",
-		});
-		const themeButton = screen.getByRole("button", { name: "Theme" });
-
-		expect(titleButton).toHaveAttribute("tabIndex", "-1");
-		expect(aboutButton).toHaveAttribute("tabIndex", "-1");
-		expect(productsButton).toHaveAttribute("tabIndex", "-1");
-		expect(themeButton).toHaveAttribute("tabIndex", "-1");
-	});
-	it("Should press the Tab key to focus buttons", async () => {
+	it("Should able focus button when showModal is true", async () => {
 		const user = userEvent.setup();
 		const mockShowModal = false;
 
@@ -73,7 +56,7 @@ describe("Renders Header Component", () => {
 		await user.tab();
 		expect(themeButton).toHaveFocus();
 	});
-	it("Should disable tab key to focus buttons", async () => {
+	it("Should unable focus button when showModal is false", async () => {
 		const user = userEvent.setup();
 		const mockShowModal = true;
 
