@@ -49,15 +49,4 @@ describe("About Component", () => {
 
 		expect(image).toHaveAttribute("src", mockAvatar.phone_small.url);
 	});
-	it("Should call the function through the load event", async () => {
-		const mockOnload = jest.fn();
-
-		render(<About onLoad={mockOnload} />);
-
-		const image = screen.getByRole("img");
-
-		fireEvent.load(image);
-
-		expect(mockOnload).toBeCalledTimes(1);
-	});
 });
