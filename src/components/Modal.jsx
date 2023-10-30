@@ -27,6 +27,7 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 	const [disableModalScroll, setDisableModalScroll] = useState(false);
 	const [touchPosition, setTouchPosition] = useState(null);
 
+	const handlePointerEnter = () => setDisableModalScroll(true);
 	const handleScroll = e =>
 		e.target.clientHeight +
 			e.target.scrollTop +
@@ -61,7 +62,7 @@ const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 		>
 			<div
 				className="padding"
-				onPointerOver={handlePointerOver}
+				onPointerEnter={handlePointerEnter}
 				onPointerOut={handlePointerOut}
 				data-testid="padding"
 			>
