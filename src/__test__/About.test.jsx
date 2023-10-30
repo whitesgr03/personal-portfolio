@@ -4,13 +4,13 @@ import { fireEvent } from "@testing-library/react";
 
 import About from "../components/About";
 
-describe("Renders Footer Component", () => {
+describe("About Component", () => {
 	it("Should able link from being focused", () => {
 		const mockShowModal = false;
 
 		render(<About showModal={mockShowModal} />);
-
 		const link = screen.getByRole("link");
+
 		expect(link).toHaveAttribute("tabIndex", "");
 	});
 	it("Should unable link from being focused", () => {
@@ -21,7 +21,7 @@ describe("Renders Footer Component", () => {
 		const link = screen.getByRole("link");
 		expect(link).toHaveAttribute("tabIndex", "-1");
 	});
-	it("Should return src property of the img tag", () => {
+	it("Should render src property of the img tag when providing avatar prop", () => {
 		const mockAvatar = {
 			phone_small: {
 				url: "../",
