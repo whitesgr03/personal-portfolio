@@ -1,4 +1,6 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { fireEvent } from "@testing-library/react";
 
 import App from "../components/App";
 
@@ -38,6 +40,82 @@ jest.mock("../components/Products", () => {
 	};
 });
 
+describe("App Component", () => {
+	it("Should correctly handles changing Theme", async () => {
+		window.matchMedia = jest.fn(() => ({
+			matches: true,
+		}));
+
+		const user = userEvent.setup();
+
+		render(<App />);
+
+		const changeThemeButton = screen.getByTestId("changeTheme");
+
+		await waitFor(async () => {
+			await user.click(changeThemeButton);
+		});
+		expect(changeThemeButton).toHaveClass("light");
+	});
+	it("Should correctly handles load image", async () => {
+		window.matchMedia = jest.fn(() => ({
+			matches: true,
+		}));
+
+		render(<App />);
+
+		const sibling = await screen.findByTestId("sibling");
+		const image = await screen.findByTestId("image");
+
+		fireEvent.load(image);
+
+		expect(sibling).not.toBeVisible();
+	});
+	it("Should correctly handles showing product", async () => {
+		window.matchMedia = jest.fn(() => ({
+			matches: true,
+		}));
+
+		const user = userEvent.setup();
+
+		render(<App />);
+
+		const productsButton = screen.getByTestId("showProduct");
+
+		expect(productsButton).not.toHaveClass("show");
+
+		await waitFor(async () => {
+			await user.click(productsButton);
+		});
+
+		expect(productsButton).toHaveClass("show");
+	});
+	it("Should close modal when app block is clicked", async () => {
+		window.matchMedia = jest.fn(() => ({
+			matches: true,
+		}));
+
+		const user = userEvent.setup();
+
+		render(<App />);
+
+		const appBlock = await screen.findByTestId("app");
+		const productsButton = await screen.findByTestId("showProduct");
+
+		expect(appBlock).not.toHaveClass("unScroll");
+
+		await waitFor(async () => {
+			await user.click(productsButton);
+		});
+
+		expect(appBlock).toHaveClass("unScroll");
+
+		await waitFor(async () => {
+			await user.click(appBlock);
+		});
+
+		expect(appBlock).not.toHaveClass("unScroll");
+	});
 	it("Should render App component with dark scheme", async () => {
 		window.matchMedia = jest.fn(() => ({
 			matches: true,
