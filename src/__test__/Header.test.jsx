@@ -101,4 +101,43 @@ describe("Header Component", () => {
 
 		expect(mockOnChangeTheme).toBeCalledTimes(1);
 	});
+	it("Should scroll to target when button is clicked", async () => {
+		const user = userEvent.setup();
+
+		const mockScrollIntoView = jest.fn();
+		const mockContains = jest.fn();
+
+		mockContains.mockReturnValueOnce(true).mockReturnValue(false);
+
+		const ref = {
+			current: {
+				scrollIntoView: mockScrollIntoView,
+				classList: {
+					contains: mockContains,
+				},
+			},
+		};
+
+		render(<Header appRef={ref} aboutRef={ref} productsRef={ref} />);
+
+		const scrollToTopButton = screen.getByRole("button", { name: "Bai" });
+		const scrollToAboutButton = screen.getByRole("button", {
+			name: "About",
+		});
+		const scrollToProjectsButton = screen.getByRole("button", {
+			name: "Projects",
+		});
+
+		await user.click(scrollToTopButton);
+
+		expect(mockScrollIntoView).toBeCalledTimes(0);
+
+		await user.click(scrollToAboutButton);
+
+		expect(mockScrollIntoView).toBeCalledTimes(1);
+
+		await user.click(scrollToProjectsButton);
+
+		expect(mockScrollIntoView).toBeCalledTimes(2);
+	});
 });
