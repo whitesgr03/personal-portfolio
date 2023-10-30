@@ -7,23 +7,18 @@ import { getImageSize } from "../utils/handleGetImageSize";
 import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
-const Products = forwardRef(
-	({ onShowProduct, productsImage, showModal, onLoad, onLoading }, ref) => {
-		const [imageSize, setImageSize] = useState(null);
-
-		useLayoutEffect(() => {
-			const IMAGES_SIZE = [
-				{
-					device: "small",
-					width: 628,
-					height: 419,
-				},
-				{
-					device: "large",
-					width: 867,
-					height: 578,
-				},
-			];
+const IMAGES_SIZE = [
+	{
+		device: "small",
+		width: 628,
+		height: 419,
+	},
+	{
+		device: "large",
+		width: 867,
+		height: 578,
+	},
+];
 
 const Products = forwardRef(
 	({ onShowProduct, productsImage, showModal, onLoad, onLoading }, ref) => {

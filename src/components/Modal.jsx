@@ -4,6 +4,23 @@ import { useState, useLayoutEffect, forwardRef } from "react";
 
 import { getImageSize } from "../utils/handleGetImageSize";
 
+const IMAGES_SIZE = [
+	{
+		device: "small",
+		width: 810,
+		height: 540,
+	},
+	{
+		device: "medium",
+		width: 1372,
+		height: 915,
+	},
+	{
+		device: "large",
+		width: 1905,
+		height: 1270,
+	},
+];
 
 const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);

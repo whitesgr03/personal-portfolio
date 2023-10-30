@@ -7,22 +7,18 @@ import { getImageSize } from "../utils/handleGetImageSize";
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 
-const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
-	const [imageSize, setImageSize] = useState(null);
-
-	useLayoutEffect(() => {
-		const IMAGES_SIZE = [
-			{
-				device: "small",
-				width: 350,
-				height: 350,
-			},
-			{
-				device: "large",
-				width: 600,
-				height: 600,
-			},
-		];
+const IMAGES_SIZE = [
+	{
+		device: "small",
+		width: 350,
+		height: 350,
+	},
+	{
+		device: "large",
+		width: 600,
+		height: 600,
+	},
+];
 
 const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
 	const [imageSize, setImageSize] = useState(null);
