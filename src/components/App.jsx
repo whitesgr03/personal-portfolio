@@ -43,8 +43,12 @@ const App = () => {
 
 	const handleCloseModal = () => {
 		setShowModal(false);
-		modalRef.current.scrollTop = 0;
+		product &&
+			(() => {
+				modalRef.current.scrollTop = 0;
+			})();
 	};
+
 	const handleLoad = e => (e.target.previousElementSibling.hidden = true);
 
 	useEffect(() => {
