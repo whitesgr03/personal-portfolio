@@ -1,6 +1,9 @@
+import PropTypes from "prop-types";
+
 import { useState, useLayoutEffect, forwardRef } from "react";
 
-import PropTypes from "prop-types";
+import { getImageSize } from "../utils/handleGetImageSize";
+
 
 const Modal = forwardRef(({ showModal, onCloseModal, children }, ref) => {
 	const [isModalScroll, setIsModalScroll] = useState(false);

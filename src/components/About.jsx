@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 
 import { forwardRef, useLayoutEffect, useState } from "react";
 
+import { getImageSize } from "../utils/handleGetImageSize";
+
 import Icon from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 

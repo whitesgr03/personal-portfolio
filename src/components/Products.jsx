@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 
 import { forwardRef, useState, useLayoutEffect } from "react";
 
+import { getImageSize } from "../utils/handleGetImageSize";
+
 import openNewTabIcon from "../image/open-in-new-icon.png";
 import githubIcon from "../image/github-icon.png";
 
