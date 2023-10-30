@@ -1,7 +1,5 @@
 import { render, screen } from "@testing-library/react";
 
-import { fireEvent } from "@testing-library/react";
-
 import About from "../components/About";
 
 describe("About Component", () => {
