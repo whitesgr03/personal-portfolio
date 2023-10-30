@@ -40,7 +40,7 @@ const getProductImages = () => {
 						url: "https://picsum.photos/1068/712/?3",
 					},
 					desktop_small: {
-						url: "https://picsum.photos/1235/823/?4",
+						url: "https://picsum.photos/1235/823/?44324",
 					},
 					laptop: {
 						url: "https://picsum.photos/1378/919/?5",
@@ -66,7 +66,7 @@ const getProductImages = () => {
 							url: "https://picsum.photos/1372/915/?3",
 						},
 						desktop_small: {
-							url: "https://picsum.photos/1672/1115/?4",
+							url: "https://picsum.photos/1672/1115/?54354",
 						},
 						laptop: {
 							url: "https://picsum.photos/1905/1270/?5",
@@ -90,7 +90,7 @@ const getProductImages = () => {
 							url: "https://picsum.photos/1324/883/?3",
 						},
 						desktop_small: {
-							url: "https://picsum.photos/1587/1058/?4",
+							url: "https://picsum.photos/1587/1058/?664",
 						},
 						laptop: {
 							url: "https://picsum.photos/1814/1209/?5",
@@ -114,7 +114,7 @@ const getProductImages = () => {
 							url: "https://picsum.photos/1324/883/?3",
 						},
 						desktop_small: {
-							url: "https://picsum.photos/1587/1058/?4",
+							url: "https://picsum.photos/1587/1058/?4234234",
 						},
 						laptop: {
 							url: "https://picsum.photos/1814/1209/?5",
@@ -141,7 +141,7 @@ const getProductImages = () => {
 						url: "https://picsum.photos/867/578/?3",
 					},
 					tablet: {
-						url: "https://picsum.photos/1068/712/?4",
+						url: "https://picsum.photos/1068/712/?99",
 					},
 					desktop_small: {
 						url: "https://picsum.photos/1235/823/?5",
@@ -153,7 +153,7 @@ const getProductImages = () => {
 						url: "https://picsum.photos/1561/1040/?7",
 					},
 					desktop_large: {
-						url: "https://picsum.photos/1672/1115/8",
+						url: "https://picsum.photos/1672/1115/?8",
 					},
 				},
 				pictures: [
@@ -166,10 +166,10 @@ const getProductImages = () => {
 							url: "https://picsum.photos/1088/725/?3",
 						},
 						tablet: {
-							url: "https://picsum.photos/1324/883/?3",
+							url: "https://picsum.photos/1324/883/?9",
 						},
 						desktop_small: {
-							url: "https://picsum.photos/1587/1058/?4",
+							url: "https://picsum.photos/1587/1058/?455",
 						},
 						laptop: {
 							url: "https://picsum.photos/1814/1209/?5",
@@ -193,7 +193,7 @@ const getProductImages = () => {
 							url: "https://picsum.photos/1324/883/?3",
 						},
 						desktop_small: {
-							url: "https://picsum.photos/1587/1058/?4",
+							url: "https://picsum.photos/1587/1058/?455",
 						},
 						laptop: {
 							url: "https://picsum.photos/1814/1209/?5",
@@ -217,7 +217,7 @@ const getProductImages = () => {
 							url: "https://picsum.photos/1324/883/?3",
 						},
 						desktop_small: {
-							url: "https://picsum.photos/1587/1058/?4",
+							url: "https://picsum.photos/1587/1058/?455234",
 						},
 						laptop: {
 							url: "https://picsum.photos/1814/1209/?5",
