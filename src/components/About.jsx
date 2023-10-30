@@ -24,8 +24,9 @@ const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
 			},
 		];
 
-		const getSize = target =>
-			IMAGES_SIZE.find(item => item.device === target);
+const About = forwardRef(({ showModal, avatar, onLoad }, ref) => {
+	const [imageSize, setImageSize] = useState(null);
+
 
 		const handleSetImageSize = () => {
 			const viewPortWidth = Math.max(
